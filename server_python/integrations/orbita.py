@@ -10,7 +10,7 @@ import os
 from . import gemini
 from .spyfu import fetch_domain_intelligence
 
-ORBITA_SYSTEM_PROMPT = """You are Orbita, the AI analysis assistant for The Conscious Orbit.
+ORBITA_SYSTEM_PROMPT = """You are Orbita, the AI analysis assistant for The Venture Orbital.
 
 You receive a venture report with 10 module scores and SpyFu competitor data.
 Your job is to critically analyze each module's score and flag inconsistencies.

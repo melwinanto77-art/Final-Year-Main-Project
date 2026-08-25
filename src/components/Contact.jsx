@@ -37,7 +37,7 @@ export default function Contact({ onBack }) {
         <div className="flex items-center gap-3 cursor-pointer" onClick={onBack}>
           <OrbitBrand size={32} />
           <span className="font-mono text-xs font-extrabold uppercase tracking-[0.2em] text-[#B8860B]">
-            CONSCIOUS ORBITAL
+            VENTURE ORBITAL
           </span>
         </div>
       </header>

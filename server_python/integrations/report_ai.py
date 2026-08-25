@@ -80,7 +80,7 @@ ASSESSMENT_SCHEMA = {
     ],
 }
 
-SYSTEM_PROMPT = """You are the senior venture analyst for The Conscious Orbit. An administrator
+SYSTEM_PROMPT = """You are the senior venture analyst for The Venture Orbital. An administrator
 is about to put a mark on a client's venture report and publish it. Your job is to give that
 administrator an assessment they can trust and defend.
 

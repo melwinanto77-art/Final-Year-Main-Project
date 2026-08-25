@@ -135,7 +135,7 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
         {!pending && (
         <div className="rounded-2xl border-2 border-[#D4AF37] bg-white p-5 flex flex-wrap items-center gap-x-8 gap-y-3">
           <div className="text-center">
-            <p className="font-mono text-[0.65rem] uppercase font-bold text-[#B8860B] tracking-wider">Conscious Orbital Score</p>
+            <p className="font-mono text-[0.65rem] uppercase font-bold text-[#B8860B] tracking-wider">Venture Orbital Score</p>
             <p className="font-serif text-4xl font-extrabold text-[#B8860B]">{score}<span className="text-lg text-[#8C6D58]"> / 100</span></p>
           </div>
           <span className={`px-3 py-1 rounded-full border text-xs font-extrabold ${decisionTone}`}>

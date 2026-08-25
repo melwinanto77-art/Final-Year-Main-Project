@@ -9,7 +9,7 @@ import AdminDashboard from './components/AdminDashboard.jsx';
 import { fetchCurrentUser, logout as apiLogout, onUnauthorized } from './api.js';
 
 /* ============================================================
-   THE CONSCIOUS ORBIT — application shell.
+   THE VENTURE ORBITAL — application shell.
 
    There is no router: a single `page` string decides what renders.
    That string and the signed-in email are persisted so a refresh

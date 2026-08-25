@@ -673,7 +673,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             <OrbitBrand size={30} />
             <div className="flex items-center gap-2">
               <span className="font-sans text-sm font-semibold tracking-wider text-[#4A0A13]">
-                CONSCIOUS ORBIT
+                VENTURE ORBITAL
               </span>
               <span className="h-4 w-px bg-[#D4AF37]/50" />
               <span className="text-xs font-medium text-[#7A1C29] bg-[#4A0A13]/5 px-2 py-0.5 rounded-full border border-[#D4AF37]/30">
@@ -1961,7 +1961,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
       )}
 
       <footer className="py-4 text-center text-[0.7rem] text-[#7A1C29] font-medium border-t border-[#D4AF37]/20">
-        © 2026 Conscious Orbit · Admin Workspace
+        © 2026 Venture Orbital · Admin Workspace
       </footer>
 
     </div>

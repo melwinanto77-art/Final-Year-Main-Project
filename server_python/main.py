@@ -1,4 +1,4 @@
-"""The Conscious Orbit — FastAPI backend.
+"""The Venture Orbital — FastAPI backend.
 
 A full port of the Express/Mongo engine in server/: the same ten calculator
 modules, the same two coupled state machines, the same gated advance, and
@@ -92,7 +92,7 @@ logger = logging.getLogger('conscious_orbit_api')
 START_TIME = time.time()
 
 app = FastAPI(
-    title='The Conscious Orbit - Python FastAPI Backend',
+    title='The Venture Orbital - Python FastAPI Backend',
     description='FastAPI port of the full intelligence pipeline (ten modules, gated state machine).',
     version='3.0.0',
 )
@@ -314,7 +314,7 @@ def _pipeline_view(report: ReportModel):
 def read_root():
     return {
         'status': 'online',
-        'service': 'The Conscious Orbit - Python FastAPI Backend',
+        'service': 'The Venture Orbital - Python FastAPI Backend',
         'db_type': DB_TYPE,
         'docs_url': '/docs',
         'api_health': '/api/health',

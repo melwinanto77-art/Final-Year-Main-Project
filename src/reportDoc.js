@@ -102,13 +102,13 @@ export function buildReportDoc(report = {}, moduleResults = {}) {
       </head>
       <body>
         <div class="header">
-          <div class="brand">The Conscious Orbit · Venture Intelligence Suite</div>
+          <div class="brand">The Venture Orbital · Venture Intelligence Suite</div>
           <h1 class="title">${esc(report.name)}</h1>
           <p class="meta">Vertical: <strong>${esc(String(report.vertical || 'startups').toUpperCase())}</strong> | Date: <strong>${date}</strong> | Status: <strong>${esc(report.status || 'RECEIVED')}</strong></p>
         </div>
 
         <div class="score-card">
-          <div class="score-title">Conscious Orbital Score</div>
+          <div class="score-title">Venture Orbital Score</div>
           <div class="score-num">${esc(score)} / 100</div>
           <div class="score-badge">${badge}</div>
         </div>
@@ -165,7 +165,7 @@ export function buildReportDoc(report = {}, moduleResults = {}) {
         </table>` : ''}
 
         <div class="footer">
-          Generated automatically by <strong>The Conscious Orbit — Executive Strategy Engine</strong><br/>
+          Generated automatically by <strong>The Venture Orbital — Executive Strategy Engine</strong><br/>
           Confidential Executive Report &copy; ${new Date().getFullYear()}
         </div>
       </body>

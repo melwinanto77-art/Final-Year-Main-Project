@@ -171,11 +171,11 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
       {/* ===== TOP HERO SECTION (PULPSENSE CREAM/GOLD HERO INTEGRATION WITH DOMAIN CARDS) ===== */}
       <PulpSenseHero onBookCall={onEnter} onViewServices={onLogin} />
 
-      {/* ===== HOW CONSCIOUS OPERATES — WIDE PREMIUM EDITORIAL TIMELINE ===== */}
+      {/* ===== HOW VENTURE ORBITAL OPERATES — WIDE PREMIUM EDITORIAL TIMELINE ===== */}
       <section id="how-it-works" className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-28">
         <div className="text-center mb-16 md:mb-24">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#B8860B] font-bold block mb-2">Operational Methodology</span>
-          <h2 className="font-sans text-3xl md:text-5xl font-extrabold text-[#4A0A13]">How Conscious Operates</h2>
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold text-[#4A0A13]">How Venture Orbital Operates</h2>
         </div>
 
         <div className="space-y-16 md:space-y-24 max-w-6xl mx-auto px-4 md:px-8">
@@ -280,7 +280,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
               <div className="flex items-center gap-3">
                 <OrbitBrand size={36} />
                 <h5 className="font-sans text-xl font-extrabold text-[#FAF4E8] tracking-tight">
-                  Conscious Orbital
+                  Venture Orbital
                 </h5>
               </div>
               <p className="text-sm text-[#EAD5D8] leading-relaxed max-w-sm">
@@ -328,7 +328,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
           {/* Bottom Copyright */}
           <div className="pt-2 text-center md:text-left">
             <p className="font-mono text-xs text-[#EAD5D8]">
-              © 2026 Conscious Orbital. All rights reserved.
+              © 2026 Venture Orbital. All rights reserved.
             </p>
           </div>
         </div>

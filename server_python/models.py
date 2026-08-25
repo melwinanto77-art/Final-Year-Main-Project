@@ -87,7 +87,7 @@ class ReportModel(Base):
     status = Column(String, default='RECEIVED', index=True)
     action = Column(String, default='SCRUMING')
 
-    # Final Conscious Orbital Score, 0-100. Zero until the aggregate runs.
+    # Final Venture Orbital Score, 0-100. Zero until the aggregate runs.
     score = Column(Integer, default=0)
     # Binary GO/PIVOT verdict, null until scored.
     decision = Column(Integer, nullable=True, default=None)

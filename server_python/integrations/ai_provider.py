@@ -29,7 +29,7 @@ DECISION_SCHEMA = {
     'additionalProperties': False,
 }
 
-SYSTEM_PROMPT = """You are the decision engine for The Conscious Orbit, a venture strategy platform.
+SYSTEM_PROMPT = """You are the decision engine for The Venture Orbital, a venture strategy platform.
 
 You receive the consolidated output of a venture's intelligence pipeline: customer
 discovery, sector profiling, TAM/SAM/SOM market sizing, feasibility, pricing,

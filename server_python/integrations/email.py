@@ -56,7 +56,7 @@ def build_report_docx(report_data: dict, client_data: dict | None = None) -> io.
 
     score_p = doc.add_paragraph()
     score_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = score_p.add_run(f"Conscious Orbital Score: {score}/100")
+    r = score_p.add_run(f"Venture Orbital Score: {score}/100")
     r.bold = True
     r.font.size = Pt(18)
     r.font.color.rgb = RGBColor(0xD4, 0xAF, 0x37)
@@ -119,7 +119,7 @@ def build_report_docx(report_data: dict, client_data: dict | None = None) -> io.
     doc.add_paragraph()
     footer = doc.add_paragraph()
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    fr = footer.add_run("The Conscious Orbit")
+    fr = footer.add_run("The Venture Orbital")
     fr.italic = True
     fr.font.size = Pt(9)
     fr.font.color.rgb = RGBColor(0x9A, 0x9A, 0x9A)
@@ -188,14 +188,14 @@ def _build_report_html(report_data: dict) -> str:
   <h1 style="color: #1a1a1a;">{report_data.get("name", "Report")}</h1>
   <p style="color: #666;">{(report_data.get("vertical", "startups")).upper()} · PUBLISHED</p>
   <div style="background: #f8f9fa; border: 2px solid #D4AF37; border-radius: 12px; padding: 20px; margin: 20px 0;">
-    <h2 style="margin: 0; color: #D4AF37;">Conscious Orbital Score: {score}/100</h2>
+    <h2 style="margin: 0; color: #D4AF37;">Venture Orbital Score: {score}/100</h2>
     <span style="display: inline-block; padding: 4px 12px; border-radius: 20px; background: {verdict_color}; color: white; font-weight: bold; margin-top: 8px;">{verdict_label}</span>
   </div>
   {analysis_section}
   {strengths_section}
   {risks_section}
   {note_section}
-  <p style="color: #999; font-size: 12px; margin-top: 40px;">The Conscious Orbit</p>
+  <p style="color: #999; font-size: 12px; margin-top: 40px;">The Venture Orbital</p>
 </body>
 </html>"""
 
@@ -222,7 +222,7 @@ def send_report_email(report_data: dict, client_data: dict) -> dict:
     slug = _slug(report_data.get("name"))
 
     msg = MIMEMultipart()
-    msg["From"] = os.getenv("SMTP_FROM", '"The Conscious Orbit" <reports@consciousorbit.com>')
+    msg["From"] = os.getenv("SMTP_FROM", '"The Venture Orbital" <reports@consciousorbit.com>')
     msg["To"] = recipient_email
     msg["Subject"] = f"Your Venture Strategy Report: {report_data.get('name', 'Report')}"
 

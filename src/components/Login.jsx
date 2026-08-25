@@ -92,7 +92,7 @@ export default function Login({ onLogin, onBack }) {
               isAdmin ? "text-[#4A0A13]" : "text-[#F5D77F]"
             }`}
           >
-            Conscious Orbital
+            Venture Orbital
           </span>
         </div>
       </header>
@@ -180,7 +180,7 @@ export default function Login({ onLogin, onBack }) {
                 <p className="text-[0.72rem] text-[#7A1C29] font-medium">
                   {isSignUp
                     ? "Start your intelligence journey"
-                    : "Welcome back to Conscious Orbital"}
+                    : "Welcome back to Venture Orbital"}
                 </p>
               </div>
 
@@ -348,7 +348,7 @@ export default function Login({ onLogin, onBack }) {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="admin@consciousorbital.ai"
+                    placeholder="admin@ventureorbital.ai"
                     className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#38070E] px-3.5 py-2 text-xs text-[#FAF4E8] placeholder-[#F5D77F]/40 focus:border-[#D4AF37] focus:outline-none transition shadow-xs font-sans"
                   />
                 </div>
@@ -412,7 +412,7 @@ export default function Login({ onLogin, onBack }) {
       {/* Footer */}
       <footer className="relative z-10 py-2 text-center text-[0.68rem] font-mono transition-colors duration-700">
         <span className={isAdmin ? "text-[#4A0A13]/75" : "text-[#F5D77F]/75"}>
-          © 2026 Conscious Orbital · Executive &amp; System Governance
+          © 2026 Venture Orbital · Executive &amp; System Governance
         </span>
       </footer>
     </div>

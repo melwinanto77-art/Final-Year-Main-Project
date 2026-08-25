@@ -1,4 +1,4 @@
-# The Conscious Orbit
+# The Venture Orbital
 
 Venture intelligence workspace — a React dashboard that runs ventures through a
 five-stage pipeline (RECEIVED → PENDING → PROCESSED → REVIEWING → PUBLISHED) and scores

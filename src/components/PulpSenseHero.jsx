@@ -106,7 +106,7 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
           <OrbitBrand size={36} />
           <span className="text-[#C89B3C] font-light text-base hidden sm:inline">–</span>
           <span className="font-mono text-xs font-extrabold uppercase tracking-[0.25em] text-[#B8860B]">
-            THE CONSCIOUS ORBIT
+            THE VENTURE ORBITAL
           </span>
         </div>
 
