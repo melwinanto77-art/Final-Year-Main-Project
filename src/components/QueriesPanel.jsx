@@ -24,7 +24,7 @@ const STATUS_STYLES = {
 
 const labelCls = "font-mono text-[0.68rem] uppercase font-bold text-[#B8860B] tracking-wider";
 const fieldCls =
-  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] placeholder-[#8C6D58]/60 focus:border-[#400A12] focus:outline-none";
+  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] placeholder-[#6E7B91]/60 focus:border-[#081428] focus:outline-none";
 
 export default function QueriesPanel({ role = "client", clientEmail, clientName, reportId }) {
   const isAdmin = role === "admin";
@@ -127,10 +127,10 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#400A12]">
+          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#081428]">
             {isAdmin ? "Client Queries" : "Ask a Question"}
           </h3>
-          <p className="text-xs text-[#7A1C29]">
+          <p className="text-xs text-[#3D5A80]">
             {isAdmin
               ? `Questions raised by clients. ${openCount} awaiting a response.`
               : "Ask anything about your venture or your report — an administrator replies here."}
@@ -145,8 +145,8 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
                 onClick={() => setFilter(s)}
                 className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition cursor-pointer ${
                   filter === s
-                    ? "bg-[#400A12] text-[#F5D77F]"
-                    : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                    ? "bg-[#081428] text-[#F5D77F]"
+                    : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                 }`}
               >
                 {s.replace("_", " ")}
@@ -168,7 +168,7 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
                 placeholder="e.g. How should we price against local competitors?"
                 className={fieldCls}
               />
-              <p className="text-[0.65rem] text-[#8C6D58]">A short title so the reviewer can scan it quickly.</p>
+              <p className="text-[0.65rem] text-[#6E7B91]">A short title so the reviewer can scan it quickly.</p>
             </div>
             <div className="space-y-1">
               <label className={labelCls} htmlFor="q-category">Topic</label>
@@ -179,7 +179,7 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
               >
                 {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
-              <p className="text-[0.65rem] text-[#8C6D58]">Routes it to the right area.</p>
+              <p className="text-[0.65rem] text-[#6E7B91]">Routes it to the right area.</p>
             </div>
           </div>
 
@@ -191,7 +191,7 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
               placeholder="Describe what you need to know, and any numbers or context that would help us answer accurately."
               className={`${fieldCls} rounded-2xl resize-none`}
             />
-            <p className="text-[0.65rem] text-[#8C6D58]">
+            <p className="text-[0.65rem] text-[#6E7B91]">
               The more context you give, the more specific the answer — mention your market, price
               point or constraint.
             </p>
@@ -211,7 +211,7 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
             )}
             <button
               type="submit" disabled={sending}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 disabled:opacity-60"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 disabled:opacity-60"
             >
               {sending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
               <span>{sending ? "Sending…" : "Send Question"}</span>
@@ -222,16 +222,16 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
 
       {/* Thread */}
       {loading ? (
-        <p className="text-xs text-[#8C6D58]">Loading queries…</p>
+        <p className="text-xs text-[#6E7B91]">Loading queries…</p>
       ) : visible.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-[#D4AF37]/50 bg-white/70 p-8 text-center">
           <MessageSquare size={22} className="mx-auto text-[#B8860B]" />
-          <p className="text-sm font-semibold text-[#400A12] mt-2">
+          <p className="text-sm font-semibold text-[#081428] mt-2">
             {queries.length === 0
               ? isAdmin ? "No client queries yet" : "You haven't asked anything yet"
               : `No ${filter.replace("_", " ").toLowerCase()} queries`}
           </p>
-          <p className="text-xs text-[#7A1C29] mt-1">
+          <p className="text-xs text-[#3D5A80] mt-1">
             {isAdmin
               ? "Questions submitted from client dashboards appear here."
               : "Use the form above and your question will reach an administrator."}
@@ -253,27 +253,27 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
                       {q.status.replace("_", " ")}
                     </span>
                   </div>
-                  <h4 className="font-serif text-base font-bold text-[#400A12] mt-0.5 break-words">{q.subject}</h4>
+                  <h4 className="font-serif text-base font-bold text-[#081428] mt-0.5 break-words">{q.subject}</h4>
                   {isAdmin && (
-                    <p className="text-[0.68rem] text-[#7A1C29]">
+                    <p className="text-[0.68rem] text-[#3D5A80]">
                       {q.clientName || "Client"}{q.clientEmail ? ` · ${q.clientEmail}` : ""}
                     </p>
                   )}
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="text-[0.62rem] text-[#8C6D58] font-mono">
+                  <span className="text-[0.62rem] text-[#6E7B91] font-mono">
                     {(q.createdAt || "").split("T")[0]}
                   </span>
                   {isAdmin && (
                     <button onClick={() => handleDelete(q)} title="Delete query"
-                      className="p-1 rounded-lg border border-[#D4AF37]/40 text-[#7A1C29] hover:bg-[#F5EAD4] cursor-pointer">
+                      className="p-1 rounded-lg border border-[#D4AF37]/40 text-[#3D5A80] hover:bg-[#EDF2F9] cursor-pointer">
                       <Trash2 size={12} />
                     </button>
                   )}
                 </div>
               </div>
 
-              <p className="text-xs text-[#4A0A13] whitespace-pre-wrap break-words">{q.message}</p>
+              <p className="text-xs text-[#0B1B36] whitespace-pre-wrap break-words">{q.message}</p>
 
               {/* Answer */}
               {q.response ? (
@@ -297,7 +297,7 @@ export default function QueriesPanel({ role = "client", clientEmail, clientName,
                     <button
                       onClick={() => handleReply(q)}
                       disabled={replyingId === q.id || !(replyDraft[q.id] || "").trim()}
-                      className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#4A0A13] hover:bg-[#5C0F1A] text-[#F5D77F] text-xs font-bold cursor-pointer disabled:opacity-50"
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0B1B36] hover:bg-[#16294D] text-[#F5D77F] text-xs font-bold cursor-pointer disabled:opacity-50"
                     >
                       {replyingId === q.id ? <Loader2 size={12} className="animate-spin" /> : <Send size={12} />}
                       <span>Send Response</span>

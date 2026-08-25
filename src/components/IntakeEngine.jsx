@@ -120,18 +120,18 @@ const SAMPLE_ECOFLY_CLUSTERS = {
 
 const labelCls = "font-mono text-[0.68rem] uppercase font-bold text-[#B8860B] tracking-wider";
 const fieldCls =
-  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] placeholder-[#8C6D58]/60 focus:border-[#400A12] focus:outline-none shadow-xs";
+  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] placeholder-[#6E7B91]/60 focus:border-[#081428] focus:outline-none shadow-xs";
 
 function LayerBadge({ n, title, note }) {
   return (
     <div className="flex items-center gap-3">
-      <span className="w-8 h-8 rounded-xl bg-[#400A12] text-[#F5D77F] font-mono text-sm font-bold flex items-center justify-center border border-[#D4AF37]/50">
+      <span className="w-8 h-8 rounded-xl bg-[#081428] text-[#F5D77F] font-mono text-sm font-bold flex items-center justify-center border border-[#D4AF37]/50">
         {n}
       </span>
       <div>
         <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[#B8860B] font-bold">Layer {n}</p>
-        <h3 className="font-serif text-lg font-bold text-[#400A12] leading-tight">
-          {title} <span className="font-sans text-xs font-normal text-[#8C6D58]">— {note}</span>
+        <h3 className="font-serif text-lg font-bold text-[#081428] leading-tight">
+          {title} <span className="font-sans text-xs font-normal text-[#6E7B91]">— {note}</span>
         </h3>
       </div>
     </div>
@@ -257,10 +257,10 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
             <Layers size={14} />
             <span>Startup Vertical</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#400A12]">
+          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#081428]">
             Three-Layer Dynamic Intake Engine
           </h2>
-          <p className="text-xs text-[#7A1C29]">
+          <p className="text-xs text-[#3D5A80]">
             A layered architecture: capture once, cluster by theme, then select flagship tracks.
           </p>
         </div>
@@ -268,7 +268,7 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
           <button
             type="button"
             onClick={clearForm}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-[#D4AF37]/50 text-xs font-bold text-[#400A12] hover:bg-[#F5EAD4] transition cursor-pointer"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-[#D4AF37]/50 text-xs font-bold text-[#081428] hover:bg-[#EDF2F9] transition cursor-pointer"
           >
             <Plus size={13} />
             <span>New Venture (Clear Form)</span>
@@ -276,7 +276,7 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
           <button
             type="button"
             onClick={loadSample}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-[#D4AF37]/50 text-xs font-bold text-[#400A12] hover:bg-[#F5EAD4] transition cursor-pointer"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-[#D4AF37]/50 text-xs font-bold text-[#081428] hover:bg-[#EDF2F9] transition cursor-pointer"
           >
             <Sparkles size={13} className="text-[#B8860B]" />
             <span>Load EcoFly Sample</span>
@@ -381,25 +381,25 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
               context, so show progress toward the 50-word threshold instead of
               only claiming it in help text. */}
           <div className={`rounded-2xl border p-3 sm:p-4 ${
-            detailWords >= 50 ? "border-emerald-300 bg-emerald-50" : "border-[#D4AF37]/50 bg-[#FAF4E8]/70"
+            detailWords >= 50 ? "border-emerald-300 bg-emerald-50" : "border-[#D4AF37]/50 bg-[#FBFCFE]/70"
           }`}>
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <p className={`text-xs font-bold ${detailWords >= 50 ? "text-emerald-800" : "text-[#400A12]"}`}>
+              <p className={`text-xs font-bold ${detailWords >= 50 ? "text-emerald-800" : "text-[#081428]"}`}>
                 {detailWords >= 50
                   ? `Detail level: good — ${detailWords} words captured`
                   : `Detail level: ${detailWords} of 50 words`}
               </p>
-              <span className="font-mono text-[0.65rem] text-[#8C6D58]">
+              <span className="font-mono text-[0.65rem] text-[#6E7B91]">
                 {Math.min(100, Math.round((detailWords / 50) * 100))}%
               </span>
             </div>
-            <div className="mt-2 h-1.5 w-full rounded-full bg-[#4A0A13]/10 overflow-hidden">
+            <div className="mt-2 h-1.5 w-full rounded-full bg-[#0B1B36]/10 overflow-hidden">
               <div
                 className={`h-1.5 rounded-full transition-all ${detailWords >= 50 ? "bg-emerald-500" : "bg-[#B8860B]"}`}
                 style={{ width: `${Math.min(100, (detailWords / 50) * 100)}%` }}
               />
             </div>
-            <p className="mt-1.5 text-[0.65rem] text-[#7A1C29]">
+            <p className="mt-1.5 text-[0.65rem] text-[#3D5A80]">
               {detailWords >= 50
                 ? "Enough written context for a properly grounded analysis. More still helps."
                 : "Write about 50 words or more across these answers and the analysis uses that extra context to produce a more accurate result."}
@@ -415,8 +415,8 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
                   onClick={() => setActiveCluster(tab.id)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition cursor-pointer ${
                     activeCluster === tab.id
-                      ? "bg-[#400A12] text-[#F5D77F] border border-[#D4AF37]/50"
-                      : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                      ? "bg-[#081428] text-[#F5D77F] border border-[#D4AF37]/50"
+                      : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                   }`}
                 >
                   <span className="font-mono text-[0.6rem] uppercase mr-1.5 opacity-70">{tab.cluster}</span>
@@ -449,7 +449,7 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
                     />
                   )}
                   {explanation && (
-                    <p className="text-[0.65rem] text-[#8C6D58] leading-relaxed">{explanation}</p>
+                    <p className="text-[0.65rem] text-[#6E7B91] leading-relaxed">{explanation}</p>
                   )}
                 </div>
               ))}
@@ -479,8 +479,8 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
                     <Icon size={18} className="text-[#B8860B]" />
                     {active && <CheckCircle2 size={16} className="text-emerald-600" />}
                   </div>
-                  <h4 className="font-serif text-sm font-bold text-[#400A12]">{track.name}</h4>
-                  <p className="text-[0.7rem] text-[#7A1C29]">{track.desc}</p>
+                  <h4 className="font-serif text-sm font-bold text-[#081428]">{track.name}</h4>
+                  <p className="text-[0.7rem] text-[#3D5A80]">{track.desc}</p>
                 </button>
               );
             })}
@@ -498,8 +498,8 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
                     onClick={() => toggleCustom(mod)}
                     className={`px-3 py-1.5 rounded-full text-xs font-bold transition cursor-pointer ${
                       active
-                        ? "bg-[#400A12] text-[#F5D77F] border border-[#D4AF37]/50"
-                        : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                        ? "bg-[#081428] text-[#F5D77F] border border-[#D4AF37]/50"
+                        : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                     }`}
                   >
                     {active ? "✓ " : "+ "}{mod}
@@ -515,10 +515,10 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
           {phase === "running" ? (
             <div className="flex items-center gap-3">
               <div className="relative w-9 h-9 flex items-center justify-center shrink-0">
-                <div className="absolute inset-0 rounded-full border-3 border-[#D4AF37]/30 border-t-[#400A12] animate-spin" />
+                <div className="absolute inset-0 rounded-full border-3 border-[#D4AF37]/30 border-t-[#081428] animate-spin" />
                 <Sparkles size={15} className="text-[#B8860B]" />
               </div>
-              <p className="text-xs font-mono text-[#7A1C29] animate-pulse">{progressText}</p>
+              <p className="text-xs font-mono text-[#3D5A80] animate-pulse">{progressText}</p>
             </div>
           ) : (
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -529,7 +529,7 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
                     {doneNote}
                   </motion.p>
                 ) : (
-                  <p className="text-xs text-[#7A1C29]">
+                  <p className="text-xs text-[#3D5A80]">
                     Runs all ten intelligence modules over this intake — real scoring
                     {apiStatus === "online" ? " via the live pipeline" : " (backend offline: local simulation)"} — then
                     opens the report overview, where the .doc download lives.
@@ -538,7 +538,7 @@ export default function IntakeEngine({ apiStatus, onComplete, onSimulated }) {
               </div>
               <button
                 type="submit"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 shrink-0"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 shrink-0"
               >
                 <Play size={14} className="fill-[#F5D77F]" />
                 <span>Generate Report</span>

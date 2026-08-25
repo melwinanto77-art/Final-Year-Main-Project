@@ -657,7 +657,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF4E8] text-[#4A0A13] font-sans selection:bg-[#D4AF37] selection:text-[#4A0A13] flex flex-col relative">
+    <div className="min-h-screen bg-[#FBFCFE] text-[#0B1B36] font-sans selection:bg-[#D4AF37] selection:text-[#0B1B36] flex flex-col relative">
       
       {/* Soft Subtle Ambient Background */}
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,rgba(212,175,55,0.06)_0%,transparent_70%)]" />
@@ -665,18 +665,18 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
       {/* ============================================================ */}
       {/* ELEGANT UNIFIED HEADER & NAVBAR                              */}
       {/* ============================================================ */}
-      <header className="relative z-30 w-full border-b border-[#D4AF37]/30 bg-[#FAF4E8] px-6 py-4 shadow-xs">
+      <header className="relative z-30 w-full border-b border-[#D4AF37]/30 bg-[#FBFCFE] px-6 py-4 shadow-xs">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Brand & Admin Title */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={onGoHome}>
             <OrbitBrand size={30} />
             <div className="flex items-center gap-2">
-              <span className="font-sans text-sm font-semibold tracking-wider text-[#4A0A13]">
+              <span className="font-sans text-sm font-semibold tracking-wider text-[#0B1B36]">
                 VENTURE ORBITAL
               </span>
               <span className="h-4 w-px bg-[#D4AF37]/50" />
-              <span className="text-xs font-medium text-[#7A1C29] bg-[#4A0A13]/5 px-2 py-0.5 rounded-full border border-[#D4AF37]/30">
+              <span className="text-xs font-medium text-[#3D5A80] bg-[#0B1B36]/5 px-2 py-0.5 rounded-full border border-[#D4AF37]/30">
                 Admin Workspace
               </span>
             </div>
@@ -690,7 +690,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search..."
-              className="w-full rounded-full border border-[#D4AF37]/40 bg-[#FAF4E8] pl-9 pr-4 py-1.5 text-xs text-[#4A0A13] placeholder-[#7A1C29]/40 focus:border-[#4A0A13] focus:outline-none transition"
+              className="w-full rounded-full border border-[#D4AF37]/40 bg-[#FBFCFE] pl-9 pr-4 py-1.5 text-xs text-[#0B1B36] placeholder-[#3D5A80]/40 focus:border-[#0B1B36] focus:outline-none transition"
             />
           </div>
 
@@ -698,13 +698,13 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
           <div className="flex items-center gap-3">
             <button
               onClick={onGoHome}
-              className="text-xs font-medium text-[#4A0A13] hover:text-[#B8860B] transition cursor-pointer px-3 py-1.5"
+              className="text-xs font-medium text-[#0B1B36] hover:text-[#B8860B] transition cursor-pointer px-3 py-1.5"
             >
               Home
             </button>
             <button
               onClick={onLogout}
-              className="rounded-full border border-[#D4AF37] bg-[#4A0A13] hover:bg-[#5C0F1A] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer shadow-xs"
+              className="rounded-full border border-[#D4AF37] bg-[#0B1B36] hover:bg-[#16294D] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer shadow-xs"
             >
               Logout
             </button>
@@ -729,14 +729,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 onClick={() => setActiveNav(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium transition whitespace-nowrap cursor-pointer ${
                   isActive
-                    ? "bg-[#4A0A13] text-[#FAF4E8] border border-[#D4AF37] shadow-xs font-semibold"
-                    : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                    ? "bg-[#0B1B36] text-[#FBFCFE] border border-[#D4AF37] shadow-xs font-semibold"
+                    : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                 }`}
               >
                 <Icon size={14} className={isActive ? "text-[#F5D77F]" : "text-[#D4AF37]"} />
                 <span>{tab.label}</span>
                 <span className={`ml-1 px-1.5 py-0.2 rounded-full text-[0.65rem] ${
-                  isActive ? "bg-[#FAF4E8]/20 text-[#FAF4E8]" : "bg-[#4A0A13]/10 text-[#4A0A13]"
+                  isActive ? "bg-[#FBFCFE]/20 text-[#FBFCFE]" : "bg-[#0B1B36]/10 text-[#0B1B36]"
                 }`}>
                   {tab.count}
                 </span>
@@ -754,7 +754,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
         {/* ============================================================ */}
         {/* WELCOME ADMIN CARD BANNER (LIKE CLIENT WORKSPACE)            */}
         {/* ============================================================ */}
-        <div className="relative w-full bg-[#4A0A13] border border-[#D4AF37]/40 rounded-2xl p-6 md:p-7 text-[#FAF4E8] shadow-md overflow-hidden">
+        <div className="relative w-full bg-[#0B1B36] border border-[#D4AF37]/40 rounded-2xl p-6 md:p-7 text-[#FBFCFE] shadow-md overflow-hidden">
           
           {/* Ambient Glow */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -764,19 +764,19 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
           <div className="relative z-10 space-y-3">
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-1.5 bg-[#FAF4E8] text-[#4A0A13] text-xs font-semibold px-3 py-1 rounded-full shadow-xs">
-              <ShieldCheck size={13} className="text-[#800000]" />
+            <div className="inline-flex items-center gap-1.5 bg-[#FBFCFE] text-[#0B1B36] text-xs font-semibold px-3 py-1 rounded-full shadow-xs">
+              <ShieldCheck size={13} className="text-[#2E4E8F]" />
               <span>Admin Workspace Governance</span>
             </div>
 
             {/* Headline */}
-            <h2 className="text-2xl md:text-3xl font-bold text-[#FAF4E8] tracking-tight leading-tight flex items-center gap-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#FBFCFE] tracking-tight leading-tight flex items-center gap-2">
               <span>Welcome back, System Admin!</span>
               <span className="animate-bounce inline-block">👋</span>
             </h2>
 
             {/* Subtitle */}
-            <p className="text-xs md:text-sm text-[#FAF4E8]/85 font-normal max-w-3xl leading-relaxed">
+            <p className="text-xs md:text-sm text-[#FBFCFE]/85 font-normal max-w-3xl leading-relaxed">
               Master control portal to audit all 10 intelligence modules, manage client profiles, monitor project registrations across 5 core domains, track report progress, and resolve client queries.
             </p>
 
@@ -787,8 +787,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 onClick={() => setActiveNav("all-modules")}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition cursor-pointer flex items-center gap-1.5 shadow-xs ${
                   activeNav === "all-modules"
-                    ? "bg-[#FAF4E8] text-[#4A0A13]"
-                    : "bg-[#C89B3C] hover:bg-[#D4AF37] text-[#4A0A13]"
+                    ? "bg-[#FBFCFE] text-[#0B1B36]"
+                    : "bg-[#C89B3C] hover:bg-[#D4AF37] text-[#0B1B36]"
                 }`}
               >
                 <Layers size={14} />
@@ -798,7 +798,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
               <button
                 type="button"
                 onClick={() => setIsAddProfileModalOpen(true)}
-                className="px-4 py-2 rounded-full border border-[#D4AF37] bg-white/10 hover:bg-white/20 text-[#FAF4E8] font-medium text-xs transition cursor-pointer flex items-center gap-1.5"
+                className="px-4 py-2 rounded-full border border-[#D4AF37] bg-white/10 hover:bg-white/20 text-[#FBFCFE] font-medium text-xs transition cursor-pointer flex items-center gap-1.5"
               >
                 <Plus size={14} className="text-[#F5D77F]" />
                 <span>Create Client Profile</span>
@@ -807,7 +807,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
               <button
                 type="button"
                 onClick={() => setIsAddRegistrationModalOpen(true)}
-                className="px-4 py-2 rounded-full border border-[#D4AF37] bg-white/10 hover:bg-white/20 text-[#FAF4E8] font-medium text-xs transition cursor-pointer flex items-center gap-1.5"
+                className="px-4 py-2 rounded-full border border-[#D4AF37] bg-white/10 hover:bg-white/20 text-[#FBFCFE] font-medium text-xs transition cursor-pointer flex items-center gap-1.5"
               >
                 <Folder size={14} className="text-[#F5D77F]" />
                 <span>Register Project (5 Domains)</span>
@@ -817,17 +817,17 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
               <div className="ml-auto hidden xl:flex items-center gap-4 border-l border-[#D4AF37]/30 pl-4 text-xs">
                 <div>
                   <span className="text-[#F5D77F] font-semibold block">10 / 10</span>
-                  <span className="text-[#FAF4E8]/70 text-[0.65rem]">Modules Active</span>
+                  <span className="text-[#FBFCFE]/70 text-[0.65rem]">Modules Active</span>
                 </div>
                 <div className="h-6 w-px bg-[#D4AF37]/30" />
                 <div>
                   <span className="text-[#F5D77F] font-semibold block">5 Domains</span>
-                  <span className="text-[#FAF4E8]/70 text-[0.65rem]">Homepage Tracked</span>
+                  <span className="text-[#FBFCFE]/70 text-[0.65rem]">Homepage Tracked</span>
                 </div>
                 <div className="h-6 w-px bg-[#D4AF37]/30" />
                 <div>
                   <span className="text-[#F5D77F] font-semibold block">Operational</span>
-                  <span className="text-[#FAF4E8]/70 text-[0.65rem]">System Governance</span>
+                  <span className="text-[#FBFCFE]/70 text-[0.65rem]">System Governance</span>
                 </div>
               </div>
             </div>
@@ -844,8 +844,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             {/* Header & Filter */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#D4AF37]/20 pb-4">
               <div>
-                <h1 className="text-xl font-semibold text-[#4A0A13]">All 10 Intelligence Modules</h1>
-                <p className="text-xs text-[#7A1C29]">System intelligence scoring and module governance.</p>
+                <h1 className="text-xl font-semibold text-[#0B1B36]">All 10 Intelligence Modules</h1>
+                <p className="text-xs text-[#3D5A80]">System intelligence scoring and module governance.</p>
               </div>
 
               <div className="flex items-center gap-2 overflow-x-auto py-1">
@@ -855,8 +855,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                     onClick={() => setModuleCategoryFilter(cat)}
                     className={`px-3 py-1 rounded-full text-xs font-medium transition cursor-pointer ${
                       moduleCategoryFilter === cat
-                        ? "bg-[#4A0A13] text-[#F5D77F] border border-[#D4AF37]"
-                        : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                        ? "bg-[#0B1B36] text-[#F5D77F] border border-[#D4AF37]"
+                        : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                     }`}
                   >
                     {cat}
@@ -872,19 +872,19 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 return (
                   <div
                     key={mod.id}
-                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FAF4E8] p-5 shadow-xs hover:border-[#D4AF37] transition flex flex-col justify-between"
+                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FBFCFE] p-5 shadow-xs hover:border-[#D4AF37] transition flex flex-col justify-between"
                   >
                     <div className="space-y-3">
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="h-9 w-9 rounded-xl bg-[#4A0A13] text-[#F5D77F] flex items-center justify-center">
+                          <div className="h-9 w-9 rounded-xl bg-[#0B1B36] text-[#F5D77F] flex items-center justify-center">
                             <IconComp size={18} />
                           </div>
                           <div>
                             <span className="text-[0.68rem] text-[#D4AF37] font-medium uppercase tracking-wide">
                               {mod.code}
                             </span>
-                            <h3 className="font-semibold text-sm text-[#4A0A13]">{mod.name}</h3>
+                            <h3 className="font-semibold text-sm text-[#0B1B36]">{mod.name}</h3>
                           </div>
                         </div>
 
@@ -901,18 +901,18 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         </span>
                       </div>
 
-                      <p className="text-xs text-[#7A1C29] leading-relaxed">{mod.desc}</p>
+                      <p className="text-xs text-[#3D5A80] leading-relaxed">{mod.desc}</p>
                     </div>
 
                     <div className="pt-4 mt-4 border-t border-[#D4AF37]/20 space-y-3">
                       <div className="flex items-center justify-between text-xs">
-                        <span className="text-[#7A1C29]">Score</span>
-                        <span className="font-medium text-[#4A0A13]">{mod.score} / 100</span>
+                        <span className="text-[#3D5A80]">Score</span>
+                        <span className="font-medium text-[#0B1B36]">{mod.score} / 100</span>
                       </div>
 
-                      <div className="w-full bg-[#4A0A13]/10 rounded-full h-1.5 overflow-hidden">
+                      <div className="w-full bg-[#0B1B36]/10 rounded-full h-1.5 overflow-hidden">
                         <div
-                          className="bg-[#4A0A13] h-1.5 rounded-full"
+                          className="bg-[#0B1B36] h-1.5 rounded-full"
                           style={{ width: `${mod.score}%` }}
                         />
                       </div>
@@ -920,14 +920,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                       <div className="flex items-center justify-between gap-2 pt-1">
                         <button
                           onClick={() => setSelectedModule(mod)}
-                          className="flex-1 rounded-full border border-[#D4AF37]/50 bg-[#FAF4E8] hover:bg-[#F5EAD4] py-1 text-xs text-[#4A0A13] font-medium transition cursor-pointer"
+                          className="flex-1 rounded-full border border-[#D4AF37]/50 bg-[#FBFCFE] hover:bg-[#EDF2F9] py-1 text-xs text-[#0B1B36] font-medium transition cursor-pointer"
                         >
                           View Details
                         </button>
                         <select
                           value={mod.status}
                           onChange={(e) => handleUpdateModuleStatus(mod.id, e.target.value)}
-                          className="rounded-full border border-[#D4AF37]/40 bg-[#FAF4E8] px-2 py-1 text-xs text-[#4A0A13] cursor-pointer"
+                          className="rounded-full border border-[#D4AF37]/40 bg-[#FBFCFE] px-2 py-1 text-xs text-[#0B1B36] cursor-pointer"
                         >
                           <option value="COMPLETED">COMPLETED</option>
                           <option value="IN_PROGRESS">IN_PROGRESS</option>
@@ -949,20 +949,20 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#D4AF37]/20 pb-4">
               <div>
-                <h1 className="text-xl font-semibold text-[#4A0A13]">Client Profiles &amp; Forms</h1>
-                <p className="text-xs text-[#7A1C29]">Manage verified profiles and intake records.</p>
+                <h1 className="text-xl font-semibold text-[#0B1B36]">Client Profiles &amp; Forms</h1>
+                <p className="text-xs text-[#3D5A80]">Manage verified profiles and intake records.</p>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-1 rounded-full border border-[#D4AF37]/30 bg-[#FAF4E8] p-1">
+                <div className="flex items-center gap-1 rounded-full border border-[#D4AF37]/30 bg-[#FBFCFE] p-1">
                   {["ALL", "VERIFIED", "ACTIVE", "PENDING"].map((st) => (
                     <button
                       key={st}
                       onClick={() => setProfileStatusFilter(st)}
                       className={`px-3 py-1 rounded-full text-xs font-medium transition cursor-pointer ${
                         profileStatusFilter === st
-                          ? "bg-[#4A0A13] text-[#FAF4E8]"
-                          : "text-[#4A0A13] hover:bg-[#F5EAD4]"
+                          ? "bg-[#0B1B36] text-[#FBFCFE]"
+                          : "text-[#0B1B36] hover:bg-[#EDF2F9]"
                       }`}
                     >
                       {st}
@@ -972,7 +972,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
                 <button
                   onClick={() => setIsAddProfileModalOpen(true)}
-                  className="rounded-full border border-[#D4AF37] bg-[#4A0A13] hover:bg-[#5C0F1A] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer flex items-center gap-1.5"
+                  className="rounded-full border border-[#D4AF37] bg-[#0B1B36] hover:bg-[#16294D] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer flex items-center gap-1.5"
                 >
                   <Plus size={14} />
                   <span>Add Profile</span>
@@ -981,9 +981,9 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             </div>
 
             {/* Profiles Table */}
-            <div className="rounded-2xl border border-[#D4AF37]/30 bg-[#FAF4E8] overflow-hidden shadow-xs">
+            <div className="rounded-2xl border border-[#D4AF37]/30 bg-[#FBFCFE] overflow-hidden shadow-xs">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#4A0A13] text-[#FAF4E8] font-medium text-[0.7rem] uppercase">
+                <thead className="bg-[#0B1B36] text-[#FBFCFE] font-medium text-[0.7rem] uppercase">
                   <tr>
                     <th className="p-3.5">Client</th>
                     <th className="p-3.5">Company</th>
@@ -992,24 +992,24 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                     <th className="p-3.5 text-right">Action</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#D4AF37]/20 text-[#4A0A13]">
+                <tbody className="divide-y divide-[#D4AF37]/20 text-[#0B1B36]">
                   {!filteredProfiles.length && (
                     <tr><td colSpan={5} className="p-8 text-center">
-                      <p className="text-sm font-semibold text-[#4A0A13]">No client profiles yet</p>
-                      <p className="text-xs text-[#7A1C29] mt-1">Profiles are created from the client details attached to submitted reports.</p>
+                      <p className="text-sm font-semibold text-[#0B1B36]">No client profiles yet</p>
+                      <p className="text-xs text-[#3D5A80] mt-1">Profiles are created from the client details attached to submitted reports.</p>
                     </td></tr>
                   )}
                   {filteredProfiles.map((prof) => (
-                    <tr key={prof.id} className="hover:bg-[#F5EAD4]/40 transition">
+                    <tr key={prof.id} className="hover:bg-[#EDF2F9]/40 transition">
                       <td className="p-3.5">
-                        <div className="font-semibold text-sm text-[#4A0A13]">{prof.fullName}</div>
-                        <div className="text-[0.68rem] text-[#7A1C29]">{prof.email}</div>
+                        <div className="font-semibold text-sm text-[#0B1B36]">{prof.fullName}</div>
+                        <div className="text-[0.68rem] text-[#3D5A80]">{prof.email}</div>
                       </td>
                       <td className="p-3.5 font-medium">{prof.company}</td>
-                      <td className="p-3.5 text-[#7A1C29]">{prof.domain}</td>
+                      <td className="p-3.5 text-[#3D5A80]">{prof.domain}</td>
                       <td className="p-3.5">
                         <div className="flex flex-col gap-1 items-start">
-                          <span className="px-2.5 py-0.5 rounded-full text-[0.65rem] border border-[#D4AF37]/40 bg-[#4A0A13]/5 text-[#4A0A13] font-medium">
+                          <span className="px-2.5 py-0.5 rounded-full text-[0.65rem] border border-[#D4AF37]/40 bg-[#0B1B36]/5 text-[#0B1B36] font-medium">
                             {prof.status}
                           </span>
                           {prof.strengthBand && <StrengthBadge band={prof.strengthBand} size="sm" />}
@@ -1018,7 +1018,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                       <td className="p-3.5 text-right">
                         <button
                           onClick={() => setSelectedProfile(prof)}
-                          className="rounded-full border border-[#D4AF37] px-3 py-1 text-xs text-[#4A0A13] hover:bg-[#4A0A13] hover:text-[#FAF4E8] transition cursor-pointer"
+                          className="rounded-full border border-[#D4AF37] px-3 py-1 text-xs text-[#0B1B36] hover:bg-[#0B1B36] hover:text-[#FBFCFE] transition cursor-pointer"
                         >
                           View Profile
                         </button>
@@ -1038,13 +1038,13 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#D4AF37]/20 pb-4">
               <div>
-                <h1 className="text-xl font-semibold text-[#4A0A13]">Project Registrations</h1>
-                <p className="text-xs text-[#7A1C29]">Domain project registrations across 5 core verticals.</p>
+                <h1 className="text-xl font-semibold text-[#0B1B36]">Project Registrations</h1>
+                <p className="text-xs text-[#3D5A80]">Domain project registrations across 5 core verticals.</p>
               </div>
 
               <button
                 onClick={() => setIsAddRegistrationModalOpen(true)}
-                className="rounded-full border border-[#D4AF37] bg-[#4A0A13] hover:bg-[#5C0F1A] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer flex items-center gap-1.5 self-start md:self-auto"
+                className="rounded-full border border-[#D4AF37] bg-[#0B1B36] hover:bg-[#16294D] px-4 py-1.5 text-xs font-medium text-[#F5D77F] transition cursor-pointer flex items-center gap-1.5 self-start md:self-auto"
               >
                 <Plus size={14} />
                 <span>New Registration</span>
@@ -1066,8 +1066,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                   onClick={() => setDomainFilter(dom)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition cursor-pointer whitespace-nowrap ${
                     domainFilter === dom
-                      ? "bg-[#4A0A13] text-[#FAF4E8] border border-[#D4AF37]"
-                      : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                      ? "bg-[#0B1B36] text-[#FBFCFE] border border-[#D4AF37]"
+                      : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                   }`}
                 >
                   {dom === "ALL" ? "All 5 Domains" : dom}
@@ -1078,9 +1078,9 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             {/* Registrations List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {!filteredRegistrations.length && (
-                <div className="rounded-2xl border border-dashed border-[#D4AF37]/50 bg-[#FAF4E8]/60 p-8 text-center">
-                  <p className="text-sm font-semibold text-[#4A0A13]">No project registrations yet</p>
-                  <p className="text-xs text-[#7A1C29] mt-1">Registrations appear here as clients submit ventures through the intake engine.</p>
+                <div className="rounded-2xl border border-dashed border-[#D4AF37]/50 bg-[#FBFCFE]/60 p-8 text-center">
+                  <p className="text-sm font-semibold text-[#0B1B36]">No project registrations yet</p>
+                  <p className="text-xs text-[#3D5A80] mt-1">Registrations appear here as clients submit ventures through the intake engine.</p>
                 </div>
               )}
               {filteredRegistrations.map((reg) => {
@@ -1088,25 +1088,25 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 return (
                   <div
                     key={reg.id}
-                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FAF4E8] p-5 shadow-xs hover:border-[#D4AF37] transition space-y-4"
+                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FBFCFE] p-5 shadow-xs hover:border-[#D4AF37] transition space-y-4"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="h-9 w-9 rounded-xl bg-[#4A0A13] text-[#F5D77F] flex items-center justify-center">
+                        <div className="h-9 w-9 rounded-xl bg-[#0B1B36] text-[#F5D77F] flex items-center justify-center">
                           <DomIcon size={18} />
                         </div>
                         <div>
                           <span className="text-[0.65rem] text-[#D4AF37] font-medium uppercase">{reg.domain}</span>
-                          <h3 className="font-semibold text-sm text-[#4A0A13]">{reg.projectName}</h3>
+                          <h3 className="font-semibold text-sm text-[#0B1B36]">{reg.projectName}</h3>
                         </div>
                       </div>
-                      <span className="px-2.5 py-0.5 rounded-full text-[0.65rem] border border-[#D4AF37]/40 bg-[#4A0A13]/5 text-[#4A0A13] font-medium">
+                      <span className="px-2.5 py-0.5 rounded-full text-[0.65rem] border border-[#D4AF37]/40 bg-[#0B1B36]/5 text-[#0B1B36] font-medium">
                         {reg.status}
                       </span>
                     </div>
 
-                    <div className="text-xs text-[#7A1C29] space-y-1">
-                      <p>Lead: <strong className="text-[#4A0A13]">{reg.clientName}</strong> ({reg.clientEmail})</p>
+                    <div className="text-xs text-[#3D5A80] space-y-1">
+                      <p>Lead: <strong className="text-[#0B1B36]">{reg.clientName}</strong> ({reg.clientEmail})</p>
                       <p className="italic">"{reg.notes}"</p>
                     </div>
 
@@ -1135,7 +1135,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                           }}
                           disabled={processingId === reg.reportId}
                           title="Run the intelligence modules so this report can be reviewed"
-                          className="rounded-full bg-[#4A0A13] hover:bg-[#5C0F1A] text-[#F5D77F] px-3 py-1 text-xs font-medium transition cursor-pointer disabled:opacity-50"
+                          className="rounded-full bg-[#0B1B36] hover:bg-[#16294D] text-[#F5D77F] px-3 py-1 text-xs font-medium transition cursor-pointer disabled:opacity-50"
                         >
                           {processingId === reg.reportId ? "Processing…" : "Process"}
                         </button>
@@ -1146,7 +1146,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                           setReportStatusFilter("ALL");
                         }}
                         title="Open this submission in Report Tracking"
-                        className="rounded-full border border-[#D4AF37] bg-[#FAF4E8] hover:bg-[#F5EAD4] text-[#4A0A13] px-3 py-1 text-xs font-medium transition cursor-pointer"
+                        className="rounded-full border border-[#D4AF37] bg-[#FBFCFE] hover:bg-[#EDF2F9] text-[#0B1B36] px-3 py-1 text-xs font-medium transition cursor-pointer"
                       >
                         Track
                       </button>
@@ -1165,8 +1165,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#D4AF37]/20 pb-4">
               <div>
-                <h1 className="text-xl font-semibold text-[#4A0A13]">Report Progress Tracking</h1>
-                <p className="text-xs text-[#7A1C29]">Monitor report generation status and scores.</p>
+                <h1 className="text-xl font-semibold text-[#0B1B36]">Report Progress Tracking</h1>
+                <p className="text-xs text-[#3D5A80]">Monitor report generation status and scores.</p>
               </div>
 
               <div className="flex items-center gap-1.5 overflow-x-auto">
@@ -1176,8 +1176,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                     onClick={() => setReportStatusFilter(st)}
                     className={`px-3 py-1 rounded-full text-xs font-medium transition cursor-pointer ${
                       reportStatusFilter === st
-                        ? "bg-[#4A0A13] text-[#FAF4E8]"
-                        : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                        ? "bg-[#0B1B36] text-[#FBFCFE]"
+                        : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                     }`}
                   >
                     {st}
@@ -1190,8 +1190,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                     onClick={() => setReportView(id)}
                     className={`px-3 py-1 rounded-full text-xs font-medium transition cursor-pointer ${
                       reportView === id
-                        ? "bg-[#D4AF37] text-[#4A0A13]"
-                        : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                        ? "bg-[#D4AF37] text-[#0B1B36]"
+                        : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                     }`}
                   >
                     {label}
@@ -1203,36 +1203,36 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             {reportView === "list" ? (
               <div className="space-y-4">
                 {!filteredReports.length && (
-                  <div className="rounded-2xl border border-dashed border-[#D4AF37]/50 bg-[#FAF4E8]/60 p-8 text-center">
-                    <p className="text-sm font-semibold text-[#4A0A13]">No client reports yet</p>
-                    <p className="text-xs text-[#7A1C29] mt-1">When a client submits an intake it appears here for review, processing and approval.</p>
+                  <div className="rounded-2xl border border-dashed border-[#D4AF37]/50 bg-[#FBFCFE]/60 p-8 text-center">
+                    <p className="text-sm font-semibold text-[#0B1B36]">No client reports yet</p>
+                    <p className="text-xs text-[#3D5A80] mt-1">When a client submits an intake it appears here for review, processing and approval.</p>
                   </div>
                 )}
                 {filteredReports.map((rep) => (
                   <div
                     key={rep.id}
-                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FAF4E8] p-5 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+                    className="rounded-2xl border border-[#D4AF37]/40 bg-[#FBFCFE] p-5 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
                   >
                     <div className="space-y-1">
                       <span className="text-[0.65rem] text-[#D4AF37] font-medium uppercase">{rep.domain} · {rep.status}</span>
-                      <h3 className="font-semibold text-sm text-[#4A0A13]">{rep.reportName}</h3>
-                      <p className="text-xs text-[#7A1C29]">Auditor: {rep.auditor}</p>
+                      <h3 className="font-semibold text-sm text-[#0B1B36]">{rep.reportName}</h3>
+                      <p className="text-xs text-[#3D5A80]">Auditor: {rep.auditor}</p>
                     </div>
 
                     <div className="w-full md:w-64 space-y-2">
                       <div className="flex justify-between text-xs">
-                        <span className="text-[#7A1C29]">Progress</span>
-                        <span className="font-medium text-[#4A0A13]">{rep.progressPct}%</span>
+                        <span className="text-[#3D5A80]">Progress</span>
+                        <span className="font-medium text-[#0B1B36]">{rep.progressPct}%</span>
                       </div>
-                      <div className="w-full bg-[#4A0A13]/10 rounded-full h-1.5 overflow-hidden">
-                        <div className="bg-[#4A0A13] h-1.5 rounded-full" style={{ width: `${rep.progressPct}%` }} />
+                      <div className="w-full bg-[#0B1B36]/10 rounded-full h-1.5 overflow-hidden">
+                        <div className="bg-[#0B1B36] h-1.5 rounded-full" style={{ width: `${rep.progressPct}%` }} />
                       </div>
 
                       <div className="flex justify-end gap-1 pt-1">
                         <button
                           onClick={() => handleViewReport(rep)}
                           title="View report detail"
-                          className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#4A0A13] flex items-center justify-center cursor-pointer hover:bg-[#F5EAD4]"
+                          className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#0B1B36] flex items-center justify-center cursor-pointer hover:bg-[#EDF2F9]"
                         >
                           <Eye size={12} />
                         </button>
@@ -1241,7 +1241,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                             onClick={() => handleProcessReport(rep)}
                             disabled={processingId === rep.id}
                             title="Run all modules and advance to REVIEWING"
-                            className="h-6 px-2 rounded-full bg-[#4A0A13] text-[#F5D77F] text-[0.65rem] font-semibold flex items-center gap-1 cursor-pointer hover:bg-[#5C0F1A] disabled:opacity-50"
+                            className="h-6 px-2 rounded-full bg-[#0B1B36] text-[#F5D77F] text-[0.65rem] font-semibold flex items-center gap-1 cursor-pointer hover:bg-[#16294D] disabled:opacity-50"
                           >
                             <Sparkles size={10} />
                             {processingId === rep.id ? "…" : "Process"}
@@ -1251,7 +1251,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                           <button
                             onClick={() => openReviewModal(rep.id)}
                             title="Review report"
-                            className="h-6 w-6 rounded-full bg-[#D4AF37] text-[#4A0A13] flex items-center justify-center cursor-pointer hover:bg-[#F5D77F]"
+                            className="h-6 w-6 rounded-full bg-[#D4AF37] text-[#0B1B36] flex items-center justify-center cursor-pointer hover:bg-[#F5D77F]"
                           >
                             <Edit size={12} />
                           </button>
@@ -1264,7 +1264,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                                 .catch((err) => alert(err.message || 'Could not download the report.'))
                             }
                             title="Download the published .docx"
-                            className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#4A0A13] flex items-center justify-center cursor-pointer hover:bg-[#F5EAD4]"
+                            className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#0B1B36] flex items-center justify-center cursor-pointer hover:bg-[#EDF2F9]"
                           >
                             <Download size={12} />
                           </button>
@@ -1272,7 +1272,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         <button
                           onClick={() => handleDeleteReport(rep)}
                           title="Delete report"
-                          className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#7A1C29] flex items-center justify-center cursor-pointer hover:bg-[#F5EAD4]"
+                          className="h-6 w-6 rounded-full border border-[#D4AF37]/40 text-[#3D5A80] flex items-center justify-center cursor-pointer hover:bg-[#EDF2F9]"
                         >
                           <Trash2 size={12} />
                         </button>
@@ -1284,7 +1284,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         </button>
                         <button
                           onClick={() => handleUpdateReportProgress(rep.id, 20)}
-                          className="h-6 w-6 rounded-full bg-[#4A0A13] text-[#FAF4E8] text-xs font-bold flex items-center justify-center cursor-pointer"
+                          className="h-6 w-6 rounded-full bg-[#0B1B36] text-[#FBFCFE] text-xs font-bold flex items-center justify-center cursor-pointer"
                         >
                           +
                         </button>
@@ -1300,23 +1300,23 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                   const adminStatus = SERVER_STATUS_TO_ADMIN[col.status] || col.status;
                   const items = filteredReports.filter((r) => r.status === adminStatus);
                   return (
-                    <div key={col.status} className="rounded-2xl border border-[#D4AF37]/40 bg-[#FAF4E8]/60 p-3 space-y-3 min-h-40">
+                    <div key={col.status} className="rounded-2xl border border-[#D4AF37]/40 bg-[#FBFCFE]/60 p-3 space-y-3 min-h-40">
                       <div className="flex items-center justify-between px-1">
                         <span className="text-[0.65rem] font-bold uppercase tracking-wider text-[#B8860B]">{adminStatus}</span>
-                        <span className="text-[0.65rem] font-mono text-[#7A1C29]">{items.length}</span>
+                        <span className="text-[0.65rem] font-mono text-[#3D5A80]">{items.length}</span>
                       </div>
                       {items.map((rep) => (
-                        <div key={rep.id} className="rounded-xl border border-[#D4AF37]/40 bg-[#FAF4E8] p-3 shadow-xs space-y-2">
+                        <div key={rep.id} className="rounded-xl border border-[#D4AF37]/40 bg-[#FBFCFE] p-3 shadow-xs space-y-2">
                           <span className="text-[0.6rem] text-[#D4AF37] font-medium uppercase">{rep.domain}</span>
-                          <h4 className="font-semibold text-xs text-[#4A0A13] leading-snug">{rep.reportName}</h4>
-                          <div className="w-full bg-[#4A0A13]/10 rounded-full h-1 overflow-hidden">
-                            <div className="bg-[#4A0A13] h-1 rounded-full" style={{ width: `${rep.progressPct}%` }} />
+                          <h4 className="font-semibold text-xs text-[#0B1B36] leading-snug">{rep.reportName}</h4>
+                          <div className="w-full bg-[#0B1B36]/10 rounded-full h-1 overflow-hidden">
+                            <div className="bg-[#0B1B36] h-1 rounded-full" style={{ width: `${rep.progressPct}%` }} />
                           </div>
                           <div className="flex items-center justify-between pt-0.5">
-                            <span className="font-mono text-[0.65rem] font-bold text-[#4A0A13]">{rep.score}%</span>
+                            <span className="font-mono text-[0.65rem] font-bold text-[#0B1B36]">{rep.score}%</span>
                             <div className="flex gap-1">
                               <button onClick={() => handleViewReport(rep)} title="View"
-                                className="h-5 w-5 rounded-full border border-[#D4AF37]/40 text-[#4A0A13] flex items-center justify-center cursor-pointer hover:bg-[#F5EAD4]">
+                                className="h-5 w-5 rounded-full border border-[#D4AF37]/40 text-[#0B1B36] flex items-center justify-center cursor-pointer hover:bg-[#EDF2F9]">
                                 <Eye size={10} />
                               </button>
                               {rep.fromApi && ["RECEIVED", "PENDING", "PROCESSED"].includes(rep.serverStatus) && (
@@ -1324,7 +1324,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                                   onClick={() => handleProcessReport(rep)}
                                   disabled={processingId === rep.id}
                                   title="Run modules & advance to REVIEWING"
-                                  className="h-5 px-1.5 rounded-full bg-[#4A0A13] text-[#F5D77F] text-[0.55rem] font-bold flex items-center gap-0.5 cursor-pointer hover:bg-[#5C0F1A] disabled:opacity-50"
+                                  className="h-5 px-1.5 rounded-full bg-[#0B1B36] text-[#F5D77F] text-[0.55rem] font-bold flex items-center gap-0.5 cursor-pointer hover:bg-[#16294D] disabled:opacity-50"
                                 >
                                   <Sparkles size={8} />
                                   {processingId === rep.id ? "…" : "Run"}
@@ -1332,12 +1332,12 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                               )}
                               {(adminStatus === "REVIEWING" || rep.serverStatus === "REVIEWING") && (
                                 <button onClick={() => openReviewModal(rep.id)} title="Review"
-                                  className="h-5 w-5 rounded-full bg-[#D4AF37] text-[#4A0A13] flex items-center justify-center cursor-pointer hover:bg-[#F5D77F]">
+                                  className="h-5 w-5 rounded-full bg-[#D4AF37] text-[#0B1B36] flex items-center justify-center cursor-pointer hover:bg-[#F5D77F]">
                                   <Edit size={10} />
                                 </button>
                               )}
                               <button onClick={() => handleDeleteReport(rep)} title="Delete"
-                                className="h-5 w-5 rounded-full border border-[#D4AF37]/40 text-[#7A1C29] flex items-center justify-center cursor-pointer hover:bg-[#F5EAD4]">
+                                className="h-5 w-5 rounded-full border border-[#D4AF37]/40 text-[#3D5A80] flex items-center justify-center cursor-pointer hover:bg-[#EDF2F9]">
                                 <Trash2 size={10} />
                               </button>
                               <button onClick={() => handleUpdateReportProgress(rep.id, -20)}
@@ -1345,7 +1345,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                                 -
                               </button>
                               <button onClick={() => handleUpdateReportProgress(rep.id, 20)}
-                                className="h-5 w-5 rounded-full bg-[#4A0A13] text-[#FAF4E8] text-[0.65rem] font-bold flex items-center justify-center cursor-pointer">
+                                className="h-5 w-5 rounded-full bg-[#0B1B36] text-[#FBFCFE] text-[0.65rem] font-bold flex items-center justify-center cursor-pointer">
                                 +
                               </button>
                             </div>
@@ -1353,7 +1353,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         </div>
                       ))}
                       {!items.length && (
-                        <p className="text-center text-[0.65rem] text-[#8C6D58] py-4">No reports</p>
+                        <p className="text-center text-[0.65rem] text-[#6E7B91] py-4">No reports</p>
                       )}
                     </div>
                   );
@@ -1377,8 +1377,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
         {activeNav === "client-documents" && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
             <div className="border-b border-[#D4AF37]/20 pb-4">
-              <h1 className="text-lg sm:text-xl font-semibold text-[#4A0A13]">Client Documents</h1>
-              <p className="text-xs text-[#7A1C29]">
+              <h1 className="text-lg sm:text-xl font-semibold text-[#0B1B36]">Client Documents</h1>
+              <p className="text-xs text-[#3D5A80]">
                 Files clients uploaded in support of their submissions. Pick a report to see what
                 was attached to it, or leave it on All to see everything.
               </p>
@@ -1395,14 +1395,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 id="admin-doc-report"
                 value={adminDocReportId}
                 onChange={(e) => setAdminDocReportId(e.target.value)}
-                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] focus:border-[#4A0A13] focus:outline-none cursor-pointer"
+                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] focus:border-[#0B1B36] focus:outline-none cursor-pointer"
               >
                 <option value="">All uploaded documents</option>
                 {reports.filter((r) => r.fromApi).map((r) => (
                   <option key={r.id} value={r.id}>{r.reportName}</option>
                 ))}
               </select>
-              <p className="text-[0.65rem] text-[#8C6D58]">
+              <p className="text-[0.65rem] text-[#6E7B91]">
                 Documents are read-only here - the client owns them.
               </p>
             </div>
@@ -1422,21 +1422,21 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
       {/* Report Detail Modal — module scores, pipeline state, history */}
       {reportDetail && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <div className="w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-4 text-xs text-[#4A0A13]">
+          <div className="w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-4 text-xs text-[#0B1B36]">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <span className="text-[0.65rem] text-[#D4AF37] font-medium uppercase">
                   {reportDetail.row.domain} · {reportDetail.row.status}
                 </span>
-                <h2 className="text-lg font-semibold text-[#4A0A13]">{reportDetail.row.reportName}</h2>
-                <p className="text-[#7A1C29]">Auditor: {reportDetail.row.auditor}</p>
+                <h2 className="text-lg font-semibold text-[#0B1B36]">{reportDetail.row.reportName}</h2>
+                <p className="text-[#3D5A80]">Auditor: {reportDetail.row.auditor}</p>
               </div>
               <div className="flex items-center gap-2">
                 {reportDetail.detail && (
                   <button
                     onClick={() => downloadReportDoc(reportDetail.detail.report, reportDetail.detail.moduleResults || {})}
                     title="Download strategy report (.doc)"
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D4AF37]/50 text-[0.68rem] font-bold text-[#4A0A13] hover:bg-[#F5EAD4] cursor-pointer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D4AF37]/50 text-[0.68rem] font-bold text-[#0B1B36] hover:bg-[#EDF2F9] cursor-pointer"
                   >
                     <Download size={12} />
                     <span>.doc</span>
@@ -1444,7 +1444,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 )}
                 <button
                   onClick={() => setReportDetail(null)}
-                  className="p-1.5 rounded-full hover:bg-[#F5EAD4] text-[#8C6D58] cursor-pointer"
+                  className="p-1.5 rounded-full hover:bg-[#EDF2F9] text-[#6E7B91] cursor-pointer"
                 >
                   <X size={16} />
                 </button>
@@ -1452,10 +1452,10 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             </div>
 
             {reportDetail.loading && (
-              <p className="text-[#7A1C29] animate-pulse py-6 text-center">Loading report detail from the pipeline…</p>
+              <p className="text-[#3D5A80] animate-pulse py-6 text-center">Loading report detail from the pipeline…</p>
             )}
             {reportDetail.error && (
-              <p className="text-[#7A1C29] py-2">Could not load detail: {reportDetail.error}</p>
+              <p className="text-[#3D5A80] py-2">Could not load detail: {reportDetail.error}</p>
             )}
 
             {!reportDetail.loading && reportDetail.detail && (() => {
@@ -1478,7 +1478,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                       <p className="font-mono">{report.status} · {pipeline?.progressPercent ?? 0}%</p>
                     </div>
                     {decision?.headline && (
-                      <p className="w-full text-[#7A1C29] italic">"{decision.headline}"</p>
+                      <p className="w-full text-[#3D5A80] italic">"{decision.headline}"</p>
                     )}
                   </div>
 
@@ -1494,7 +1494,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                       ))}
                     </div>
                     {pipeline?.missingModules?.length > 0 && (
-                      <p className="text-[#7A1C29] mt-2">
+                      <p className="text-[#3D5A80] mt-2">
                         Missing for this stage: {pipeline.missingModules.join(", ")}
                       </p>
                     )}
@@ -1508,8 +1508,8 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         {report.transitions.map((t, i) => (
                           <div key={i} className="flex items-center gap-2 text-[0.7rem]">
                             <span className="font-mono text-[#B8860B]">{t.from || "•"} → {t.to}</span>
-                            <span className="text-[#8C6D58]">{t.note}</span>
-                            {t.at && <span className="ml-auto text-[#8C6D58]">{String(t.at).slice(0, 10)}</span>}
+                            <span className="text-[#6E7B91]">{t.note}</span>
+                            {t.at && <span className="ml-auto text-[#6E7B91]">{String(t.at).slice(0, 10)}</span>}
                           </div>
                         ))}
                       </div>
@@ -1520,7 +1520,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
             })()}
 
             {!reportDetail.loading && !reportDetail.detail && !reportDetail.error && (
-              <p className="text-[#7A1C29] py-2">
+              <p className="text-[#3D5A80] py-2">
                 This is a local sample report — score {reportDetail.row.score}%, progress {reportDetail.row.progressPct}%.
                 Generate a report through the pipeline to see per-module results and history here.
               </p>
@@ -1532,11 +1532,11 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
       {/* Simple Modals */}
       {selectedModule && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-3">
-            <h2 className="text-lg font-semibold text-[#4A0A13]">{selectedModule.name}</h2>
-            <p className="text-xs text-[#7A1C29]">{selectedModule.desc}</p>
+          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-3">
+            <h2 className="text-lg font-semibold text-[#0B1B36]">{selectedModule.name}</h2>
+            <p className="text-xs text-[#3D5A80]">{selectedModule.desc}</p>
             <div className="text-right pt-2">
-              <button onClick={() => setSelectedModule(null)} className="rounded-full bg-[#4A0A13] text-[#FAF4E8] px-4 py-1 text-xs font-medium">Close</button>
+              <button onClick={() => setSelectedModule(null)} className="rounded-full bg-[#0B1B36] text-[#FBFCFE] px-4 py-1 text-xs font-medium">Close</button>
             </div>
           </div>
         </div>
@@ -1544,13 +1544,13 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
       {selectedProfile && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-3 text-xs text-[#4A0A13]">
+          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-3 text-xs text-[#0B1B36]">
             <h2 className="text-lg font-semibold">{selectedProfile.fullName}</h2>
             <p><strong>Company:</strong> {selectedProfile.company}</p>
             <p><strong>Email:</strong> {selectedProfile.email}</p>
             <p><strong>Domain:</strong> {selectedProfile.domain}</p>
             <div className="text-right pt-2">
-              <button onClick={() => setSelectedProfile(null)} className="rounded-full bg-[#4A0A13] text-[#FAF4E8] px-4 py-1 text-xs font-medium">Close</button>
+              <button onClick={() => setSelectedProfile(null)} className="rounded-full bg-[#0B1B36] text-[#FBFCFE] px-4 py-1 text-xs font-medium">Close</button>
             </div>
           </div>
         </div>
@@ -1558,13 +1558,13 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
       {selectedTicket && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-3 text-xs">
-            <h2 className="text-base font-semibold text-[#4A0A13]">{selectedTicket.title}</h2>
+          <div className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-3 text-xs">
+            <h2 className="text-base font-semibold text-[#0B1B36]">{selectedTicket.title}</h2>
             <textarea
               id="simpleNoteInput"
               rows={3}
               defaultValue={selectedTicket.investigationNote}
-              className="w-full rounded-xl border border-[#D4AF37]/50 p-2.5 bg-[#FAF4E8] text-xs text-[#4A0A13]"
+              className="w-full rounded-xl border border-[#D4AF37]/50 p-2.5 bg-[#FBFCFE] text-xs text-[#0B1B36]"
             />
             <div className="flex justify-end gap-2 pt-1">
               <button onClick={() => setSelectedTicket(null)} className="px-3 py-1 text-xs">Cancel</button>
@@ -1574,7 +1574,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                   handleUpdateTicketStatus(selectedTicket.id, "RESOLVED", val);
                   setSelectedTicket(null);
                 }}
-                className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-4 py-1 text-xs font-medium"
+                className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-4 py-1 text-xs font-medium"
               >
                 Save
               </button>
@@ -1585,14 +1585,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
       {isAddProfileModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <form onSubmit={handleCreateProfileSubmit} className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-3 text-xs">
-            <h2 className="text-base font-semibold text-[#4A0A13]">Add Client Profile</h2>
-            <input required type="text" placeholder="Full Name" value={newProfile.fullName} onChange={(e) => setNewProfile({ ...newProfile, fullName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
-            <input required type="email" placeholder="Email" value={newProfile.email} onChange={(e) => setNewProfile({ ...newProfile, email: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
-            <input required type="text" placeholder="Company" value={newProfile.company} onChange={(e) => setNewProfile({ ...newProfile, company: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
+          <form onSubmit={handleCreateProfileSubmit} className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-3 text-xs">
+            <h2 className="text-base font-semibold text-[#0B1B36]">Add Client Profile</h2>
+            <input required type="text" placeholder="Full Name" value={newProfile.fullName} onChange={(e) => setNewProfile({ ...newProfile, fullName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
+            <input required type="email" placeholder="Email" value={newProfile.email} onChange={(e) => setNewProfile({ ...newProfile, email: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
+            <input required type="text" placeholder="Company" value={newProfile.company} onChange={(e) => setNewProfile({ ...newProfile, company: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
             <div className="flex justify-end gap-2 pt-2">
               <button type="button" onClick={() => setIsAddProfileModalOpen(false)} className="px-3 py-1">Cancel</button>
-              <button type="submit" className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-4 py-1 font-medium">Save</button>
+              <button type="submit" className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-4 py-1 font-medium">Save</button>
             </div>
           </form>
         </div>
@@ -1600,21 +1600,21 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
       {isAddRegistrationModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
-          <form onSubmit={handleCreateRegistrationSubmit} className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] p-5 shadow-xl space-y-3 text-xs">
-            <h2 className="text-base font-semibold text-[#4A0A13]">New Project Registration</h2>
-            <input required type="text" placeholder="Project Name" value={newReg.projectName} onChange={(e) => setNewReg({ ...newReg, projectName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
-            <select value={newReg.domain} onChange={(e) => setNewReg({ ...newReg, domain: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]">
+          <form onSubmit={handleCreateRegistrationSubmit} className="w-full max-w-md rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] p-5 shadow-xl space-y-3 text-xs">
+            <h2 className="text-base font-semibold text-[#0B1B36]">New Project Registration</h2>
+            <input required type="text" placeholder="Project Name" value={newReg.projectName} onChange={(e) => setNewReg({ ...newReg, projectName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
+            <select value={newReg.domain} onChange={(e) => setNewReg({ ...newReg, domain: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]">
               <option value="Startups">Startups</option>
               <option value="MSMEs">MSMEs</option>
               <option value="Industries">Industries</option>
               <option value="Educational Institutions">Educational Institutions</option>
               <option value="Students & Scholars">Students & Scholars</option>
             </select>
-            <input required type="text" placeholder="Client Name" value={newReg.clientName} onChange={(e) => setNewReg({ ...newReg, clientName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
-            <input required type="email" placeholder="Client Email" value={newReg.clientEmail} onChange={(e) => setNewReg({ ...newReg, clientEmail: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FAF4E8]" />
+            <input required type="text" placeholder="Client Name" value={newReg.clientName} onChange={(e) => setNewReg({ ...newReg, clientName: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
+            <input required type="email" placeholder="Client Email" value={newReg.clientEmail} onChange={(e) => setNewReg({ ...newReg, clientEmail: e.target.value })} className="w-full rounded-xl border border-[#D4AF37]/40 p-2 bg-[#FBFCFE]" />
             <div className="flex justify-end gap-2 pt-2">
               <button type="button" onClick={() => setIsAddRegistrationModalOpen(false)} className="px-3 py-1">Cancel</button>
-              <button type="submit" className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-4 py-1 font-medium">Save</button>
+              <button type="submit" className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-4 py-1 font-medium">Save</button>
             </div>
           </form>
         </div>
@@ -1623,22 +1623,22 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
       {/* Report Review Modal */}
       {reviewReportId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
-          <div className="w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[#D4AF37] bg-[#FAF4E8] shadow-xl text-xs text-[#4A0A13]">
+          <div className="w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[#D4AF37] bg-[#FBFCFE] shadow-xl text-xs text-[#0B1B36]">
             {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-[#D4AF37]/30 sticky top-0 bg-[#FAF4E8] z-10">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-[#D4AF37]/30 sticky top-0 bg-[#FBFCFE] z-10">
               <div>
-                <h2 className="text-base font-semibold text-[#4A0A13]">Report Review</h2>
-                <p className="text-[0.65rem] text-[#7A1C29]">ID: {reviewReportId}</p>
+                <h2 className="text-base font-semibold text-[#0B1B36]">Report Review</h2>
+                <p className="text-[0.65rem] text-[#3D5A80]">ID: {reviewReportId}</p>
               </div>
               <button onClick={() => setReviewReportId(null)}
-                className="p-1.5 rounded-full hover:bg-[#F5EAD4] text-[#8C6D58] cursor-pointer">
+                className="p-1.5 rounded-full hover:bg-[#EDF2F9] text-[#6E7B91] cursor-pointer">
                 <X size={16} />
               </button>
             </div>
 
             {/* Loading state */}
             {reviewLoading && (
-              <div className="p-8 text-center text-[#7A1C29] animate-pulse">Loading report data…</div>
+              <div className="p-8 text-center text-[#3D5A80] animate-pulse">Loading report data…</div>
             )}
 
             {/* Error state */}
@@ -1656,15 +1656,15 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                 <div className="space-y-0">
                   {/* Top: Intake Data */}
                   <div className="p-5 space-y-3">
-                    <h3 className="font-semibold text-sm text-[#4A0A13] mb-2">Intake Data from User</h3>
+                    <h3 className="font-semibold text-sm text-[#0B1B36] mb-2">Intake Data from User</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {/* Company Info */}
                       <div className="rounded-xl border border-[#D4AF37]/40 bg-white p-3 space-y-2">
                         <span className="text-[0.65rem] uppercase text-[#B8860B] font-bold">Company</span>
-                        <p className="text-sm font-medium text-[#4A0A13]">{report.name}</p>
-                        <p className="text-xs text-[#7A1C29]">{report.client?.company || report.name}</p>
-                        <p className="text-xs text-[#7A1C29]">{report.client?.industry || report.vertical}</p>
-                        <p className="text-xs text-[#7A1C29]">Email: {report.client?.email || '—'}</p>
+                        <p className="text-sm font-medium text-[#0B1B36]">{report.name}</p>
+                        <p className="text-xs text-[#3D5A80]">{report.client?.company || report.name}</p>
+                        <p className="text-xs text-[#3D5A80]">{report.client?.industry || report.vertical}</p>
+                        <p className="text-xs text-[#3D5A80]">Email: {report.client?.email || '—'}</p>
                       </div>
 
                       {/* Cluster Data */}
@@ -1673,11 +1673,11 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                           <span className="text-[0.65rem] uppercase text-[#B8860B] font-bold">{cluster}</span>
                           {data && typeof data === 'object' ? Object.entries(data).map(([key, val]) => (
                             <div key={key}>
-                              <span className="text-[0.6rem] text-[#8C6D58] uppercase">{key}</span>
-                              <p className="text-xs text-[#4A0A13]">{val || '—'}</p>
+                              <span className="text-[0.6rem] text-[#6E7B91] uppercase">{key}</span>
+                              <p className="text-xs text-[#0B1B36]">{val || '—'}</p>
                             </div>
                           )) : (
-                            <p className="text-xs text-[#7A1C29]">{String(data) || '—'}</p>
+                            <p className="text-xs text-[#3D5A80]">{String(data) || '—'}</p>
                           )}
                         </div>
                       ))}
@@ -1703,21 +1703,21 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                   />
 
                   {/* Middle: Orbitaa AI assist */}
-                  <div className="p-5 border-t border-[#D4AF37]/30 space-y-3 bg-[#FBF7ED]">
+                  <div className="p-5 border-t border-[#D4AF37]/30 space-y-3 bg-[#F3F7FC]">
                     <div className="flex items-center justify-between flex-wrap gap-2">
                       <div>
-                        <h3 className="font-semibold text-sm text-[#4A0A13] flex items-center gap-1.5">
+                        <h3 className="font-semibold text-sm text-[#0B1B36] flex items-center gap-1.5">
                           <Sparkles size={14} className="text-[#D4AF37]" />
                           Ask Orbitaa
                         </h3>
-                        <p className="text-[0.65rem] text-[#7A1C29]">
+                        <p className="text-[0.65rem] text-[#3D5A80]">
                           AI second-opinion on the module scores — flags anything over- or under-scored and gives an overall recommendation.
                         </p>
                       </div>
                       <button
                         onClick={runOrbitaAnalysis}
                         disabled={orbitaLoading}
-                        className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-4 py-1.5 text-[0.7rem] font-semibold flex items-center gap-1.5 cursor-pointer hover:bg-[#5C0F1A] disabled:opacity-50"
+                        className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-4 py-1.5 text-[0.7rem] font-semibold flex items-center gap-1.5 cursor-pointer hover:bg-[#16294D] disabled:opacity-50"
                       >
                         <Sparkles size={12} />
                         {orbitaLoading ? "Orbitaa is analysing…" : orbitaResult ? "Re-run Orbitaa" : "Run Orbitaa Analysis"}
@@ -1752,13 +1752,13 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                               {overallLabel}
                             </span>
                             {a.live === false && (
-                              <span className="inline-block px-2 py-1 rounded-full border border-[#D4AF37]/40 bg-[#FAF4E8] text-[0.6rem] text-[#7A1C29]">
+                              <span className="inline-block px-2 py-1 rounded-full border border-[#D4AF37]/40 bg-[#FBFCFE] text-[0.6rem] text-[#3D5A80]">
                                 heuristic (no live model)
                               </span>
                             )}
                           </div>
 
-                          <p className="text-xs text-[#4A0A13] leading-relaxed whitespace-pre-wrap">{a.summary}</p>
+                          <p className="text-xs text-[#0B1B36] leading-relaxed whitespace-pre-wrap">{a.summary}</p>
 
                           {(a.keyStrengths?.length || a.keyConcerns?.length) ? (
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1793,14 +1793,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                                     : "bg-emerald-100 text-emerald-800";
                                   return (
                                     <div key={m.moduleKey} className="flex items-start gap-2 text-[0.7rem]">
-                                      <span className="font-mono text-[0.65rem] text-[#7A1C29] min-w-[10rem] shrink-0">{m.moduleKey}</span>
-                                      <span className="font-mono text-[0.65rem] text-[#4A0A13] min-w-[5.5rem] shrink-0">
+                                      <span className="font-mono text-[0.65rem] text-[#3D5A80] min-w-[10rem] shrink-0">{m.moduleKey}</span>
+                                      <span className="font-mono text-[0.65rem] text-[#0B1B36] min-w-[5.5rem] shrink-0">
                                         pipeline {Math.round(m.pipelineScore ?? 0)} → orbitaa {Math.round(m.orbitaScore ?? 0)}
                                       </span>
                                       <span className={`px-1.5 py-0.5 rounded text-[0.6rem] font-semibold uppercase shrink-0 ${badge}`}>
                                         {m.assessment.replace("_", " ")}
                                       </span>
-                                      <span className="text-[0.7rem] text-[#4A0A13] leading-snug">{m.reasoning}</span>
+                                      <span className="text-[0.7rem] text-[#0B1B36] leading-snug">{m.reasoning}</span>
                                     </div>
                                   );
                                 })}
@@ -1831,7 +1831,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                                 risks: f.risks ? f.risks : risks,
                               }));
                             }}
-                            className="text-[0.7rem] text-[#4A0A13] underline hover:text-[#7A1C29] cursor-pointer"
+                            className="text-[0.7rem] text-[#0B1B36] underline hover:text-[#3D5A80] cursor-pointer"
                           >
                             ↓ Prefill my review form with Orbitaa's findings
                           </button>
@@ -1842,11 +1842,11 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
                   {/* Bottom: Admin Manual Review Form */}
                   <div className="p-5 border-t border-[#D4AF37]/30 space-y-4">
-                    <h3 className="font-semibold text-sm text-[#4A0A13]">Your Analysis & Score</h3>
+                    <h3 className="font-semibold text-sm text-[#0B1B36]">Your Analysis & Score</h3>
 
                     {/* Score */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Score (0-100)</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Score (0-100)</label>
                       <input
                         type="number"
                         min={0}
@@ -1854,17 +1854,17 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                         value={reviewForm.adminScore}
                         onChange={(e) => setReviewForm({ ...reviewForm, adminScore: e.target.value })}
                         placeholder="Enter score"
-                        className="w-full max-w-xs rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full max-w-xs rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       />
                     </div>
 
                     {/* Verdict */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Verdict</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Verdict</label>
                       <select
                         value={reviewForm.verdict || ""}
                         onChange={(e) => setReviewForm({ ...reviewForm, verdict: e.target.value })}
-                        className="w-full max-w-xs rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full max-w-xs rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       >
                         <option value="">Select verdict</option>
                         <option value="GO">GO — Proceed with venture</option>
@@ -1876,49 +1876,49 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
 
                     {/* Analysis */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Your Analysis</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Your Analysis</label>
                       <textarea
                         rows={4}
                         value={reviewForm.analysis || ""}
                         onChange={(e) => setReviewForm({ ...reviewForm, analysis: e.target.value })}
                         placeholder="Write your analysis of this venture based on the intake data..."
-                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       />
                     </div>
 
                     {/* Strengths */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Strengths</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Strengths</label>
                       <textarea
                         rows={2}
                         value={reviewForm.strengths || ""}
                         onChange={(e) => setReviewForm({ ...reviewForm, strengths: e.target.value })}
                         placeholder="Key strengths (one per line)"
-                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       />
                     </div>
 
                     {/* Risks */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Risks & Concerns</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Risks & Concerns</label>
                       <textarea
                         rows={2}
                         value={reviewForm.risks || ""}
                         onChange={(e) => setReviewForm({ ...reviewForm, risks: e.target.value })}
                         placeholder="Key risks (one per line)"
-                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       />
                     </div>
 
                     {/* Approval Note */}
                     <div className="space-y-1">
-                      <label className="text-[0.7rem] font-medium text-[#7A1C29]">Note to User</label>
+                      <label className="text-[0.7rem] font-medium text-[#3D5A80]">Note to User</label>
                       <textarea
                         rows={2}
                         value={reviewForm.approvalNote}
                         onChange={(e) => setReviewForm({ ...reviewForm, approvalNote: e.target.value })}
                         placeholder="Add a note for the user..."
-                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FAF4E8] px-3 py-2 text-xs text-[#4A0A13]"
+                        className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#FBFCFE] px-3 py-2 text-xs text-[#0B1B36]"
                       />
                     </div>
 
@@ -1931,7 +1931,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                             .catch((err) => alert(err.message || 'Could not download the report.'))
                         }
                         title="Download the current .docx (uses whatever is saved on the server so far)"
-                        className="rounded-full border border-[#D4AF37]/50 bg-[#FAF4E8] hover:bg-[#F5EAD4] px-5 py-2 text-xs font-medium text-[#4A0A13] transition cursor-pointer inline-flex items-center gap-1.5"
+                        className="rounded-full border border-[#D4AF37]/50 bg-[#FBFCFE] hover:bg-[#EDF2F9] px-5 py-2 text-xs font-medium text-[#0B1B36] transition cursor-pointer inline-flex items-center gap-1.5"
                       >
                         <Download size={12} />
                         Download .docx
@@ -1939,14 +1939,14 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
                       <button
                         onClick={() => submitReview("sendBack")}
                         disabled={reviewSubmitting}
-                        className="rounded-full border border-[#D4AF37]/50 bg-[#FAF4E8] hover:bg-[#F5EAD4] px-5 py-2 text-xs font-medium text-[#4A0A13] transition cursor-pointer disabled:opacity-50"
+                        className="rounded-full border border-[#D4AF37]/50 bg-[#FBFCFE] hover:bg-[#EDF2F9] px-5 py-2 text-xs font-medium text-[#0B1B36] transition cursor-pointer disabled:opacity-50"
                       >
                         Send Back
                       </button>
                       <button
                         onClick={() => submitReview("approve")}
                         disabled={reviewSubmitting}
-                        className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-5 py-2 text-xs font-semibold transition cursor-pointer hover:bg-[#5C0F1A] disabled:opacity-50 flex items-center gap-1.5"
+                        className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-5 py-2 text-xs font-semibold transition cursor-pointer hover:bg-[#16294D] disabled:opacity-50 flex items-center gap-1.5"
                       >
                         <CheckCircle2 size={14} />
                         {reviewSubmitting ? "Submitting…" : "Approve & Publish"}
@@ -1960,7 +1960,7 @@ export default function AdminDashboard({ onLogout, onGoHome }) {
         </div>
       )}
 
-      <footer className="py-4 text-center text-[0.7rem] text-[#7A1C29] font-medium border-t border-[#D4AF37]/20">
+      <footer className="py-4 text-center text-[0.7rem] text-[#3D5A80] font-medium border-t border-[#D4AF37]/20">
         © 2026 Venture Orbital · Admin Workspace
       </footer>
 

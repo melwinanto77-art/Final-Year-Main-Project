@@ -155,13 +155,13 @@ def owner_email(user) -> str:
 
 DEFAULT_ACCOUNTS = [
     {
-        "email": "admin@consciousorbit.com",
+        "email": "admin@ventureorbital.com",
         "password": "admin123",
         "role": "admin",
         "full_name": "Administrator",
     },
     {
-        "email": "founder@venture.io",
+        "email": "founder@ventureorbital.com",
         "password": "password123",
         "role": "client",
         "full_name": "Venture Founder",

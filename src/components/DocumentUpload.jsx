@@ -105,8 +105,8 @@ export default function DocumentUpload({
   return (
     <div className="bg-white/90 border border-[#D4AF37]/40 rounded-2xl p-4 sm:p-5 shadow-xs space-y-4">
       <div>
-        <h3 className="font-serif text-lg font-bold text-[#400A12]">{title}</h3>
-        <p className="text-xs text-[#7A1C29]">
+        <h3 className="font-serif text-lg font-bold text-[#081428]">{title}</h3>
+        <p className="text-xs text-[#3D5A80]">
           Attach the files that back up your submission. Accepted: PDF, Word, Excel, PowerPoint,
           CSV, images and ZIP — up to {MAX_MB} MB each.
         </p>
@@ -121,13 +121,13 @@ export default function DocumentUpload({
                 id="doc-category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3 py-2.5 text-xs text-[#4A0A13] focus:border-[#400A12] focus:outline-none cursor-pointer"
+                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3 py-2.5 text-xs text-[#0B1B36] focus:border-[#081428] focus:outline-none cursor-pointer"
               >
                 {CATEGORIES.map((c) => (
                   <option key={c.id} value={c.id}>{c.label}</option>
                 ))}
               </select>
-              <p className="text-[0.65rem] text-[#8C6D58]">{activeCategory?.hint}</p>
+              <p className="text-[0.65rem] text-[#6E7B91]">{activeCategory?.hint}</p>
             </div>
             <div className="space-y-1">
               <label className={labelCls} htmlFor="doc-note">Short note (optional)</label>
@@ -137,9 +137,9 @@ export default function DocumentUpload({
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="e.g. Updated FY26 projections"
-                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3 py-2.5 text-xs text-[#4A0A13] placeholder-[#8C6D58]/60 focus:border-[#400A12] focus:outline-none"
+                className="w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3 py-2.5 text-xs text-[#0B1B36] placeholder-[#6E7B91]/60 focus:border-[#081428] focus:outline-none"
               />
-              <p className="text-[0.65rem] text-[#8C6D58]">Helps the reviewer understand the file at a glance.</p>
+              <p className="text-[0.65rem] text-[#6E7B91]">Helps the reviewer understand the file at a glance.</p>
             </div>
           </div>
 
@@ -153,14 +153,14 @@ export default function DocumentUpload({
             tabIndex={0}
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") inputRef.current?.click(); }}
             className={`rounded-2xl border-2 border-dashed p-6 text-center cursor-pointer transition ${
-              dragging ? "border-[#400A12] bg-[#F5EAD4]" : "border-[#D4AF37]/60 bg-[#FAF4E8]/60 hover:bg-[#F5EAD4]/60"
+              dragging ? "border-[#081428] bg-[#EDF2F9]" : "border-[#D4AF37]/60 bg-[#FBFCFE]/60 hover:bg-[#EDF2F9]/60"
             }`}
           >
             <Upload size={24} className="mx-auto text-[#B8860B]" />
-            <p className="mt-2 text-sm font-bold text-[#400A12]">
+            <p className="mt-2 text-sm font-bold text-[#081428]">
               Tap to choose files, or drag them here
             </p>
-            <p className="text-[0.7rem] text-[#7A1C29] mt-0.5">
+            <p className="text-[0.7rem] text-[#3D5A80] mt-0.5">
               You can select more than one file at a time.
             </p>
             <input
@@ -183,8 +183,8 @@ export default function DocumentUpload({
               {p.state === "uploading" && <Loader2 size={13} className="text-[#B8860B] animate-spin shrink-0" />}
               {p.state === "done" && <CheckCircle2 size={13} className="text-emerald-600 shrink-0" />}
               {p.state === "error" && <AlertTriangle size={13} className="text-red-600 shrink-0" />}
-              <span className="font-medium text-[#4A0A13] truncate flex-1 min-w-0">{p.name}</span>
-              <span className={`shrink-0 ${p.state === "error" ? "text-red-700" : "text-[#7A1C29]"}`}>
+              <span className="font-medium text-[#0B1B36] truncate flex-1 min-w-0">{p.name}</span>
+              <span className={`shrink-0 ${p.state === "error" ? "text-red-700" : "text-[#3D5A80]"}`}>
                 {p.message}
               </span>
             </div>
@@ -199,11 +199,11 @@ export default function DocumentUpload({
         </p>
 
         {loading ? (
-          <p className="text-xs text-[#8C6D58]">Loading…</p>
+          <p className="text-xs text-[#6E7B91]">Loading…</p>
         ) : documents.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-[#D4AF37]/50 bg-[#FAF4E8]/60 p-5 text-center">
-            <p className="text-xs font-semibold text-[#4A0A13]">No files uploaded yet</p>
-            <p className="text-[0.68rem] text-[#7A1C29] mt-0.5">
+          <div className="rounded-xl border border-dashed border-[#D4AF37]/50 bg-[#FBFCFE]/60 p-5 text-center">
+            <p className="text-xs font-semibold text-[#0B1B36]">No files uploaded yet</p>
+            <p className="text-[0.68rem] text-[#3D5A80] mt-0.5">
               {canDelete ? "Anything you upload appears here." : "This client has not uploaded any documents."}
             </p>
           </div>
@@ -212,12 +212,12 @@ export default function DocumentUpload({
             {documents.map((doc) => (
               <li
                 key={doc.id}
-                className="flex items-center gap-3 rounded-xl border border-[#D4AF37]/40 bg-[#FAF4E8] px-3 py-2.5"
+                className="flex items-center gap-3 rounded-xl border border-[#D4AF37]/40 bg-[#FBFCFE] px-3 py-2.5"
               >
                 <FileText size={16} className="text-[#B8860B] shrink-0" />
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-bold text-[#4A0A13] truncate">{doc.filename}</p>
-                  <p className="text-[0.65rem] text-[#7A1C29] truncate">
+                  <p className="text-xs font-bold text-[#0B1B36] truncate">{doc.filename}</p>
+                  <p className="text-[0.65rem] text-[#3D5A80] truncate">
                     {CATEGORIES.find((c) => c.id === doc.category)?.label || doc.category}
                     {" · "}{prettySize(doc.sizeBytes)}
                     {doc.note ? ` · ${doc.note}` : ""}
@@ -228,7 +228,7 @@ export default function DocumentUpload({
                     alert(err.message || "Could not download this file.")
                   )}
                   title="Download"
-                  className="p-1.5 rounded-lg border border-[#D4AF37]/50 text-[#4A0A13] hover:bg-[#F5EAD4] shrink-0 cursor-pointer"
+                  className="p-1.5 rounded-lg border border-[#D4AF37]/50 text-[#0B1B36] hover:bg-[#EDF2F9] shrink-0 cursor-pointer"
                 >
                   <Download size={13} />
                 </button>
@@ -236,7 +236,7 @@ export default function DocumentUpload({
                   <button
                     onClick={() => handleDelete(doc)}
                     title="Remove"
-                    className="p-1.5 rounded-lg border border-[#D4AF37]/50 text-[#7A1C29] hover:bg-[#F5EAD4] shrink-0 cursor-pointer"
+                    className="p-1.5 rounded-lg border border-[#D4AF37]/50 text-[#3D5A80] hover:bg-[#EDF2F9] shrink-0 cursor-pointer"
                   >
                     <Trash2 size={13} />
                   </button>

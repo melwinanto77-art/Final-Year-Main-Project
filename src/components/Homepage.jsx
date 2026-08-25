@@ -164,7 +164,7 @@ const STATS = [
 
 export default function Homepage({ onEnter, onLogin, onContact }) {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#FAF4E8] text-[#4A0A13] font-sans selection:bg-[#D4AF37] selection:text-[#FAF4E8]">
+    <div className="relative min-h-screen overflow-hidden bg-[#FBFCFE] text-[#0B1B36] font-sans selection:bg-[#D4AF37] selection:text-[#FBFCFE]">
       {/* Background canvas */}
       <RoyalBackground />
 
@@ -175,7 +175,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
       <section id="how-it-works" className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-28">
         <div className="text-center mb-16 md:mb-24">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#B8860B] font-bold block mb-2">Operational Methodology</span>
-          <h2 className="font-sans text-3xl md:text-5xl font-extrabold text-[#4A0A13]">How Venture Orbital Operates</h2>
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold text-[#0B1B36]">How Venture Orbital Operates</h2>
         </div>
 
         <div className="space-y-16 md:space-y-24 max-w-6xl mx-auto px-4 md:px-8">
@@ -187,10 +187,10 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
 
             const iconBlock = (
               <div className="relative flex items-center justify-center shrink-0">
-                <div className="relative flex h-28 w-28 sm:h-32 sm:w-32 shrink-0 items-center justify-center rounded-full border-2 sm:border-[2.5px] border-[#D4AF37] bg-[#42181C] text-[#FFFFFF] shadow-2xl transition-transform duration-300 hover:scale-105">
+                <div className="relative flex h-28 w-28 sm:h-32 sm:w-32 shrink-0 items-center justify-center rounded-full border-2 sm:border-[2.5px] border-[#D4AF37] bg-[#42181C] text-[#FBFCFE] shadow-2xl transition-transform duration-300 hover:scale-105">
                   {/* Top Gold Pip Dot */}
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-[#E2B755] border-2 border-[#FAF4E8] shadow-sm" />
-                  <Icon size={44} className="text-[#FFFFFF] stroke-[1.8]" />
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-[#E2B755] border-2 border-[#FBFCFE] shadow-sm" />
+                  <Icon size={44} className="text-[#FBFCFE] stroke-[1.8]" />
                 </div>
               </div>
             );
@@ -198,17 +198,17 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
             const contentBlock = (
               <div className="space-y-3 max-w-[38rem] lg:max-w-[42rem] text-left">
                 {/* Gold Outlined Pill Badge */}
-                <div className="inline-flex items-center rounded-full border border-[#D4AF37] px-3.5 py-1 bg-[#FAF4E8] shadow-xs">
+                <div className="inline-flex items-center rounded-full border border-[#D4AF37] px-3.5 py-1 bg-[#FBFCFE] shadow-xs">
                   <span className="font-mono text-[0.65rem] font-bold text-[#B8860B] uppercase tracking-[0.18em]">
                     STEP {step.n}
                   </span>
                 </div>
                 {/* Prominent Bold Matte Maroon Heading */}
-                <h3 className="font-sans text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold text-[#4A0A13] tracking-tight leading-snug">
+                <h3 className="font-sans text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold text-[#0B1B36] tracking-tight leading-snug">
                   {step.title}
                 </h3>
                 {/* Wide Text Block (550–650px) for Comfortable Wrapping */}
-                <p className="text-base sm:text-lg lg:text-[1.125rem] text-[#7A1C29] leading-[1.75] font-normal pt-0.5">
+                <p className="text-base sm:text-lg lg:text-[1.125rem] text-[#3D5A80] leading-[1.75] font-normal pt-0.5">
                   {step.desc}
                 </p>
               </div>
@@ -258,7 +258,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
           </div>
           <button
             onClick={onContact || onEnter}
-            className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#8B6508] bg-gradient-to-r from-[#B8860B] via-[#996515] to-[#78520A] px-8 py-3.5 text-sm font-bold text-[#FAF4E8] hover:shadow-[0_8px_25px_rgba(139,101,8,0.4)] transition-all cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#8B6508] bg-gradient-to-r from-[#B8860B] via-[#996515] to-[#78520A] px-8 py-3.5 text-sm font-bold text-[#FBFCFE] hover:shadow-[0_8px_25px_rgba(139,101,8,0.4)] transition-all cursor-pointer"
           >
             <span>Get in Touch</span>
             <ArrowRight size={15} />
@@ -267,7 +267,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
       </section>
 
       {/* ===== LUXURY EXECUTIVE FOOTER WITH DEEP MAROON BG ===== */}
-      <footer id="contact" className="relative z-10 bg-[#4A0A13] text-[#FAF4E8] border-t-2 border-[#D4AF37]/50 pt-12 pb-10 px-6 overflow-hidden">
+      <footer id="contact" className="relative z-10 bg-[#0B1B36] text-[#FBFCFE] border-t-2 border-[#D4AF37]/50 pt-12 pb-10 px-6 overflow-hidden">
         {/* Subtle Background Radial Glow */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(212,175,55,0.12)_0%,transparent_70%)]" />
         <div className="pointer-events-none absolute left-1/2 -top-24 h-48 w-96 -translate-x-1/2 rounded-full bg-[#F5D77F]/10 blur-[90px]" />
@@ -279,11 +279,11 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
             <div className="md:col-span-4 space-y-4">
               <div className="flex items-center gap-3">
                 <OrbitBrand size={36} />
-                <h5 className="font-sans text-xl font-extrabold text-[#FAF4E8] tracking-tight">
+                <h5 className="font-sans text-xl font-extrabold text-[#FBFCFE] tracking-tight">
                   Venture Orbital
                 </h5>
               </div>
-              <p className="text-sm text-[#EAD5D8] leading-relaxed max-w-sm">
+              <p className="text-sm text-[#D7E3F4] leading-relaxed max-w-sm">
                 AI-powered business intelligence platform.
               </p>
             </div>
@@ -293,7 +293,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
               <h5 className="font-mono text-xs uppercase tracking-[0.2em] text-[#F5D77F] font-bold">
                 Platform
               </h5>
-              <ul className="space-y-2 text-sm text-[#EAD5D8]">
+              <ul className="space-y-2 text-sm text-[#D7E3F4]">
                 <li><button onClick={onEnter} className="hover:text-[#F5D77F] transition cursor-pointer">Dashboard</button></li>
                 <li><button onClick={onEnter} className="hover:text-[#F5D77F] transition cursor-pointer">Projects</button></li>
                 <li><button onClick={onLogin} className="hover:text-[#F5D77F] transition cursor-pointer">Login</button></li>
@@ -305,7 +305,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
               <h5 className="font-mono text-xs uppercase tracking-[0.2em] text-[#F5D77F] font-bold">
                 Company
               </h5>
-              <ul className="space-y-2 text-sm text-[#EAD5D8]">
+              <ul className="space-y-2 text-sm text-[#D7E3F4]">
                 <li><button onClick={onEnter} className="hover:text-[#F5D77F] transition cursor-pointer">About Us</button></li>
                 <li><button onClick={onContact || onEnter} className="hover:text-[#F5D77F] transition cursor-pointer">Contact</button></li>
                 <li><button onClick={onEnter} className="hover:text-[#F5D77F] transition cursor-pointer">Privacy</button></li>
@@ -317,7 +317,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
               <h5 className="font-mono text-xs uppercase tracking-[0.2em] text-[#F5D77F] font-bold">
                 Connect
               </h5>
-              <ul className="space-y-2 text-sm text-[#EAD5D8]">
+              <ul className="space-y-2 text-sm text-[#D7E3F4]">
                 <li><a href="#" className="hover:text-[#F5D77F] transition">Twitter</a></li>
                 <li><a href="#" className="hover:text-[#F5D77F] transition">LinkedIn</a></li>
                 <li><a href="#" className="hover:text-[#F5D77F] transition">GitHub</a></li>
@@ -327,7 +327,7 @@ export default function Homepage({ onEnter, onLogin, onContact }) {
 
           {/* Bottom Copyright */}
           <div className="pt-2 text-center md:text-left">
-            <p className="font-mono text-xs text-[#EAD5D8]">
+            <p className="font-mono text-xs text-[#D7E3F4]">
               © 2026 Venture Orbital. All rights reserved.
             </p>
           </div>
@@ -432,13 +432,13 @@ function TelemetryStats({ stats }) {
                 <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[#D4AF37]/0 group-hover:bg-[#D4AF37]/[0.08] group-hover:blur-md transition-all duration-300" />
 
                 {/* Icon & Label Header */}
-                <div className="flex items-center gap-2 text-[#F4D67A] group-hover:text-[#FFFFFF] transition-colors duration-300">
+                <div className="flex items-center gap-2 text-[#F4D67A] group-hover:text-[#FBFCFE] transition-colors duration-300">
                   {Icon && (
                     <motion.div
                       whileHover={{ rotate: 12 }}
                       transition={{ duration: 0.2, ease: 'easeOut' }}
                     >
-                      <Icon size={15} className="text-[#D4AF37] group-hover:text-[#FFFFFF] transition-colors" />
+                      <Icon size={15} className="text-[#D4AF37] group-hover:text-[#FBFCFE] transition-colors" />
                     </motion.div>
                   )}
                   <span className="font-mono text-[0.7rem] uppercase tracking-[0.18em] font-bold">
@@ -447,12 +447,12 @@ function TelemetryStats({ stats }) {
                 </div>
 
                 {/* Metric Value */}
-                <div className="font-sans text-3xl md:text-4xl font-extrabold text-[#FFFFFF] group-hover:text-[#FFF8DC] tracking-tight block transition-colors duration-300 group-hover:drop-shadow-[0_0_16px_rgba(244,214,122,0.5)]">
+                <div className="font-sans text-3xl md:text-4xl font-extrabold text-[#FBFCFE] group-hover:text-[#FFF8DC] tracking-tight block transition-colors duration-300 group-hover:drop-shadow-[0_0_16px_rgba(244,214,122,0.5)]">
                   <CountUpValue value={s.value} isVisible={true} />
                 </div>
 
                 {/* Animated Gold Underline */}
-                <div className="h-[2px] w-12 bg-gradient-to-r from-[#D4AF37] to-[#F4D67A] rounded-full group-hover:w-20 group-hover:from-[#FFFFFF] group-hover:to-[#F4D67A] transition-all duration-300 opacity-70 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#F4D67A]" />
+                <div className="h-[2px] w-12 bg-gradient-to-r from-[#D4AF37] to-[#F4D67A] rounded-full group-hover:w-20 group-hover:from-[#FBFCFE] group-hover:to-[#F4D67A] transition-all duration-300 opacity-70 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#F4D67A]" />
               </motion.div>
             );
           })}
@@ -490,7 +490,7 @@ function ExecutiveOrbitalGauge({ value = 88 }) {
 
         {/* Inner SVG Progress Arc */}
         <svg width="210" height="210" className="-rotate-90">
-          <circle cx="105" cy="105" r={R} fill="none" stroke="#FAF4E8" strokeWidth="6" />
+          <circle cx="105" cy="105" r={R} fill="none" stroke="#FBFCFE" strokeWidth="6" />
           <motion.circle
             cx="105"
             cy="105"
@@ -516,7 +516,7 @@ function ExecutiveOrbitalGauge({ value = 88 }) {
 
         {/* Centered Large Orbital Score */}
         <div className="absolute flex flex-col items-center justify-center text-center space-y-0.5">
-          <span className="font-sans text-5xl font-extrabold text-[#4A0A13] tracking-tight drop-shadow-sm">
+          <span className="font-sans text-5xl font-extrabold text-[#0B1B36] tracking-tight drop-shadow-sm">
             <CountUpValue value={value.toString()} isVisible={true} />
           </span>
           <span className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-[#B8860B] font-bold">
@@ -531,25 +531,25 @@ function ExecutiveOrbitalGauge({ value = 88 }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="w-full rounded-2xl border border-[#D4AF37]/40 bg-[#4A0A13] text-[#FFFFFF] p-5 shadow-xl space-y-3"
+        className="w-full rounded-2xl border border-[#D4AF37]/40 bg-[#0B1B36] text-[#FBFCFE] p-5 shadow-xl space-y-3"
       >
         <div className="flex items-center justify-between text-xs font-mono border-b border-[#D4AF37]/25 pb-2.5">
-          <span className="text-[#EAD5D8] uppercase tracking-wider">Orbital Index</span>
+          <span className="text-[#D7E3F4] uppercase tracking-wider">Orbital Index</span>
           <span className="font-bold text-[#F5D77F]">88 / 100</span>
         </div>
         <div className="flex items-center justify-between text-xs font-mono border-b border-[#D4AF37]/25 pb-2.5">
-          <span className="text-[#EAD5D8] uppercase tracking-wider">Decision</span>
-          <span className="font-extrabold text-[#4A0A13] bg-[#D4AF37] px-2.5 py-0.5 rounded-full text-[0.7rem] tracking-widest shadow-sm">
+          <span className="text-[#D7E3F4] uppercase tracking-wider">Decision</span>
+          <span className="font-extrabold text-[#0B1B36] bg-[#D4AF37] px-2.5 py-0.5 rounded-full text-[0.7rem] tracking-widest shadow-sm">
             GO (1)
           </span>
         </div>
         <div className="flex items-center justify-between text-xs font-mono border-b border-[#D4AF37]/25 pb-2.5">
-          <span className="text-[#EAD5D8] uppercase tracking-wider">Confidence</span>
+          <span className="text-[#D7E3F4] uppercase tracking-wider">Confidence</span>
           <span className="font-bold text-[#F5D77F]">High</span>
         </div>
         <div className="flex items-center justify-between text-xs font-mono">
-          <span className="text-[#EAD5D8] uppercase tracking-wider">Execution Ready</span>
-          <span className="font-bold text-[#FFFFFF]">YES</span>
+          <span className="text-[#D7E3F4] uppercase tracking-wider">Execution Ready</span>
+          <span className="font-bold text-[#FBFCFE]">YES</span>
         </div>
       </motion.div>
     </div>

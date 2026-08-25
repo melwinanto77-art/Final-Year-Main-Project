@@ -179,12 +179,12 @@ export const Card = ({ card, index, layout = false, onEnter }) => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="relative max-w-2xl w-full rounded-[32px] border border-[#D4AF37]/35 bg-[linear-gradient(145deg,#2D3035_0%,#22252A_55%,#191B1F_100%)] p-6 md:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] overflow-hidden text-[#FFFFFF]"
+                className="relative max-w-2xl w-full rounded-[32px] border border-[#D4AF37]/35 bg-[linear-gradient(145deg,#2D3035_0%,#22252A_55%,#191B1F_100%)] p-6 md:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] overflow-hidden text-[#FBFCFE]"
               >
                 {/* Close Button */}
                 <button
                   onClick={handleClose}
-                  className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-[#050505] text-[#D4AF37] hover:bg-[#151515] hover:text-[#FFFFFF] transition cursor-pointer z-20 shadow-md"
+                  className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-[#050505] text-[#D4AF37] hover:bg-[#151515] hover:text-[#FBFCFE] transition cursor-pointer z-20 shadow-md"
                 >
                   <X size={18} />
                 </button>
@@ -202,7 +202,7 @@ export const Card = ({ card, index, layout = false, onEnter }) => {
                       <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#D4AF37] bg-[#050505]/60 border border-[#D4AF37]/40 px-2.5 py-0.5 rounded-md block w-max mb-1 shadow-xs">
                         Domain 0{index + 1}
                       </span>
-                      <h4 className="font-sans text-xl font-bold text-[#FFFFFF]">
+                      <h4 className="font-sans text-xl font-bold text-[#FBFCFE]">
                         {card.title}
                       </h4>
                     </div>
@@ -212,7 +212,7 @@ export const Card = ({ card, index, layout = false, onEnter }) => {
                 {/* Body Content */}
                 <div className="space-y-6 text-left">
                   <div className="space-y-2">
-                    <h3 className="font-sans text-2xl md:text-3xl font-extrabold text-[#FFFFFF]">
+                    <h3 className="font-sans text-2xl md:text-3xl font-extrabold text-[#FBFCFE]">
                       {card.title} Executive Strategy
                     </h3>
                     <p className="font-sans text-base text-[#CFCFCF] leading-relaxed font-medium">
@@ -271,7 +271,7 @@ export const Card = ({ card, index, layout = false, onEnter }) => {
         onClick={handleOpen}
         whileHover={{ y: -8, scale: 1.025 }}
         transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        className="group relative h-[530px] w-[300px] sm:w-[360px] rounded-[32px] border border-[#D4AF37]/35 bg-[linear-gradient(145deg,#2D3035_0%,#22252A_55%,#191B1F_100%)] overflow-hidden cursor-pointer shadow-[0_18px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_24px_50px_rgba(212,175,55,0.3)] hover:border-[#D4AF37] flex flex-col justify-between p-8 text-[#FFFFFF] transition-colors duration-300"
+        className="group relative h-[530px] w-[300px] sm:w-[360px] rounded-[32px] border border-[#D4AF37]/35 bg-[linear-gradient(145deg,#2D3035_0%,#22252A_55%,#191B1F_100%)] overflow-hidden cursor-pointer shadow-[0_18px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_24px_50px_rgba(212,175,55,0.3)] hover:border-[#D4AF37] flex flex-col justify-between p-8 text-[#FBFCFE] transition-colors duration-300"
       >
         {/* Gold Highlight Line near top edge */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-90" />
@@ -306,9 +306,9 @@ export const Card = ({ card, index, layout = false, onEnter }) => {
           </div>
         </div>
 
-        {/* Bottom Content: Title (#FFFFFF), Description (#CFCFCF), and Gold Explore Button */}
+        {/* Bottom Content: Title (#FBFCFE), Description (#CFCFCF), and Gold Explore Button */}
         <div className="relative z-10 space-y-3 text-center">
-          <h3 className="font-sans text-2xl font-extrabold text-[#FFFFFF] tracking-tight leading-snug">
+          <h3 className="font-sans text-2xl font-extrabold text-[#FBFCFE] tracking-tight leading-snug">
             {card.title}
           </h3>
           <p className="font-sans text-xs font-medium text-[#CFCFCF] line-clamp-2 leading-relaxed px-1">

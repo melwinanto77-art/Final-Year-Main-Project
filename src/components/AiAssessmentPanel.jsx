@@ -47,7 +47,7 @@ function List({ title, items, tone, icon: Icon }) {
     emerald: "border-emerald-200 bg-emerald-50 text-emerald-900",
     red: "border-red-200 bg-red-50 text-red-900",
     blue: "border-blue-200 bg-blue-50 text-blue-900",
-    gold: "border-[#D4AF37]/40 bg-[#FAF4E8] text-[#4A0A13]",
+    gold: "border-[#D4AF37]/40 bg-[#FBFCFE] text-[#0B1B36]",
   };
   const heads = {
     emerald: "text-emerald-700",
@@ -114,11 +114,11 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
     <div className="p-4 sm:p-5 border-t border-[#D4AF37]/30 space-y-3 bg-white">
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
-          <h3 className="font-semibold text-sm text-[#4A0A13] flex items-center gap-1.5">
+          <h3 className="font-semibold text-sm text-[#0B1B36] flex items-center gap-1.5">
             <Brain size={14} className="text-[#D4AF37]" />
             AI Report Assessment
           </h3>
-          <p className="text-[0.65rem] text-[#7A1C29] max-w-xl">
+          <p className="text-[0.65rem] text-[#3D5A80] max-w-xl">
             The analyst reads the intake, all module outputs, uploaded documents and the brand
             assessment, then recommends a mark with its reasoning. You decide the mark that
             publishes — this only advises.
@@ -136,7 +136,7 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
         <button
           onClick={run}
           disabled={loading}
-          className="rounded-full bg-[#4A0A13] text-[#F5D77F] px-4 py-1.5 text-[0.7rem] font-semibold flex items-center gap-1.5 cursor-pointer hover:bg-[#5C0F1A] disabled:opacity-50 shrink-0"
+          className="rounded-full bg-[#0B1B36] text-[#F5D77F] px-4 py-1.5 text-[0.7rem] font-semibold flex items-center gap-1.5 cursor-pointer hover:bg-[#16294D] disabled:opacity-50 shrink-0"
         >
           {loading ? <Loader2 size={12} className="animate-spin" /> : <Brain size={12} />}
           {loading ? "Analysing the report…" : assessment ? "Re-run assessment" : "Run AI Assessment"}
@@ -152,14 +152,14 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
       {assessment && (
         <div className="space-y-3">
           {/* Recommended mark */}
-          <div className="rounded-xl border-2 border-[#D4AF37] bg-[#FBF7ED] p-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="rounded-xl border-2 border-[#D4AF37] bg-[#F3F7FC] p-4 flex flex-wrap items-center gap-x-6 gap-y-3">
             <div>
               <span className="text-[0.6rem] uppercase font-bold text-[#B8860B] tracking-wider block">
                 Recommended mark
               </span>
               <span className="font-serif text-3xl font-extrabold text-[#B8860B]">
                 {assessment.recommendedScore}
-                <span className="text-base text-[#8C6D58]"> / 100</span>
+                <span className="text-base text-[#6E7B91]"> / 100</span>
               </span>
             </div>
 
@@ -177,7 +177,7 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
 
             <button
               onClick={() => onApply?.(assessment)}
-              className="ml-auto flex items-center gap-1.5 rounded-xl bg-[#D4AF37] hover:bg-[#F5D77F] text-[#4A0A13] px-4 py-2 text-[0.7rem] font-extrabold cursor-pointer border border-[#4A0A13]/20 shrink-0"
+              className="ml-auto flex items-center gap-1.5 rounded-xl bg-[#D4AF37] hover:bg-[#F5D77F] text-[#0B1B36] px-4 py-2 text-[0.7rem] font-extrabold cursor-pointer border border-[#0B1B36]/20 shrink-0"
             >
               <ArrowDownToLine size={12} />
               Use this mark
@@ -187,13 +187,13 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
           {/* Evidence + divergence, so a LOW-confidence mark is not published blind */}
           <div className="flex flex-wrap items-center gap-2 text-[0.65rem]">
             {assessment.evidence && (
-              <span className="px-2 py-1 rounded-lg border border-[#D4AF37]/40 bg-[#FAF4E8] text-[#7A1C29]">
+              <span className="px-2 py-1 rounded-lg border border-[#D4AF37]/40 bg-[#FBFCFE] text-[#3D5A80]">
                 Evidence: {assessment.evidence.completeness}% complete · {assessment.evidence.words} words
                 {!assessment.evidence.enriched && " · thin"}
               </span>
             )}
             {assessment.live === false && (
-              <span className="px-2 py-1 rounded-lg border border-[#D4AF37]/40 bg-[#FAF4E8] text-[#7A1C29]">
+              <span className="px-2 py-1 rounded-lg border border-[#D4AF37]/40 bg-[#FBFCFE] text-[#3D5A80]">
                 deterministic baseline — no live model
               </span>
             )}
@@ -205,10 +205,10 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
           </div>
 
           {assessment.headline && (
-            <p className="text-xs font-bold text-[#400A12]">{assessment.headline}</p>
+            <p className="text-xs font-bold text-[#081428]">{assessment.headline}</p>
           )}
           {assessment.analysis && (
-            <p className="text-xs text-[#4A0A13] leading-relaxed whitespace-pre-wrap">
+            <p className="text-xs text-[#0B1B36] leading-relaxed whitespace-pre-wrap">
               {assessment.analysis}
             </p>
           )}
@@ -223,15 +223,15 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
                 {assessment.scoreBreakdown.map((row) => (
                   <div key={row.dimension} className="space-y-1">
                     <div className="flex items-center justify-between gap-3 text-[0.7rem]">
-                      <span className="font-bold text-[#4A0A13]">
+                      <span className="font-bold text-[#0B1B36]">
                         {DIMENSION_LABELS[row.dimension] || row.dimension}
                       </span>
-                      <span className="font-mono font-bold text-[#400A12] shrink-0">{row.score}/100</span>
+                      <span className="font-mono font-bold text-[#081428] shrink-0">{row.score}/100</span>
                     </div>
-                    <div className="h-1.5 w-full rounded-full bg-[#4A0A13]/10 overflow-hidden">
+                    <div className="h-1.5 w-full rounded-full bg-[#0B1B36]/10 overflow-hidden">
                       <div className="h-1.5 rounded-full bg-[#B8860B]" style={{ width: `${row.score}%` }} />
                     </div>
-                    <p className="text-[0.65rem] text-[#7A1C29]">{row.reasoning}</p>
+                    <p className="text-[0.65rem] text-[#3D5A80]">{row.reasoning}</p>
                   </div>
                 ))}
               </div>
@@ -262,7 +262,7 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
                     }`}>
                       {String(m.assessment).replace("_", " ")}
                     </span>
-                    <span className="text-[#4A0A13]">
+                    <span className="text-[#0B1B36]">
                       <strong>{m.moduleKey}</strong> — {m.note}
                     </span>
                   </div>
@@ -272,7 +272,7 @@ export default function AiAssessmentPanel({ reportId, onApply, currentAdminScore
           )}
 
           {assessment.note && (
-            <p className="text-[0.62rem] text-[#8C6D58] italic">{assessment.note}</p>
+            <p className="text-[0.62rem] text-[#6E7B91] italic">{assessment.note}</p>
           )}
         </div>
       )}

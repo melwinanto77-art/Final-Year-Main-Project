@@ -4,7 +4,7 @@ import { ArrowLeft, Eye, EyeOff, ShieldCheck, UserCheck, Sparkles } from "lucide
 
 /* Credentials are verified by the API against hashed passwords — there is no
    password in this file any more. The seeded development accounts are
-   admin@consciousorbit.com and founder@venture.io; change them before this is
+   admin@ventureorbital.com and founder@ventureorbital.com; change them before this is
    exposed to anything real. */
 
 export default function Login({ onLogin, onBack }) {
@@ -58,15 +58,15 @@ export default function Login({ onLogin, onBack }) {
 
   return (
     <div
-      className={`relative min-h-screen h-screen w-full flex flex-col justify-between items-center p-4 sm:p-6 overflow-hidden selection:bg-[#D4AF37] selection:text-[#4A0A13] transition-colors duration-700 ${
-        isAdmin ? "bg-[#FAF4E8] text-[#4A0A13]" : "bg-[#4A0A13] text-[#FAF4E8]"
+      className={`relative min-h-screen h-screen w-full flex flex-col justify-between items-center p-4 sm:p-6 overflow-hidden selection:bg-[#D4AF37] selection:text-[#0B1B36] transition-colors duration-700 ${
+        isAdmin ? "bg-[#FBFCFE] text-[#0B1B36]" : "bg-[#0B1B36] text-[#FBFCFE]"
       }`}
     >
       {/* Soft Ambient Radial Background Glow */}
       <div
         className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${
           isAdmin
-            ? "bg-[radial-gradient(circle_at_50%_50%,rgba(74,10,19,0.08)_0%,transparent_65%)]"
+            ? "bg-[radial-gradient(circle_at_50%_50%,rgba(11,27,54,0.08)_0%,transparent_65%)]"
             : "bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.15)_0%,transparent_65%)]"
         }`}
       />
@@ -78,8 +78,8 @@ export default function Login({ onLogin, onBack }) {
           type="button"
           className={`group flex items-center gap-1.5 text-xs font-bold transition-all cursor-pointer px-3.5 py-1.5 rounded-full border shadow-xs ${
             isAdmin
-              ? "bg-[#FAF4E8] hover:bg-[#F5EAD4] text-[#4A0A13] border-[#4A0A13]/30"
-              : "bg-[#38070E] hover:bg-[#38070E]/80 text-[#F5D77F] border-[#D4AF37]/30"
+              ? "bg-[#FBFCFE] hover:bg-[#EDF2F9] text-[#0B1B36] border-[#0B1B36]/30"
+              : "bg-[#050E1D] hover:bg-[#050E1D]/80 text-[#F5D77F] border-[#D4AF37]/30"
           }`}
         >
           <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition" />
@@ -89,7 +89,7 @@ export default function Login({ onLogin, onBack }) {
         <div className="cursor-pointer" onClick={onBack}>
           <span
             className={`font-mono text-xs font-extrabold uppercase tracking-[0.2em] transition-colors ${
-              isAdmin ? "text-[#4A0A13]" : "text-[#F5D77F]"
+              isAdmin ? "text-[#0B1B36]" : "text-[#F5D77F]"
             }`}
           >
             Venture Orbital
@@ -104,8 +104,8 @@ export default function Login({ onLogin, onBack }) {
         <div
           className={`relative mb-6 flex items-center justify-center gap-5 select-none px-4 py-2 rounded-full border shadow-md transition-colors duration-700 ${
             isAdmin
-              ? "bg-[#FAF4E8]/90 border-[#4A0A13]/40 text-[#4A0A13]"
-              : "bg-[#38070E]/80 border-[#D4AF37]/40 text-[#FAF4E8]"
+              ? "bg-[#FBFCFE]/90 border-[#0B1B36]/40 text-[#0B1B36]"
+              : "bg-[#050E1D]/80 border-[#D4AF37]/40 text-[#FBFCFE]"
           }`}
         >
           <span
@@ -113,7 +113,7 @@ export default function Login({ onLogin, onBack }) {
             className={`text-xs font-bold cursor-pointer transition-colors ${
               !isAdmin
                 ? "text-[#F5D77F]"
-                : "text-[#4A0A13]/60 hover:text-[#4A0A13]"
+                : "text-[#0B1B36]/60 hover:text-[#0B1B36]"
             }`}
           >
             Sign in
@@ -129,14 +129,14 @@ export default function Login({ onLogin, onBack }) {
             <div
               className={`w-10 h-5.5 rounded-full border peer transition-colors relative ${
                 isAdmin
-                  ? "bg-[#FAF4E8] border-[#4A0A13]/60"
-                  : "bg-[#4A0A13] border-[#D4AF37]/60"
+                  ? "bg-[#FBFCFE] border-[#0B1B36]/60"
+                  : "bg-[#0B1B36] border-[#D4AF37]/60"
               }`}
             >
               <div
                 className={`absolute top-[2px] left-[2px] w-4 h-4 rounded-full transition-transform duration-500 ${
                   isAdmin
-                    ? "translate-x-[18px] bg-[#4A0A13]"
+                    ? "translate-x-[18px] bg-[#0B1B36]"
                     : "translate-x-0 bg-[#F5D77F]"
                 }`}
               />
@@ -147,8 +147,8 @@ export default function Login({ onLogin, onBack }) {
             onClick={() => { setIsAdmin(true); setError(""); }}
             className={`text-xs font-bold cursor-pointer transition-colors ${
               isAdmin
-                ? "text-[#4A0A13]"
-                : "text-[#FAF4E8]/60 hover:text-[#FAF4E8]"
+                ? "text-[#0B1B36]"
+                : "text-[#FBFCFE]/60 hover:text-[#FBFCFE]"
             }`}
           >
             Admin Sign in
@@ -166,7 +166,7 @@ export default function Login({ onLogin, onBack }) {
             {/* ============================================================ */}
             {/* FRONT FACE: SIGN IN (Executive Profile) — CARD COLOUR = IVORY */}
             {/* ============================================================ */}
-            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-[#FAF4E8] text-[#4A0A13] rounded-3xl border border-[#D4AF37] p-6 shadow-2xl flex flex-col justify-between items-center text-center">
+            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-[#FBFCFE] text-[#0B1B36] rounded-3xl border border-[#D4AF37] p-6 shadow-2xl flex flex-col justify-between items-center text-center">
               
               {/* Card Header */}
               <div className="space-y-1 w-full">
@@ -174,10 +174,10 @@ export default function Login({ onLogin, onBack }) {
                   {isSignUp ? <Sparkles size={13} /> : <UserCheck size={13} />}
                   <span>{isSignUp ? "New Account" : "Executive Profile"}</span>
                 </div>
-                <h2 className="font-serif italic text-2xl sm:text-3xl font-extrabold text-[#4A0A13]">
+                <h2 className="font-serif italic text-2xl sm:text-3xl font-extrabold text-[#0B1B36]">
                   {isSignUp ? "Sign up" : "Sign in"}
                 </h2>
-                <p className="text-[0.72rem] text-[#7A1C29] font-medium">
+                <p className="text-[0.72rem] text-[#3D5A80] font-medium">
                   {isSignUp
                     ? "Start your intelligence journey"
                     : "Welcome back to Venture Orbital"}
@@ -197,7 +197,7 @@ export default function Login({ onLogin, onBack }) {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="John Doe"
-                      className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FAF4E8] px-3.5 py-2 text-xs text-[#4A0A13] placeholder-[#7A1C29]/45 focus:border-[#4A0A13] focus:outline-none transition shadow-xs"
+                      className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FBFCFE] px-3.5 py-2 text-xs text-[#0B1B36] placeholder-[#3D5A80]/45 focus:border-[#0B1B36] focus:outline-none transition shadow-xs"
                     />
                   </div>
                 )}
@@ -212,7 +212,7 @@ export default function Login({ onLogin, onBack }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@company.com"
-                    className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FAF4E8] px-3.5 py-2.5 text-xs text-[#4A0A13] placeholder-[#7A1C29]/45 focus:border-[#4A0A13] focus:outline-none transition shadow-xs"
+                    className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FBFCFE] px-3.5 py-2.5 text-xs text-[#0B1B36] placeholder-[#3D5A80]/45 focus:border-[#0B1B36] focus:outline-none transition shadow-xs"
                   />
                 </div>
 
@@ -225,7 +225,7 @@ export default function Login({ onLogin, onBack }) {
                       <a
                         href="#forgot"
                         onClick={(e) => e.preventDefault()}
-                        className="text-[0.65rem] font-bold text-[#800000] hover:underline"
+                        className="text-[0.65rem] font-bold text-[#2E4E8F] hover:underline"
                       >
                         Forgot?
                       </a>
@@ -238,12 +238,12 @@ export default function Login({ onLogin, onBack }) {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••••••"
-                      className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FAF4E8] px-3.5 py-2.5 pr-8 text-xs text-[#4A0A13] placeholder-[#7A1C29]/45 focus:border-[#4A0A13] focus:outline-none transition shadow-xs"
+                      className="w-full rounded-xl border border-[#D4AF37]/60 bg-[#FBFCFE] px-3.5 py-2.5 pr-8 text-xs text-[#0B1B36] placeholder-[#3D5A80]/45 focus:border-[#0B1B36] focus:outline-none transition shadow-xs"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#7A1C29]/60 hover:text-[#4A0A13] transition cursor-pointer"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#3D5A80]/60 hover:text-[#0B1B36] transition cursor-pointer"
                     >
                       {showPassword ? <EyeOff size={14} /> : <Eye size={14} />}
                     </button>
@@ -257,17 +257,17 @@ export default function Login({ onLogin, onBack }) {
                       id="terms"
                       checked={agreedToTerms}
                       onChange={(e) => setAgreedToTerms(e.target.checked)}
-                      className="h-3 w-3 rounded border-[#D4AF37] text-[#4A0A13] focus:ring-[#4A0A13] cursor-pointer"
+                      className="h-3 w-3 rounded border-[#D4AF37] text-[#0B1B36] focus:ring-[#0B1B36] cursor-pointer"
                     />
                     <label
                       htmlFor="terms"
-                      className="text-[0.68rem] text-[#4A0A13] cursor-pointer font-medium"
+                      className="text-[0.68rem] text-[#0B1B36] cursor-pointer font-medium"
                     >
                       I agree to the{" "}
                       <a
                         href="#terms"
                         onClick={(e) => e.preventDefault()}
-                        className="text-[#800000] underline font-bold"
+                        className="text-[#2E4E8F] underline font-bold"
                       >
                         Terms & Privacy
                       </a>
@@ -284,21 +284,21 @@ export default function Login({ onLogin, onBack }) {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full rounded-full border border-[#D4AF37] bg-[#4A0A13] hover:bg-[#5C0F1A] active:scale-[0.98] py-3 text-xs font-bold text-[#F5D77F] shadow-md transition cursor-pointer mt-1 disabled:opacity-60"
+                  className="w-full rounded-full border border-[#D4AF37] bg-[#0B1B36] hover:bg-[#16294D] active:scale-[0.98] py-3 text-xs font-bold text-[#F5D77F] shadow-md transition cursor-pointer mt-1 disabled:opacity-60"
                 >
                   {submitting ? "Signing in…" : isSignUp ? "Sign up & Create Account" : "Sign in"}
                 </button>
               </form>
 
               {/* Bottom Sign up / Sign in link */}
-              <div className="text-[0.7rem] text-[#7A1C29] font-medium pt-2">
+              <div className="text-[0.7rem] text-[#3D5A80] font-medium pt-2">
                 {isSignUp ? (
                   <>
                     Already have an account?{" "}
                     <button
                       type="button"
                       onClick={() => { setIsSignUp(false); setError(""); }}
-                      className="font-bold text-[#800000] hover:underline cursor-pointer"
+                      className="font-bold text-[#2E4E8F] hover:underline cursor-pointer"
                     >
                       Sign in
                     </button>
@@ -309,7 +309,7 @@ export default function Login({ onLogin, onBack }) {
                     <button
                       type="button"
                       onClick={() => { setIsSignUp(true); setError(""); }}
-                      className="font-bold text-[#800000] hover:underline cursor-pointer"
+                      className="font-bold text-[#2E4E8F] hover:underline cursor-pointer"
                     >
                       Sign up
                     </button>
@@ -321,15 +321,15 @@ export default function Login({ onLogin, onBack }) {
             {/* ============================================================ */}
             {/* BACK FACE: ADMIN SIGN IN — CARD COLOUR = MAROON              */}
             {/* ============================================================ */}
-            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#4A0A13] text-[#FAF4E8] rounded-3xl border border-[#D4AF37] p-6 shadow-2xl flex flex-col justify-between items-center text-center">
+            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0B1B36] text-[#FBFCFE] rounded-3xl border border-[#D4AF37] p-6 shadow-2xl flex flex-col justify-between items-center text-center">
               
               {/* Card Header */}
               <div className="space-y-1 w-full">
-                <div className="inline-flex items-center gap-1 text-[0.68rem] font-bold text-[#F5D77F] uppercase font-mono tracking-wider bg-[#38070E] px-2.5 py-0.5 rounded-full border border-[#D4AF37]/40">
+                <div className="inline-flex items-center gap-1 text-[0.68rem] font-bold text-[#F5D77F] uppercase font-mono tracking-wider bg-[#050E1D] px-2.5 py-0.5 rounded-full border border-[#D4AF37]/40">
                   <ShieldCheck size={13} className="text-[#D4AF37]" />
                   <span>System Governance</span>
                 </div>
-                <h2 className="font-serif italic text-2xl sm:text-3xl font-extrabold text-[#FAF4E8]">
+                <h2 className="font-serif italic text-2xl sm:text-3xl font-extrabold text-[#FBFCFE]">
                   Admin Sign in
                 </h2>
                 <p className="text-[0.72rem] text-[#F5D77F]/80 font-medium">
@@ -348,8 +348,8 @@ export default function Login({ onLogin, onBack }) {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="admin@ventureorbital.ai"
-                    className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#38070E] px-3.5 py-2 text-xs text-[#FAF4E8] placeholder-[#F5D77F]/40 focus:border-[#D4AF37] focus:outline-none transition shadow-xs font-sans"
+                    placeholder="admin@ventureorbital.com"
+                    className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#050E1D] px-3.5 py-2 text-xs text-[#FBFCFE] placeholder-[#F5D77F]/40 focus:border-[#D4AF37] focus:outline-none transition shadow-xs font-sans"
                   />
                 </div>
 
@@ -364,12 +364,12 @@ export default function Login({ onLogin, onBack }) {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••••••"
-                      className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#38070E] px-3.5 py-2 pr-8 text-xs text-[#FAF4E8] placeholder-[#F5D77F]/40 focus:border-[#D4AF37] focus:outline-none transition shadow-xs font-sans"
+                      className="w-full rounded-xl border border-[#D4AF37]/50 bg-[#050E1D] px-3.5 py-2 pr-8 text-xs text-[#FBFCFE] placeholder-[#F5D77F]/40 focus:border-[#D4AF37] focus:outline-none transition shadow-xs font-sans"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#F5D77F]/60 hover:text-[#FAF4E8] transition cursor-pointer"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#F5D77F]/60 hover:text-[#FBFCFE] transition cursor-pointer"
                     >
                       {showPassword ? <EyeOff size={14} /> : <Eye size={14} />}
                     </button>
@@ -377,7 +377,7 @@ export default function Login({ onLogin, onBack }) {
                 </div>
 
                 {error && isAdmin && (
-                  <p className="text-[0.7rem] font-bold text-[#FFB4A9] bg-[#5C0F1A] border border-[#FFB4A9]/40 rounded-xl px-3 py-2">
+                  <p className="text-[0.7rem] font-bold text-[#FFB4A9] bg-[#16294D] border border-[#FFB4A9]/40 rounded-xl px-3 py-2">
                     {error}
                   </p>
                 )}
@@ -385,7 +385,7 @@ export default function Login({ onLogin, onBack }) {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full rounded-full border border-[#F5D77F] bg-gradient-to-r from-[#D4AF37] to-[#C89B3C] hover:from-[#E6C260] hover:to-[#D4AF37] active:scale-[0.98] py-2.5 text-xs font-extrabold text-[#4A0A13] shadow-lg transition cursor-pointer mt-1 disabled:opacity-60"
+                  className="w-full rounded-full border border-[#F5D77F] bg-gradient-to-r from-[#D4AF37] to-[#C89B3C] hover:from-[#E6C260] hover:to-[#D4AF37] active:scale-[0.98] py-2.5 text-xs font-extrabold text-[#0B1B36] shadow-lg transition cursor-pointer mt-1 disabled:opacity-60"
                 >
                   {submitting ? "Authenticating…" : "Authenticate Admin"}
                 </button>
@@ -411,7 +411,7 @@ export default function Login({ onLogin, onBack }) {
 
       {/* Footer */}
       <footer className="relative z-10 py-2 text-center text-[0.68rem] font-mono transition-colors duration-700">
-        <span className={isAdmin ? "text-[#4A0A13]/75" : "text-[#F5D77F]/75"}>
+        <span className={isAdmin ? "text-[#0B1B36]/75" : "text-[#F5D77F]/75"}>
           © 2026 Venture Orbital · Executive &amp; System Governance
         </span>
       </footer>

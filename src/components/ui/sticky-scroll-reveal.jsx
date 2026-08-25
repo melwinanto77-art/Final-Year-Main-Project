@@ -44,7 +44,7 @@ export const StickyScroll = ({
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.4 }}
-                className="font-mono text-xs font-bold uppercase tracking-[0.18em] px-3.5 py-1 rounded-full border border-[#C89B3C] bg-[#FBF7EC] text-[#42040D] inline-block mb-3 shadow-xs"
+                className="font-mono text-xs font-bold uppercase tracking-[0.18em] px-3.5 py-1 rounded-full border border-[#C89B3C] bg-[#F3F7FC] text-[#081428] inline-block mb-3 shadow-xs"
               >
                 {item.domainNum || `DOMAIN 0${index + 1}`}
               </motion.span>
@@ -53,7 +53,7 @@ export const StickyScroll = ({
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.35 }}
-                className="text-2xl md:text-3xl font-extrabold font-sans text-[#1C070D] tracking-tight"
+                className="text-2xl md:text-3xl font-extrabold font-sans text-[#04101F] tracking-tight"
               >
                 {item.title}
               </motion.h2>
@@ -62,7 +62,7 @@ export const StickyScroll = ({
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.35 }}
-                className="text-sm md:text-base font-sans leading-relaxed mt-4 text-[#4A1A24] font-medium max-w-md"
+                className="text-sm md:text-base font-sans leading-relaxed mt-4 text-[#1B3557] font-medium max-w-md"
               >
                 {item.description}
               </motion.p>
@@ -72,10 +72,10 @@ export const StickyScroll = ({
         </div>
       </div>
 
-      {/* Individual Domain Card in Matte Maroon (#5A2028) */}
+      {/* Individual Domain Card in Matte Maroon (#24406B) */}
       <div
         className={cn(
-          "sticky top-8 hidden h-72 w-96 shrink-0 overflow-hidden rounded-2xl bg-[#5A2028] border border-[#D4AF37]/50 lg:flex items-center justify-center p-6 shadow-2xl transition-all duration-300",
+          "sticky top-8 hidden h-72 w-96 shrink-0 overflow-hidden rounded-2xl bg-[#24406B] border border-[#D4AF37]/50 lg:flex items-center justify-center p-6 shadow-2xl transition-all duration-300",
           contentClassName
         )}
       >

@@ -10,9 +10,9 @@
   /* Executive Cream, Burgundy & Gold Color Palette */
   :root {
     /* Theme Colors */
-    --color-bg-primary: #FAF4E8;
+    --color-bg-primary: #FBFCFE;
     --color-bg-secondary: #F4ECC8;
-    --color-bg-card: #4A0A13;
+    --color-bg-card: #0B1B36;
     
     /* Gold Tones */
     --color-gold-primary: #D4AF37;
@@ -20,9 +20,9 @@
     --color-gold-accent: #B8860B;
 
     /* Burgundy Tones */
-    --color-burgundy-deep: #4A0A13;
-    --color-burgundy-dark: #38070E;
-    --color-burgundy-hover: #5C0F1A;
+    --color-burgundy-deep: #0B1B36;
+    --color-burgundy-dark: #050E1D;
+    --color-burgundy-hover: #16294D;
     
     /* Borders & Glow */
     --color-border-subtle: rgba(212, 175, 55, 0.3);
@@ -30,14 +30,14 @@
     --color-hover-glow: rgba(212, 175, 55, 0.4);
 
     /* Typography */
-    --color-text-primary: #4A0A13;
-    --color-text-secondary: #7A1C29;
-    --color-text-muted: #9E5D67;
+    --color-text-primary: #0B1B36;
+    --color-text-secondary: #3D5A80;
+    --color-text-muted: #7189A9;
   }
 
   body {
-    background-color: #FAF4E8;
-    color: #4A0A13;
+    background-color: #FBFCFE;
+    color: #0B1B36;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
@@ -48,7 +48,7 @@
 
 /* Layered Executive Cream Background with Soft Gold Radial Lighting */
 .bg-royal-mesh {
-  background-color: #FAF4E8;
+  background-color: #FBFCFE;
   background-image: 
     radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
     radial-gradient(circle at 85% 15%, rgba(245, 215, 127, 0.10) 0%, transparent 40%),
@@ -63,7 +63,7 @@
   border-radius: 20px;
   box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #FFFFFF;
+  color: #FBFCFE;
 }
 
 .card-royal-luxury:hover {
@@ -78,12 +78,12 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(212, 175, 55, 0.18);
-  color: #FFFFFF;
+  color: #FBFCFE;
 }
 
 /* Gold Gradient Shimmer Text */
 .text-shimmer-champagne {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, #FBFCFE 0%, #F4D67A 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -106,7 +106,7 @@
 }
 
 .btn-royal-red:hover {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 100%);
+  background: linear-gradient(135deg, #FBFCFE 0%, #F4D67A 100%);
   border-color: #F4D67A;
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
   transform: translateY(-3px);
@@ -121,7 +121,7 @@
 .btn-royal-gold-outline {
   background-color: transparent;
   border: 1px solid rgba(212, 175, 55, 0.5);
-  color: #FFFFFF;
+  color: #FBFCFE;
   font-weight: 600;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -258,7 +258,7 @@
   border-radius: 20px;
   box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #FFFFFF;
+  color: #FBFCFE;
 }
 
 .card-royal-luxury:hover {
@@ -273,12 +273,12 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(212, 175, 55, 0.18);
-  color: #FFFFFF;
+  color: #FBFCFE;
 }
 
 /* Gold Gradient Shimmer Text */
 .text-shimmer-champagne {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, #FBFCFE 0%, #F4D67A 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -358,7 +358,7 @@
 }
 
 .btn-royal-red:hover {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 100%);
+  background: linear-gradient(135deg, #FBFCFE 0%, #F4D67A 100%);
   border-color: #F4D67A;
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
   transform: translateY(-3px);
@@ -373,7 +373,7 @@
 .btn-royal-gold-outline {
   background-color: transparent;
   border: 1px solid rgba(212, 175, 55, 0.5);
-  color: #FFFFFF;
+  color: #FBFCFE;
   font-weight: 600;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }

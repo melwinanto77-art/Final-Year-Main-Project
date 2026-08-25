@@ -117,7 +117,7 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
               key={item.label}
               type="button"
               onClick={() => scrollToSection(item.target)}
-              className="group relative text-xs sm:text-sm font-semibold text-[#4A0A13] hover:text-[#7A1C29] transition-colors cursor-pointer whitespace-nowrap py-1 tracking-wide"
+              className="group relative text-xs sm:text-sm font-semibold text-[#0B1B36] hover:text-[#3D5A80] transition-colors cursor-pointer whitespace-nowrap py-1 tracking-wide"
             >
               <span>{item.label}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
@@ -129,9 +129,9 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
         <button
           type="button"
           onClick={onViewServices || onBookCall}
-          className="hidden lg:flex items-center gap-2.5 rounded-full bg-[#400A12] hover:bg-[#5C0F1A] px-4 py-2 text-xs font-bold text-[#FFFFFF] shadow-md transition-all cursor-pointer"
+          className="hidden lg:flex items-center gap-2.5 rounded-full bg-[#081428] hover:bg-[#16294D] px-4 py-2 text-xs font-bold text-[#FBFCFE] shadow-md transition-all cursor-pointer"
         >
-          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FAF4E8] text-[#400A12] font-mono text-[0.65rem] font-bold">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FBFCFE] text-[#081428] font-mono text-[0.65rem] font-bold">
             EX
           </div>
           <span className="font-sans text-xs font-bold tracking-wide">
@@ -148,7 +148,7 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/80 bg-[#FAF4E8]/80 px-5 py-1.5 text-[0.7rem] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#7A1C29] shadow-xs backdrop-blur-md mb-8"
+          className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/80 bg-[#FBFCFE]/80 px-5 py-1.5 text-[0.7rem] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#3D5A80] shadow-xs backdrop-blur-md mb-8"
         >
           <Sparkles size={14} className="text-[#D4AF37]" />
           <span>SYSTEMIC SOVEREIGNTY & AI INTELLIGENCE</span>
@@ -164,7 +164,7 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
           <span className="block bg-gradient-to-r from-[#F5D77F] via-[#D4AF37] to-[#E6C260] bg-clip-text text-transparent drop-shadow-[0_4px_25px_rgba(212,175,55,0.4)]">
             Grow your business,
           </span>
-          <span className="block text-[#4A0A13] drop-shadow-[0_4px_16px_rgba(74,10,19,0.15)] mt-1 sm:mt-3">
+          <span className="block text-[#0B1B36] drop-shadow-[0_4px_16px_rgba(11,27,54,0.15)] mt-1 sm:mt-3">
             not your payroll
           </span>
         </motion.h1>
@@ -180,9 +180,9 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
           <button
             type="button"
             onClick={onViewServices || onBookCall}
-            className="group flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#D4AF37] via-[#C89B3C] to-[#B8860B] hover:from-[#E6C260] hover:to-[#C89B3C] px-8 py-3.5 text-sm font-bold text-[#4A0A13] shadow-[0_6px_25px_rgba(200,155,60,0.35)] transition-all cursor-pointer"
+            className="group flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#D4AF37] via-[#C89B3C] to-[#B8860B] hover:from-[#E6C260] hover:to-[#C89B3C] px-8 py-3.5 text-sm font-bold text-[#0B1B36] shadow-[0_6px_25px_rgba(200,155,60,0.35)] transition-all cursor-pointer"
           >
-            <Play size={14} className="fill-[#4A0A13] text-[#4A0A13]" />
+            <Play size={14} className="fill-[#0B1B36] text-[#0B1B36]" />
             <span>Start your journey</span>
             <span className="text-xs font-black">›</span>
           </button>
@@ -191,10 +191,10 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
           <button
             type="button"
             onClick={onViewServices || onBookCall}
-            className="flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-[#D4AF37] bg-[#FAF4E8] hover:bg-[#F5EAD4] px-8 py-3.5 text-sm font-bold text-[#4A0A13] shadow-xs transition-all cursor-pointer"
+            className="flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-[#D4AF37] bg-[#FBFCFE] hover:bg-[#EDF2F9] px-8 py-3.5 text-sm font-bold text-[#0B1B36] shadow-xs transition-all cursor-pointer"
           >
             <span>Sign In Executive Profile</span>
-            <ArrowRight size={14} className="text-[#4A0A13]" />
+            <ArrowRight size={14} className="text-[#0B1B36]" />
           </button>
         </motion.div>
 
@@ -203,9 +203,9 @@ export default function PulpSenseHero({ onBookCall, onViewServices }) {
   );
 
   return (
-    <div className="relative w-full bg-[#FAF4E8] text-[#4A0E17] font-sans overflow-hidden selection:bg-[#D4AF37] selection:text-[#FAF4E8]">
+    <div className="relative w-full bg-[#FBFCFE] text-[#0B1B36] font-sans overflow-hidden selection:bg-[#D4AF37] selection:text-[#FBFCFE]">
       {/* Background Soft Lighting Radial Glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(245,215,127,0.3)_0%,rgba(250,244,232,0)_65%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(245,215,127,0.3)_0%,rgba(255,255,255,0)_65%)]" />
 
       {/* Hero Parallax with 5 Main Domain Cards */}
       <HeroParallax products={DOMAIN_CARDS_DATA} headerComponent={HeaderComponent} />

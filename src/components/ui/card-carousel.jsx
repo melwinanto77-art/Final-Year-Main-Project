@@ -136,10 +136,10 @@ export const CardCarousel = ({
       <style>{css}</style>
       <div className="w-full">
         <div className="flex flex-col items-center justify-center text-center pb-6 w-full">
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#4A0A13]">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#0B1B36]">
             10-Step Strategic Framework
           </h3>
-          <p className="text-[#7A1C29] text-base md:text-lg mt-2 max-w-xl font-medium">
+          <p className="text-[#3D5A80] text-base md:text-lg mt-2 max-w-xl font-medium">
             From market discovery and feasibility scoring to go-to-market execution and OKR telemetry.
           </p>
         </div>
@@ -176,16 +176,16 @@ export const CardCarousel = ({
             >
               {items.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="group relative flex flex-col justify-between h-[380px] w-full rounded-2xl border-2 border-[#D4AF37]/50 bg-[#4A0A13] p-5 shadow-xl transition-all duration-300 overflow-hidden">
+                  <div className="group relative flex flex-col justify-between h-[380px] w-full rounded-2xl border-2 border-[#D4AF37]/50 bg-[#0B1B36] p-5 shadow-xl transition-all duration-300 overflow-hidden">
                     {/* Background Image Overlay with dark burgundy gradient */}
                     <div className="absolute inset-0 -z-10 opacity-20 group-hover:opacity-30 transition-opacity">
                       <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#4A0A13]/90 via-[#4A0A13]/95 to-[#2A050A]" />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0B1B36]/90 via-[#0B1B36]/95 to-[#050E1D]" />
 
                     {/* Header Badge */}
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs font-bold text-[#F5D77F] bg-[#FAF4E8]/10 border border-[#D4AF37]/40 px-2.5 py-1 rounded-full">
+                      <span className="font-mono text-xs font-bold text-[#F5D77F] bg-[#FBFCFE]/10 border border-[#D4AF37]/40 px-2.5 py-1 rounded-full">
                         MODULE {item.num}
                       </span>
                       <span className="text-2xl">{item.icon}</span>
@@ -193,14 +193,14 @@ export const CardCarousel = ({
 
                     {/* Centered Card Title */}
                     <div className="my-auto flex flex-col items-center justify-center text-center px-2 py-4">
-                      <h4 className="font-sans text-2xl font-extrabold text-[#FAF4E8] group-hover:text-[#F5D77F] transition-colors leading-tight">
+                      <h4 className="font-sans text-2xl font-extrabold text-[#FBFCFE] group-hover:text-[#F5D77F] transition-colors leading-tight">
                         {item.title}
                       </h4>
                     </div>
 
                     {/* Footer Description */}
                     <div>
-                      <p className="font-sans text-xs text-[#EAD5D8] leading-relaxed text-center">
+                      <p className="font-sans text-xs text-[#D7E3F4] leading-relaxed text-center">
                         {item.desc}
                       </p>
                       {/* Decorative Gold Accent Bar */}

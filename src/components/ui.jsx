@@ -11,18 +11,18 @@ import DarkVeil from './DarkVeil.jsx';
 // Layered Luxury Background with Subtle Gold Orbs & Black Overlay
 export function RoyalBackground({ hueShift = 0, speed = 0.25, opacity = 0.25, className = '' }) {
   return (
-    <div className={`pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#FAF4E8] ${className}`}>
+    <div className={`pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#FBFCFE] ${className}`}>
       {/* Soft Radial Gold & Burgundy Glow Orbs */}
       <div className="absolute -left-20 -top-20 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/15 blur-[140px]" />
       <div className="absolute right-0 top-1/3 h-[500px] w-[500px] rounded-full bg-[#F5D77F]/12 blur-[150px]" />
-      <div className="absolute bottom-0 left-1/3 h-[500px] w-[500px] rounded-full bg-[#4A0A13]/06 blur-[160px]" />
+      <div className="absolute bottom-0 left-1/3 h-[500px] w-[500px] rounded-full bg-[#0B1B36]/06 blur-[160px]" />
 
       {/* WebGL Shader Ambient Layer */}
       <div className="absolute inset-0" style={{ opacity: opacity * 0.25 }}>
         <DarkVeil hueShift={hueShift} speed={speed} resolutionScale={0.75} />
       </div>
       {/* Translucent Cream Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FAF4E8]/95 via-[#F5EAD4]/90 to-[#FAF4E8]/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FBFCFE]/95 via-[#EDF2F9]/90 to-[#FBFCFE]/95" />
     </div>
   );
 }
@@ -94,7 +94,7 @@ export function AiInsightWidget({ verticalName = 'Venture' }) {
       </div>
 
       <div>
-        <h4 className="font-sans text-base font-bold text-[#FFFFFF]">{verticalName} Neural Read</h4>
+        <h4 className="font-sans text-base font-bold text-[#FBFCFE]">{verticalName} Neural Read</h4>
         <p className="mt-1 text-xs text-[#CFCFCF]">
           Real-time pattern analysis across TAM conversion, unit economics, and competitive whitespace.
         </p>
@@ -109,7 +109,7 @@ export function AiInsightWidget({ verticalName = 'Venture' }) {
           <div key={item.label} className="rounded-xl border border-[rgba(212,175,55,0.18)] bg-[#0E0E0E] p-2.5">
             <div className="flex items-center justify-between text-[0.68rem]">
               <span className="font-mono text-[#CFCFCF]">{item.label}</span>
-              <span className="font-mono font-bold text-[#FFFFFF]">{item.val}</span>
+              <span className="font-mono font-bold text-[#FBFCFE]">{item.val}</span>
             </div>
             <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[#050505]">
               <div className={`h-full rounded-full ${item.color}`} style={{ width: item.val.includes('%') ? item.val : '85%' }} />
@@ -151,7 +151,7 @@ export function RoyalHeading({ children, level = 2, shimmer = false, className =
   return (
     <Tag
       className={`font-sans font-bold tracking-tight ${sizes[level]} ${
-        shimmer ? 'text-shimmer-champagne' : 'text-[#FFFFFF]'
+        shimmer ? 'text-shimmer-champagne' : 'text-[#FBFCFE]'
       } ${className}`}
     >
       {children}
@@ -176,7 +176,7 @@ export function Field({ label, hint, children }) {
 
 // Base input / textarea / select styling with Black background & Gold border
 export const fieldBase =
-  'field-luxury-gold w-full rounded-xl bg-[#050505] px-3.5 py-2.5 text-sm text-[#FFFFFF] ' +
+  'field-luxury-gold w-full rounded-xl bg-[#050505] px-3.5 py-2.5 text-sm text-[#FBFCFE] ' +
   'placeholder:text-[#9A9A9A] border border-[rgba(212,175,55,0.3)] shadow-xs transition-all duration-200 focus:bg-[#0E0E0E]';
 
 export function Input(props) {
@@ -237,7 +237,7 @@ const STATUS_STYLES = {
 };
 
 export function StatusBadge({ status, className = '' }) {
-  const style = STATUS_STYLES[status] || 'bg-[#111111] text-[#FFFFFF] border-[rgba(212,175,55,0.3)]';
+  const style = STATUS_STYLES[status] || 'bg-[#111111] text-[#FBFCFE] border-[rgba(212,175,55,0.3)]';
   return (
     <span
       className={`inline-flex items-center rounded-md border px-2.5 py-0.5 font-mono text-[0.62rem] font-bold uppercase tracking-wider ${style} ${className}`}

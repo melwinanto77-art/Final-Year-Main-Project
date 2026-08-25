@@ -128,7 +128,7 @@ export const ProductCard = ({
       whileHover={{
         y: -10,
         scale: 1.02,
-        boxShadow: "0 25px 40px -10px rgba(45, 12, 16, 0.6)",
+        boxShadow: "0 25px 40px -10px rgba(8, 20, 40, 0.6)",
       }}
       key={product.title}
       className="group/product h-80 w-full max-w-[19.5rem] sm:max-w-[20.5rem] relative shrink-0 rounded-[20px] bg-[#42181C] shadow-2xl p-6 flex flex-col justify-between text-left transition-shadow duration-500 overflow-hidden cursor-pointer"
@@ -136,7 +136,7 @@ export const ProductCard = ({
       {/* Top Header: Left Oval Pill Badge + Right Solid Gold Icon Square */}
       <div className="relative z-10 flex items-center justify-between w-full">
         {/* Left Pill Badge */}
-        <div className="inline-flex items-center justify-center rounded-full border border-[#7A353E] px-3.5 py-1 bg-[#331114]/80">
+        <div className="inline-flex items-center justify-center rounded-full border border-[#35507A] px-3.5 py-1 bg-[#101C33]/80">
           <span className="font-mono text-[0.62rem] font-bold text-[#E2B755] uppercase tracking-[0.18em]">
             DOMAIN {domainIndex}
           </span>
@@ -150,18 +150,18 @@ export const ProductCard = ({
 
       {/* Middle Body: Left-aligned Title & Multi-line Description */}
       <div className="relative z-10 flex flex-col items-start justify-start space-y-2.5 my-auto pt-2">
-        <h3 className="font-sans text-xl sm:text-[1.35rem] font-extrabold text-[#FFFFFF] tracking-tight leading-snug">
+        <h3 className="font-sans text-xl sm:text-[1.35rem] font-extrabold text-[#FBFCFE] tracking-tight leading-snug">
           {product.title}
         </h3>
-        <p className="text-xs sm:text-[0.82rem] text-[#D8B4B8] group-hover/product:text-[#FAF4E8] font-normal leading-relaxed transition-colors duration-300">
+        <p className="text-xs sm:text-[0.82rem] text-[#D8B4B8] group-hover/product:text-[#FBFCFE] font-normal leading-relaxed transition-colors duration-300">
           {product.description}
         </p>
       </div>
 
       {/* Footer: Thin Separator Line + Strategy Module Footer Link */}
-      <div className="relative z-10 w-full pt-3 border-t border-[#592328]/80 flex items-center justify-between font-mono text-[0.63rem] tracking-wider uppercase">
-        <span className="text-[#A36B72] font-semibold">STRATEGY MODULE</span>
-        <span className="text-[#E2B755] font-bold group-hover/product:text-[#FFFFFF] transition-colors flex items-center gap-1">
+      <div className="relative z-10 w-full pt-3 border-t border-[#24406B]/80 flex items-center justify-between font-mono text-[0.63rem] tracking-wider uppercase">
+        <span className="text-[#8FA6C9] font-semibold">STRATEGY MODULE</span>
+        <span className="text-[#E2B755] font-bold group-hover/product:text-[#FBFCFE] transition-colors flex items-center gap-1">
           Explore domain <span className="text-xs">›</span>
         </span>
       </div>

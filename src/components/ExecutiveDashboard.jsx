@@ -344,13 +344,13 @@ function ReqText({ label, value, onChange, placeholder, hint, rows }) {
           className={fieldCls}
         />
       )}
-      {hint && <p className="text-[0.65rem] text-[#8C6D58]">{hint}</p>}
+      {hint && <p className="text-[0.65rem] text-[#6E7B91]">{hint}</p>}
     </div>
   );
 }
 
 const fieldCls =
-  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] placeholder-[#8C6D58]/60 focus:border-[#400A12] focus:outline-none shadow-xs";
+  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] placeholder-[#6E7B91]/60 focus:border-[#081428] focus:outline-none shadow-xs";
 const labelCls =
   "font-mono text-[0.68rem] uppercase font-bold text-[#B8860B] tracking-wider";
 
@@ -367,7 +367,7 @@ function ReqNumber({ label, value, onChange, placeholder, hint }) {
         placeholder={placeholder}
         className={fieldCls}
       />
-      {hint && <p className="text-[0.65rem] text-[#8C6D58]">{hint}</p>}
+      {hint && <p className="text-[0.65rem] text-[#6E7B91]">{hint}</p>}
     </div>
   );
 }
@@ -377,7 +377,7 @@ function ReqSlider({ label, value, onChange }) {
     <div className="space-y-1">
       <div className="flex items-center justify-between">
         <label className={labelCls}>{label}</label>
-        <span className="font-mono text-xs font-bold text-[#400A12]">{value}/100</span>
+        <span className="font-mono text-xs font-bold text-[#081428]">{value}/100</span>
       </div>
       <input
         type="range"
@@ -385,7 +385,7 @@ function ReqSlider({ label, value, onChange }) {
         max="100"
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-[#400A12] cursor-pointer"
+        className="w-full accent-[#081428] cursor-pointer"
       />
     </div>
   );
@@ -783,28 +783,28 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
   );
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#4A0A13] font-sans selection:bg-[#D4AF37] selection:text-[#4A0A13] flex flex-col w-full pb-16">
+    <div className="min-h-screen bg-[#FBFCFE] text-[#0B1B36] font-sans selection:bg-[#D4AF37] selection:text-[#0B1B36] flex flex-col w-full pb-16">
       
       {/* ============================================================
          1. EXECUTIVE TOP NAVBAR (HEADER)
          ============================================================ */}
-      <header className="sticky top-0 z-30 w-full bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#D4AF37]/20 px-4 sm:px-8 py-4">
+      <header className="sticky top-0 z-30 w-full bg-[#FBFCFE]/95 backdrop-blur-md border-b border-[#D4AF37]/20 px-4 sm:px-8 py-4">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Left Title & Breadcrumbs */}
           <div className="flex flex-col text-center md:text-left w-full md:w-auto">
-            <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-[#4A0A13] tracking-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-[#0B1B36] tracking-tight">
               Dashboard
             </h1>
-            <div className="flex items-center justify-center md:justify-start gap-1.5 text-xs font-semibold text-[#8C6D58] mt-0.5">
+            <div className="flex items-center justify-center md:justify-start gap-1.5 text-xs font-semibold text-[#6E7B91] mt-0.5">
               <button
                 onClick={onGoHome}
-                className="hover:text-[#4A0A13] transition cursor-pointer"
+                className="hover:text-[#0B1B36] transition cursor-pointer"
               >
                 Home
               </button>
               <span>/</span>
-              <span className="text-[#4A0A13]">Dashboard</span>
+              <span className="text-[#0B1B36]">Dashboard</span>
             </div>
           </div>
 
@@ -815,19 +815,19 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
             <div className="relative flex-1 md:w-72 lg:w-80">
               <Search
                 size={16}
-                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8C6D58]"
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6E7B91]"
               />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search queries, modules, projects..."
-                className="w-full bg-[#F5EAD4]/90 border border-[#D4AF37]/40 rounded-full pl-10 pr-4 py-2 text-xs sm:text-sm text-[#4A0A13] placeholder-[#8C6D58]/70 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/30 transition shadow-xs"
+                className="w-full bg-[#EDF2F9]/90 border border-[#D4AF37]/40 rounded-full pl-10 pr-4 py-2 text-xs sm:text-sm text-[#0B1B36] placeholder-[#6E7B91]/70 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/30 transition shadow-xs"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8C6D58] hover:text-[#4A0A13]"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6E7B91] hover:text-[#0B1B36]"
                 >
                   <X size={14} />
                 </button>
@@ -842,12 +842,12 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   setIsNotificationsOpen(!isNotificationsOpen);
                   setNotificationsRead(true);
                 }}
-                className="relative p-2 rounded-full hover:bg-[#F5EAD4] text-[#B8860B] transition cursor-pointer"
+                className="relative p-2 rounded-full hover:bg-[#EDF2F9] text-[#B8860B] transition cursor-pointer"
                 title="Notifications"
               >
                 <Bell size={20} />
                 {!notificationsRead && unreadCount > 0 && (
-                  <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-[#FAF7F2]" />
+                  <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-[#FBFCFE]" />
                 )}
               </button>
 
@@ -858,7 +858,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute right-0 mt-2 w-72 sm:w-80 bg-[#FAF4E8] border border-[#D4AF37]/50 rounded-2xl shadow-xl p-4 z-50 text-[#4A0A13]"
+                    className="absolute right-0 mt-2 w-72 sm:w-80 bg-[#FBFCFE] border border-[#D4AF37]/50 rounded-2xl shadow-xl p-4 z-50 text-[#0B1B36]"
                   >
                     <div className="flex items-center justify-between border-b border-[#D4AF37]/30 pb-2 mb-3">
                       <span className="font-bold text-xs uppercase font-mono tracking-wider text-[#B8860B]">
@@ -866,14 +866,14 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                       </span>
                       <button
                         onClick={() => setIsNotificationsOpen(false)}
-                        className="text-[#8C6D58] hover:text-[#4A0A13]"
+                        className="text-[#6E7B91] hover:text-[#0B1B36]"
                       >
                         <X size={14} />
                       </button>
                     </div>
                     <div className="space-y-2 max-h-80 overflow-y-auto">
                       {notifications.length === 0 ? (
-                        <p className="text-xs text-[#8C6D58] py-4 text-center">
+                        <p className="text-xs text-[#6E7B91] py-4 text-center">
                           Nothing new yet. Submit a venture and you will be told here when it is
                           reviewed and approved.
                         </p>
@@ -888,11 +888,11 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                               : "bg-white/60 border-[#D4AF37]/20"
                           }`}
                         >
-                          <p className="font-semibold text-[#4A0A13]">{n.title}</p>
+                          <p className="font-semibold text-[#0B1B36]">{n.title}</p>
                           {n.detail && (
-                            <p className="text-[0.68rem] text-[#7A1C29] mt-0.5 break-words">{n.detail}</p>
+                            <p className="text-[0.68rem] text-[#3D5A80] mt-0.5 break-words">{n.detail}</p>
                           )}
-                          <span className="text-[0.65rem] text-[#8C6D58]">{n.time}</span>
+                          <span className="text-[0.65rem] text-[#6E7B91]">{n.time}</span>
                         </div>
                       ))}
                     </div>
@@ -913,7 +913,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
             <button
               onClick={onLogout || onGoHome}
               type="button"
-              className="flex items-center gap-1 text-xs font-bold text-[#7A1C29] hover:text-[#4A0A13] transition cursor-pointer px-2 py-1 rounded-lg hover:bg-[#F5EAD4]"
+              className="flex items-center gap-1 text-xs font-bold text-[#3D5A80] hover:text-[#0B1B36] transition cursor-pointer px-2 py-1 rounded-lg hover:bg-[#EDF2F9]"
               title="Log Out"
             >
               <LogOut size={15} />
@@ -930,7 +930,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
       <main className="w-full px-4 sm:px-8 pt-6 sm:pt-8 space-y-8 flex-1">
         
         {/* Banner Card */}
-        <div className="relative w-full bg-[#400A12] border border-[#D4AF37]/30 rounded-2xl p-5 sm:p-7 text-[#FAF4E8] shadow-xl">
+        <div className="relative w-full bg-[#081428] border border-[#D4AF37]/30 rounded-2xl p-5 sm:p-7 text-[#FBFCFE] shadow-xl">
           
           {/* Subtle Ambient Lighting Background */}
           <div className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden">
@@ -941,18 +941,18 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
           <div className="relative z-10 space-y-3">
             
             {/* Pill Tag: Client Workspace */}
-            <div className="inline-block bg-[#FAF4E8] text-[#400A12] font-bold text-[0.7rem] px-3 py-1 rounded-full shadow-xs tracking-wide">
+            <div className="inline-block bg-[#FBFCFE] text-[#081428] font-bold text-[0.7rem] px-3 py-1 rounded-full shadow-xs tracking-wide">
               Client Executive Workspace
             </div>
 
             {/* Headline: Welcome back, <name from email>! 👋 */}
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF4E8] tracking-tight leading-tight flex items-center gap-2">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FBFCFE] tracking-tight leading-tight flex items-center gap-2">
               <span>Welcome back, {emailName}!</span>
               <span className="animate-bounce inline-block">👋</span>
             </h2>
 
             {/* Subtitle */}
-            <p className="text-xs sm:text-sm text-[#FAF4E8]/85 font-sans max-w-3xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#FBFCFE]/85 font-sans max-w-3xl leading-relaxed">
               Ready to validate a new business idea? Post your question or problem statement to start structured evaluation across 10 intelligence modules.
             </p>
 
@@ -965,9 +965,9 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               <button
                 onClick={() => setNavbarSection("queries")}
                 type="button"
-                className="group flex items-center gap-2 bg-[#C89B3C] hover:bg-[#D4AF37] active:scale-[0.98] text-[#400A12] font-extrabold px-4 sm:px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer border border-[#F5D77F]/40 text-xs tracking-wide"
+                className="group flex items-center gap-2 bg-[#C89B3C] hover:bg-[#D4AF37] active:scale-[0.98] text-[#081428] font-extrabold px-4 sm:px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer border border-[#F5D77F]/40 text-xs tracking-wide"
               >
-                <span className="flex items-center justify-center w-4 h-4 rounded-full bg-[#400A12] text-[#C89B3C] font-mono text-[0.65rem] font-bold">
+                <span className="flex items-center justify-center w-4 h-4 rounded-full bg-[#081428] text-[#C89B3C] font-mono text-[0.65rem] font-bold">
                   ?
                 </span>
                 <span>Post Business Question</span>
@@ -978,7 +978,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                 <button
                   type="button"
                   onClick={() => setIsMyProjectsDropdownOpen(!isMyProjectsDropdownOpen)}
-                  className="flex items-center gap-2 border border-[#FAF4E8]/40 hover:border-[#FAF4E8] bg-white/10 hover:bg-white/20 active:scale-[0.98] text-[#FAF4E8] font-bold px-4 sm:px-5 py-2.5 rounded-xl shadow-xs transition-all cursor-pointer text-xs tracking-wide"
+                  className="flex items-center gap-2 border border-[#FBFCFE]/40 hover:border-[#FBFCFE] bg-white/10 hover:bg-white/20 active:scale-[0.98] text-[#FBFCFE] font-bold px-4 sm:px-5 py-2.5 rounded-xl shadow-xs transition-all cursor-pointer text-xs tracking-wide"
                 >
                   <Folder size={15} className="text-[#F5D77F]" />
                   <span>My Projects</span>
@@ -997,7 +997,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                       initial={{ opacity: 0, y: -8, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -8, scale: 0.95 }}
-                      className="absolute bottom-full left-0 mb-2 w-64 bg-[#FAF4E8] border border-[#D4AF37] rounded-2xl shadow-2xl p-2 z-50 text-[#4A0A13] space-y-1"
+                      className="absolute bottom-full left-0 mb-2 w-64 bg-[#FBFCFE] border border-[#D4AF37] rounded-2xl shadow-2xl p-2 z-50 text-[#0B1B36] space-y-1"
                     >
                       <div className="px-3 py-1.5 border-b border-[#D4AF37]/30">
                         <p className="font-mono text-[0.68rem] font-extrabold uppercase text-[#B8860B]">
@@ -1012,22 +1012,22 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                           setIsMyProjectsDropdownOpen(false);
                           setIsViewProjectsModalOpen(true);
                         }}
-                        className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F5EAD4] transition text-left group cursor-pointer"
+                        className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-[#EDF2F9] transition text-left group cursor-pointer"
                       >
                         <div className="flex items-center gap-2.5">
-                          <div className="p-1.5 rounded-lg bg-[#400A12] text-[#F5D77F]">
+                          <div className="p-1.5 rounded-lg bg-[#081428] text-[#F5D77F]">
                             <Folder size={14} />
                           </div>
                           <div>
-                            <p className="text-xs font-bold text-[#4A0A13] group-hover:text-[#B8860B]">
+                            <p className="text-xs font-bold text-[#0B1B36] group-hover:text-[#B8860B]">
                               View Projects
                             </p>
-                            <p className="text-[0.65rem] text-[#8C6D58]">
+                            <p className="text-[0.65rem] text-[#6E7B91]">
                               Previous client projects & status
                             </p>
                           </div>
                         </div>
-                        <ChevronRight size={13} className="text-[#8C6D58] group-hover:translate-x-0.5 transition" />
+                        <ChevronRight size={13} className="text-[#6E7B91] group-hover:translate-x-0.5 transition" />
                       </button>
 
                       {/* Dropdown Item 2: New Project */}
@@ -1037,17 +1037,17 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                           setIsMyProjectsDropdownOpen(false);
                           setIsNewProjectModalOpen(true);
                         }}
-                        className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F5EAD4] transition text-left group cursor-pointer"
+                        className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-[#EDF2F9] transition text-left group cursor-pointer"
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="p-1.5 rounded-lg bg-[#B8860B] text-white">
                             <FolderPlus size={14} />
                           </div>
                           <div>
-                            <p className="text-xs font-bold text-[#4A0A13] group-hover:text-[#B8860B]">
+                            <p className="text-xs font-bold text-[#0B1B36] group-hover:text-[#B8860B]">
                               New Project
                             </p>
-                            <p className="text-[0.65rem] text-[#8C6D58]">
+                            <p className="text-[0.65rem] text-[#6E7B91]">
                               Post new startup & run analysis
                             </p>
                           </div>
@@ -1063,7 +1063,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               <button
                 onClick={() => setIsNewProjectModalOpen(true)}
                 type="button"
-                className="flex items-center gap-2 bg-[#5C0F1A] hover:bg-[#7A1C29] border border-[#D4AF37]/50 active:scale-[0.98] text-[#FAF4E8] font-extrabold px-4 sm:px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer text-xs tracking-wide"
+                className="flex items-center gap-2 bg-[#16294D] hover:bg-[#3D5A80] border border-[#D4AF37]/50 active:scale-[0.98] text-[#FBFCFE] font-extrabold px-4 sm:px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer text-xs tracking-wide"
               >
                 <Sparkles size={14} className="text-[#F5D77F]" />
                 <span>+ New Project Analysis</span>
@@ -1077,7 +1077,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
         {/* ============================================================
            3. THREE NAV SECTIONS BELOW WELCOME CARD (HOMEPAGE NAVBAR FORMAT)
            ============================================================ */}
-        <div className="relative z-20 bg-[#F5EAD4]/90 border border-[#D4AF37]/40 rounded-2xl p-2.5 sm:px-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="relative z-20 bg-[#EDF2F9]/90 border border-[#D4AF37]/40 rounded-2xl p-2.5 sm:px-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Section tabs. Data-driven so the set stays consistent and the row
               scrolls cleanly on a phone instead of wrapping into a wall. */}
@@ -1098,8 +1098,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   title={section.hint}
                   className={`group relative text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap py-2 px-3 sm:px-4 rounded-xl flex items-center gap-1.5 sm:gap-2 shrink-0 ${
                     active
-                      ? "bg-[#400A12] text-[#FAF4E8] shadow-md border border-[#D4AF37]/50"
-                      : "text-[#4A0A13] hover:bg-[#FAF4E8]/80 hover:text-[#7A1C29]"
+                      ? "bg-[#081428] text-[#FBFCFE] shadow-md border border-[#D4AF37]/50"
+                      : "text-[#0B1B36] hover:bg-[#FBFCFE]/80 hover:text-[#3D5A80]"
                   }`}
                 >
                   <Icon size={16} className={active ? "text-[#F5D77F]" : "text-[#B8860B]"} />
@@ -1119,7 +1119,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
           </nav>
 
           {/* Right Live System Telemetry Status Indicator */}
-          <div className="hidden lg:flex items-center gap-2 text-xs font-semibold text-[#8C6D58] shrink-0">
+          <div className="hidden lg:flex items-center gap-2 text-xs font-semibold text-[#6E7B91] shrink-0">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
             <span className="font-mono text-[0.68rem]">Systemic Telemetry Live</span>
           </div>
@@ -1147,10 +1147,10 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
         {navbarSection === "documents" && (
           <section className="space-y-4 pt-2">
             <div>
-              <h2 className="font-serif text-xl sm:text-2xl font-extrabold text-[#400A12]">
+              <h2 className="font-serif text-xl sm:text-2xl font-extrabold text-[#081428]">
                 Document Upload
               </h2>
-              <p className="text-xs text-[#7A1C29] max-w-2xl">
+              <p className="text-xs text-[#3D5A80] max-w-2xl">
                 Upload the files that support your venture — the reviewer reads these alongside your
                 intake answers, so real documents lead to a better-grounded assessment.
               </p>
@@ -1165,14 +1165,14 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                 id="doc-report"
                 value={docReportId}
                 onChange={(e) => setDocReportId(e.target.value)}
-                className="w-full sm:max-w-md rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] focus:border-[#400A12] focus:outline-none cursor-pointer"
+                className="w-full sm:max-w-md rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] focus:border-[#081428] focus:outline-none cursor-pointer"
               >
                 <option value="">General — not tied to one venture</option>
                 {projectsList.filter((p) => p.fromApi).map((p) => (
                   <option key={p.id} value={p.id}>{p.title}</option>
                 ))}
               </select>
-              <p className="text-[0.65rem] text-[#8C6D58]">
+              <p className="text-[0.65rem] text-[#6E7B91]">
                 Linking a file to a venture puts it in front of the reviewer handling that report.
               </p>
             </div>
@@ -1203,20 +1203,20 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
             {/* Clean Section Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D4AF37]/30 pb-4">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#4A0A13] flex items-center gap-2">
+                <h3 className="font-serif text-2xl font-bold text-[#0B1B36] flex items-center gap-2">
                   <Layers size={22} className="text-[#B8860B]" />
                   <span>Module Wise Score</span>
                 </h3>
-                <p className="text-xs text-[#8C6D58] mt-0.5">
+                <p className="text-xs text-[#6E7B91] mt-0.5">
                   {moduleSourceProject
-                    ? <>Scores from your approved report <strong className="text-[#400A12]">{moduleSourceProject.name}</strong>{typeof moduleSourceProject.score === "number" ? ` — overall ${moduleSourceProject.score}/100` : ""}.</>
+                    ? <>Scores from your approved report <strong className="text-[#081428]">{moduleSourceProject.name}</strong>{typeof moduleSourceProject.score === "number" ? ` — overall ${moduleSourceProject.score}/100` : ""}.</>
                     : "Module scores appear here once an administrator approves one of your reports."}
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 bg-[#F5EAD4] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30 text-xs font-bold text-[#4A0A13]">
+              <div className="flex items-center gap-2 bg-[#EDF2F9] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30 text-xs font-bold text-[#0B1B36]">
                 <span className="text-[#B8860B]">Avg Orbital Score:</span>
-                <span className="font-mono text-[#400A12] font-extrabold text-sm">84.8%</span>
+                <span className="font-mono text-[#081428] font-extrabold text-sm">84.8%</span>
               </div>
             </div>
 
@@ -1232,12 +1232,12 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     <div className="space-y-3">
                       {/* Top Row: Code & Score Pill */}
                       <div className="flex items-center justify-between">
-                        <span className="font-mono text-[0.68rem] font-bold text-[#B8860B] uppercase bg-[#F5EAD4] px-2.5 py-0.5 rounded-md">
+                        <span className="font-mono text-[0.68rem] font-bold text-[#B8860B] uppercase bg-[#EDF2F9] px-2.5 py-0.5 rounded-md">
                           {mod.code}
                         </span>
                         
                         {/* HIGHLIGHTED SCORE BADGE */}
-                        <div className="flex items-center gap-1.5 bg-[#400A12] text-[#F5D77F] px-3 py-1 rounded-xl border border-[#D4AF37]/40 shadow-xs">
+                        <div className="flex items-center gap-1.5 bg-[#081428] text-[#F5D77F] px-3 py-1 rounded-xl border border-[#D4AF37]/40 shadow-xs">
                           <span className="font-mono text-sm font-extrabold">
                             {mod.score}%
                           </span>
@@ -1246,33 +1246,33 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
 
                       {/* Icon & Title */}
                       <div className="flex items-start gap-3 pt-1">
-                        <div className="p-2.5 rounded-xl bg-[#400A12] text-[#F5D77F] shrink-0 shadow-xs">
+                        <div className="p-2.5 rounded-xl bg-[#081428] text-[#F5D77F] shrink-0 shadow-xs">
                           <IconComponent size={18} />
                         </div>
                         <div>
-                          <h4 className="font-serif text-base font-bold text-[#4A0A13] group-hover:text-[#B8860B] transition">
+                          <h4 className="font-serif text-base font-bold text-[#0B1B36] group-hover:text-[#B8860B] transition">
                             {mod.name}
                           </h4>
-                          <p className="text-[0.68rem] font-mono text-[#8C6D58]">
+                          <p className="text-[0.68rem] font-mono text-[#6E7B91]">
                             {mod.category}
                           </p>
                         </div>
                       </div>
 
                       {/* Description */}
-                      <p className="text-xs text-[#6A4B3A] leading-relaxed line-clamp-2">
+                      <p className="text-xs text-[#46587A] leading-relaxed line-clamp-2">
                         {mod.desc}
                       </p>
 
                       {/* Progress Bar */}
                       <div className="pt-1">
-                        <div className="flex items-center justify-between text-[0.65rem] font-mono text-[#8C6D58] mb-1">
+                        <div className="flex items-center justify-between text-[0.65rem] font-mono text-[#6E7B91] mb-1">
                           <span>Readiness Metric</span>
-                          <span className="font-bold text-[#400A12]">{mod.score}/100</span>
+                          <span className="font-bold text-[#081428]">{mod.score}/100</span>
                         </div>
-                        <div className="w-full h-1.5 bg-[#F5EAD4] rounded-full overflow-hidden border border-[#D4AF37]/20">
+                        <div className="w-full h-1.5 bg-[#EDF2F9] rounded-full overflow-hidden border border-[#D4AF37]/20">
                           <div
-                            className="h-full bg-gradient-to-r from-[#C89B3C] to-[#400A12] rounded-full transition-all duration-500"
+                            className="h-full bg-gradient-to-r from-[#C89B3C] to-[#081428] rounded-full transition-all duration-500"
                             style={{ width: `${mod.score}%` }}
                           />
                         </div>
@@ -1280,7 +1280,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     </div>
 
                     {/* Bottom Metadata */}
-                    <div className="pt-3 mt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[0.68rem] text-[#8C6D58]">
+                    <div className="pt-3 mt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[0.68rem] text-[#6E7B91]">
                       <span className="font-mono">{mod.project}</span>
                       <span className="font-mono">Updated {mod.lastUpdated}</span>
                     </div>
@@ -1299,11 +1299,11 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
             {/* Section Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D4AF37]/30 pb-4">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#4A0A13] flex items-center gap-2">
+                <h3 className="font-serif text-2xl font-bold text-[#0B1B36] flex items-center gap-2">
                   <Activity size={22} className="text-[#B8860B]" />
                   <span>Track Status — Project Evaluation Status Location</span>
                 </h3>
-                <p className="text-xs text-[#8C6D58] mt-0.5">
+                <p className="text-xs text-[#6E7B91] mt-0.5">
                   Pipeline tracking stages, systemic intake telemetry, and active project evaluation status.
                 </p>
               </div>
@@ -1311,8 +1311,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               {/* Global Telemetry Card */}
               <div className="flex items-center gap-3 bg-white/90 border border-[#D4AF37]/40 px-4 py-2 rounded-2xl shadow-xs">
                 <div className="flex flex-col">
-                  <span className="text-[0.68rem] font-mono text-[#8C6D58]">Overall System Readiness</span>
-                  <span className="font-mono text-sm font-extrabold text-[#400A12]">70% (7/10 Modules Complete)</span>
+                  <span className="text-[0.68rem] font-mono text-[#6E7B91]">Overall System Readiness</span>
+                  <span className="font-mono text-sm font-extrabold text-[#081428]">70% (7/10 Modules Complete)</span>
                 </div>
               </div>
             </div>
@@ -1326,8 +1326,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     RECEIVED
                   </span>
                 </div>
-                <h4 className="font-serif text-base font-bold text-[#400A12]">Raw Idea Intake</h4>
-                <p className="text-xs text-[#8C6D58]">Reviewing problem statement & founder inputs.</p>
+                <h4 className="font-serif text-base font-bold text-[#081428]">Raw Idea Intake</h4>
+                <p className="text-xs text-[#6E7B91]">Reviewing problem statement & founder inputs.</p>
               </div>
 
               <div className="bg-white/80 border border-[#D4AF37]/30 p-4 rounded-2xl space-y-2">
@@ -1337,8 +1337,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     REQUIREMENTS
                   </span>
                 </div>
-                <h4 className="font-serif text-base font-bold text-[#400A12]">Market Sizing Audit</h4>
-                <p className="text-xs text-[#8C6D58]">Mapping TAM/SAM/SOM whitespace vectors.</p>
+                <h4 className="font-serif text-base font-bold text-[#081428]">Market Sizing Audit</h4>
+                <p className="text-xs text-[#6E7B91]">Mapping TAM/SAM/SOM whitespace vectors.</p>
               </div>
 
               <div className="bg-white/80 border border-[#D4AF37]/30 p-4 rounded-2xl space-y-2">
@@ -1348,8 +1348,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     MAPPING
                   </span>
                 </div>
-                <h4 className="font-serif text-base font-bold text-[#400A12]">Financial Viability</h4>
-                <p className="text-xs text-[#8C6D58]">Auditing gross margin & unit payback cycles.</p>
+                <h4 className="font-serif text-base font-bold text-[#081428]">Financial Viability</h4>
+                <p className="text-xs text-[#6E7B91]">Auditing gross margin & unit payback cycles.</p>
               </div>
 
               <div className="bg-white/80 border border-[#D4AF37]/30 p-4 rounded-2xl space-y-2">
@@ -1359,8 +1359,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     DELIVERED
                   </span>
                 </div>
-                <h4 className="font-serif text-base font-bold text-[#400A12]">Executive Scorecard</h4>
-                <p className="text-xs text-[#8C6D58]">Synthesizing final binary verdict matrix.</p>
+                <h4 className="font-serif text-base font-bold text-[#081428]">Executive Scorecard</h4>
+                <p className="text-xs text-[#6E7B91]">Synthesizing final binary verdict matrix.</p>
               </div>
             </div>
 
@@ -1369,18 +1369,18 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                 scrolls sideways. */}
             <div className="bg-white/90 border border-[#D4AF37]/40 rounded-2xl p-4 sm:p-5 shadow-xs space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="font-serif text-base sm:text-lg font-bold text-[#4A0A13]">
+                <h4 className="font-serif text-base sm:text-lg font-bold text-[#0B1B36]">
                   Project Evaluation Status
                 </h4>
-                <span className="font-mono text-[0.65rem] text-[#8C6D58]">
+                <span className="font-mono text-[0.65rem] text-[#6E7B91]">
                   {projectsList.length} {projectsList.length === 1 ? "venture" : "ventures"}
                 </span>
               </div>
 
               {projectsList.length === 0 ? (
-                <div className="rounded-xl border border-dashed border-[#D4AF37]/50 bg-[#FAF4E8]/60 p-8 text-center">
-                  <p className="text-sm font-semibold text-[#400A12]">No ventures submitted yet</p>
-                  <p className="text-xs text-[#7A1C29] mt-1">
+                <div className="rounded-xl border border-dashed border-[#D4AF37]/50 bg-[#FBFCFE]/60 p-8 text-center">
+                  <p className="text-sm font-semibold text-[#081428]">No ventures submitted yet</p>
+                  <p className="text-xs text-[#3D5A80] mt-1">
                     Use the Intake Engine to submit your first venture for evaluation.
                   </p>
                 </div>
@@ -1388,8 +1388,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                 <>
                   {/* Desktop / tablet: real table */}
                   <div className="hidden sm:block overflow-x-auto">
-                    <table className="w-full text-left text-xs text-[#4A0A13]">
-                      <thead className="bg-[#F5EAD4] font-mono text-[0.66rem] text-[#B8860B] uppercase">
+                    <table className="w-full text-left text-xs text-[#0B1B36]">
+                      <thead className="bg-[#EDF2F9] font-mono text-[0.66rem] text-[#B8860B] uppercase">
                         <tr>
                           <th scope="col" className="p-3 rounded-l-xl">Project</th>
                           <th scope="col" className="p-3">Industry</th>
@@ -1404,14 +1404,14 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                         {projectsList.map((p) => {
                           const badge = getStatusBadge(p);
                           return (
-                            <tr key={p.id} className="hover:bg-[#FAF4E8] transition align-top">
+                            <tr key={p.id} className="hover:bg-[#FBFCFE] transition align-top">
                               <td className="p-3">
-                                <span className="font-bold text-[#400A12]">{p.title}</span>
-                                <span className="block text-[0.68rem] text-[#8C6D58] font-normal max-w-xs truncate">
+                                <span className="font-bold text-[#081428]">{p.title}</span>
+                                <span className="block text-[0.68rem] text-[#6E7B91] font-normal max-w-xs truncate">
                                   {p.verdict}
                                 </span>
                               </td>
-                              <td className="p-3 text-[#8C6D58] font-mono">{p.industry}</td>
+                              <td className="p-3 text-[#6E7B91] font-mono">{p.industry}</td>
                               <td className="p-3">
                                 <span className={`px-2.5 py-0.5 rounded-full font-bold text-[0.65rem] ${STATUS_BADGE_STYLES[badge.color]}`}>
                                   {badge.label}
@@ -1431,12 +1431,12 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                                 </div>
                               </td>
                               <td className="p-3 font-mono font-bold">{p.modulesProcessed}</td>
-                              <td className="p-3 font-mono text-[#8C6D58]">{p.date}</td>
+                              <td className="p-3 font-mono text-[#6E7B91]">{p.date}</td>
                               <td className="p-3 text-right">
                                 {p.rawStatus === "PUBLISHED" ? (
                                   <button
                                     onClick={() => handleOpenReportOverview(p)}
-                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] text-[0.68rem] font-bold cursor-pointer border border-[#D4AF37]/40"
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] text-[0.68rem] font-bold cursor-pointer border border-[#D4AF37]/40"
                                   >
                                     <Eye size={12} /> View
                                   </button>
@@ -1461,21 +1461,21 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     {projectsList.map((p) => {
                       const badge = getStatusBadge(p);
                       return (
-                        <div key={p.id} className="rounded-xl border border-[#D4AF37]/40 bg-[#FAF4E8] p-3 space-y-2">
+                        <div key={p.id} className="rounded-xl border border-[#D4AF37]/40 bg-[#FBFCFE] p-3 space-y-2">
                           <div className="flex items-start justify-between gap-2">
                             <div className="min-w-0">
-                              <p className="font-bold text-sm text-[#400A12] break-words">{p.title}</p>
-                              <p className="text-[0.68rem] text-[#8C6D58] font-mono">{p.industry}</p>
+                              <p className="font-bold text-sm text-[#081428] break-words">{p.title}</p>
+                              <p className="text-[0.68rem] text-[#6E7B91] font-mono">{p.industry}</p>
                             </div>
                             <span className={`px-2 py-0.5 rounded-full font-bold text-[0.6rem] shrink-0 ${STATUS_BADGE_STYLES[badge.color]}`}>
                               {badge.label}
                             </span>
                           </div>
-                          <p className="text-[0.7rem] font-bold text-[#400A12]">{p.verdict}</p>
+                          <p className="text-[0.7rem] font-bold text-[#081428]">{p.verdict}</p>
                           <div className="flex flex-wrap items-center gap-1.5">
                             {p.scoreBand && <StrengthBadge band={p.scoreBand} label="Score" size="sm" />}
                             {p.dataBand?.band && <StrengthBadge band={p.dataBand.band} label="Data" size="sm" />}
-                            <span className="font-mono text-[0.62rem] text-[#8C6D58]">
+                            <span className="font-mono text-[0.62rem] text-[#6E7B91]">
                               {p.modulesProcessed} - {p.date}
                             </span>
                           </div>
@@ -1483,7 +1483,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                             onClick={() => handleOpenReportOverview(p)}
                             className={`w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[0.7rem] font-bold cursor-pointer ${
                               p.rawStatus === "PUBLISHED"
-                                ? "bg-[#400A12] text-[#F5D77F] border border-[#D4AF37]/40"
+                                ? "bg-[#081428] text-[#F5D77F] border border-[#D4AF37]/40"
                                 : "border border-amber-300 bg-amber-50 text-amber-800"
                             }`}
                           >
@@ -1507,8 +1507,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
         {navbarSection === "engines" && (
           <section className="space-y-6 pt-2">
             <div className="space-y-1">
-              <h2 className="font-serif text-2xl font-extrabold text-[#400A12]">Vertical Engines</h2>
-              <p className="text-xs text-[#7A1C29]">
+              <h2 className="font-serif text-2xl font-extrabold text-[#081428]">Vertical Engines</h2>
+              <p className="text-xs text-[#3D5A80]">
                 Standalone TAM/SAM/SOM, unit-economics and feasibility calculators per vertical — run
                 what-if numbers instantly, no report required.
               </p>
@@ -1526,8 +1526,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   onClick={() => setEngineTab(id)}
                   className={`px-3 py-1.5 rounded-full text-xs font-bold transition cursor-pointer whitespace-nowrap ${
                     engineTab === id
-                      ? "bg-[#400A12] text-[#F5D77F] border border-[#D4AF37]/50"
-                      : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                      ? "bg-[#081428] text-[#F5D77F] border border-[#D4AF37]/50"
+                      : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                   }`}
                 >
                   {label}
@@ -1585,12 +1585,12 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="w-full max-w-2xl bg-[#FAF4E8] border border-[#D4AF37] rounded-3xl p-6 sm:p-8 shadow-2xl relative text-[#4A0A13] max-h-[85vh] flex flex-col"
+              className="w-full max-w-2xl bg-[#FBFCFE] border border-[#D4AF37] rounded-3xl p-6 sm:p-8 shadow-2xl relative text-[#0B1B36] max-h-[85vh] flex flex-col"
             >
               {/* Close Button */}
               <button
                 onClick={() => setIsViewProjectsModalOpen(false)}
-                className="absolute top-5 right-5 p-1.5 rounded-full hover:bg-[#F5EAD4] text-[#8C6D58] hover:text-[#4A0A13] transition cursor-pointer"
+                className="absolute top-5 right-5 p-1.5 rounded-full hover:bg-[#EDF2F9] text-[#6E7B91] hover:text-[#0B1B36] transition cursor-pointer"
               >
                 <X size={18} />
               </button>
@@ -1601,10 +1601,10 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   <Folder size={14} />
                   <span>Client Portfolio</span>
                 </div>
-                <h3 className="font-serif text-2xl font-extrabold text-[#400A12]">
+                <h3 className="font-serif text-2xl font-extrabold text-[#081428]">
                   My Projects & Status Directory
                 </h3>
-                <p className="text-xs text-[#7A1C29]">
+                <p className="text-xs text-[#3D5A80]">
                   All projects posted or updated previously by this client account.
                 </p>
               </div>
@@ -1617,7 +1617,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     className="bg-white p-4 rounded-2xl border border-[#D4AF37]/35 hover:border-[#D4AF37] transition space-y-2 shadow-xs"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[0.68rem] font-bold text-[#B8860B] uppercase bg-[#F5EAD4] px-2 py-0.5 rounded-md">
+                      <span className="font-mono text-[0.68rem] font-bold text-[#B8860B] uppercase bg-[#EDF2F9] px-2 py-0.5 rounded-md">
                         {p.industry}
                       </span>
                       {(() => {
@@ -1630,19 +1630,19 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                       })()}
                     </div>
 
-                    <h4 className="font-serif text-lg font-bold text-[#400A12]">
+                    <h4 className="font-serif text-lg font-bold text-[#081428]">
                       {p.title}
                     </h4>
 
-                    <p className="text-xs text-[#6A4B3A]">
+                    <p className="text-xs text-[#46587A]">
                       {p.description}
                     </p>
 
                     <div className="pt-2 border-t border-[#D4AF37]/20 flex items-center justify-between text-xs">
-                      <span className="text-[#8C6D58] font-mono text-[0.68rem]">
+                      <span className="text-[#6E7B91] font-mono text-[0.68rem]">
                         Modules: {p.modulesProcessed}
                       </span>
-                      <span className="font-extrabold text-[#400A12]">
+                      <span className="font-extrabold text-[#081428]">
                         Verdict: {p.verdict}
                       </span>
                     </div>
@@ -1651,7 +1651,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                       onClick={() => handleOpenReportOverview(p)}
                       className={`w-full mt-1 flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-[0.68rem] font-bold transition cursor-pointer ${
                         p.rawStatus === "PUBLISHED"
-                          ? "bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] border border-[#D4AF37]/40"
+                          ? "bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] border border-[#D4AF37]/40"
                           : "border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100"
                       }`}
                     >
@@ -1673,7 +1673,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
 
               {/* Modal Footer */}
               <div className="pt-4 mt-2 border-t border-[#D4AF37]/30 flex items-center justify-between">
-                <span className="text-xs text-[#8C6D58] font-mono">
+                <span className="text-xs text-[#6E7B91] font-mono">
                   Total: {projectsList.length} ventures registered
                 </span>
                 <button
@@ -1682,7 +1682,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     setIsViewProjectsModalOpen(false);
                     setIsNewProjectModalOpen(true);
                   }}
-                  className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] text-xs font-bold transition cursor-pointer"
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] text-xs font-bold transition cursor-pointer"
                 >
                   <Plus size={14} />
                   <span>New Project</span>
@@ -1703,7 +1703,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="w-full max-w-xl bg-[#FAF4E8] border border-[#D4AF37] rounded-3xl p-6 sm:p-8 shadow-2xl relative text-[#4A0A13]"
+              className="w-full max-w-xl bg-[#FBFCFE] border border-[#D4AF37] rounded-3xl p-6 sm:p-8 shadow-2xl relative text-[#0B1B36]"
             >
               {/* Close Button */}
               <button
@@ -1711,7 +1711,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   setIsNewProjectModalOpen(false);
                   setWizardStep(0);
                 }}
-                className="absolute top-5 right-5 p-1.5 rounded-full hover:bg-[#F5EAD4] text-[#8C6D58] hover:text-[#4A0A13] transition cursor-pointer"
+                className="absolute top-5 right-5 p-1.5 rounded-full hover:bg-[#EDF2F9] text-[#6E7B91] hover:text-[#0B1B36] transition cursor-pointer"
               >
                 <X size={18} />
               </button>
@@ -1722,10 +1722,10 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   <FolderPlus size={14} />
                   <span>Venture Onboarding</span>
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#400A12]">
+                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#081428]">
                   New Project Analysis
                 </h3>
-                <p className="text-xs text-[#7A1C29]">
+                <p className="text-xs text-[#3D5A80]">
                   Answer the requirements below — the 10 intelligence modules score exactly what you enter.
                   Blank fields fall back to standard assumptions.
                 </p>
@@ -1738,14 +1738,14 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                         onClick={() => newProjectForm.startupName.trim() && setWizardStep(i)}
                         title={title}
                         className={`h-1.5 flex-1 rounded-full transition cursor-pointer ${
-                          i <= wizardStep ? "bg-[#400A12]" : "bg-[#D4AF37]/30"
+                          i <= wizardStep ? "bg-[#081428]" : "bg-[#D4AF37]/30"
                         }`}
                       />
                     ))}
                   </div>
                 )}
                 {!isAnalyzing && (
-                  <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[#8C6D58] pt-1">
+                  <p className="font-mono text-[0.65rem] uppercase tracking-wider text-[#6E7B91] pt-1">
                     Step {wizardStep + 1} of {WIZARD_STEPS.length} — {WIZARD_STEPS[wizardStep]}
                   </p>
                 )}
@@ -1754,13 +1754,13 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
               {isAnalyzing ? (
                 <div className="py-10 text-center space-y-4">
                   <div className="relative w-16 h-16 mx-auto flex items-center justify-center">
-                    <div className="absolute inset-0 rounded-full border-4 border-[#D4AF37]/30 border-t-[#400A12] animate-spin" />
+                    <div className="absolute inset-0 rounded-full border-4 border-[#D4AF37]/30 border-t-[#081428] animate-spin" />
                     <Sparkles size={24} className="text-[#B8860B] animate-pulse" />
                   </div>
-                  <h4 className="font-serif text-xl font-bold text-[#400A12]">
+                  <h4 className="font-serif text-xl font-bold text-[#081428]">
                     Running Analysis across 10 Modules...
                   </h4>
-                  <p className="text-xs font-mono text-[#8C6D58] animate-pulse max-w-md mx-auto">
+                  <p className="text-xs font-mono text-[#6E7B91] animate-pulse max-w-md mx-auto">
                     {analysisStatusText}
                   </p>
                 </div>
@@ -1825,7 +1825,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                           <option value="B2B2C">B2B2C — through businesses to consumers</option>
                           <option value="Marketplace">Marketplace / platform</option>
                         </select>
-                        <p className="text-[0.65rem] text-[#8C6D58]">
+                        <p className="text-[0.65rem] text-[#6E7B91]">
                           Drives sector routing, pricing norms and channel strategy across the modules.
                         </p>
                       </div>
@@ -1887,8 +1887,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-3">
                         <div>
-                          <p className="text-xs font-bold text-[#4A0A13]">Can you directly reach your customers today?</p>
-                          <p className="text-[0.65rem] text-[#8C6D58]">
+                          <p className="text-xs font-bold text-[#0B1B36]">Can you directly reach your customers today?</p>
+                          <p className="text-[0.65rem] text-[#6E7B91]">
                             Honest answer — "No" scores customer discovery at 0 and the verdict will say so.
                           </p>
                         </div>
@@ -1897,8 +1897,8 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                           onClick={() => setNewProjectForm({ ...newProjectForm, consumerCommunication: !newProjectForm.consumerCommunication })}
                           className={`px-4 py-1.5 rounded-full text-xs font-extrabold transition cursor-pointer ${
                             newProjectForm.consumerCommunication
-                              ? "bg-[#400A12] text-[#F5D77F]"
-                              : "bg-[#F5EAD4] text-[#7A1C29]"
+                              ? "bg-[#081428] text-[#F5D77F]"
+                              : "bg-[#EDF2F9] text-[#3D5A80]"
                           }`}
                         >
                           {newProjectForm.consumerCommunication ? "YES" : "NO"}
@@ -1963,7 +1963,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                   {/* STEP 5 — Feasibility self-rating (MOD-04) */}
                   {wizardStep === 4 && (
                     <div className="space-y-4">
-                      <p className="text-[0.7rem] text-[#7A1C29]">
+                      <p className="text-[0.7rem] text-[#3D5A80]">
                         Rate each dimension 0–100 as honestly as you can — these weight directly into the feasibility score.
                       </p>
                       <ReqSlider label="Technical feasibility" value={newProjectForm.technical}
@@ -2084,7 +2084,7 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                         setIsNewProjectModalOpen(false);
                         setWizardStep(0);
                       }}
-                      className="px-4 py-2.5 rounded-xl text-xs font-bold text-[#7A1C29] hover:bg-[#F5EAD4] transition cursor-pointer"
+                      className="px-4 py-2.5 rounded-xl text-xs font-bold text-[#3D5A80] hover:bg-[#EDF2F9] transition cursor-pointer"
                     >
                       Cancel
                     </button>
@@ -2094,14 +2094,14 @@ export default function ExecutiveDashboard({ onLogout, onGoHome, userEmail }) {
                         <button
                           type="button"
                           onClick={() => setWizardStep((s) => s - 1)}
-                          className="px-4 py-2.5 rounded-xl text-xs font-bold text-[#400A12] border border-[#D4AF37]/60 hover:bg-[#F5EAD4] transition cursor-pointer"
+                          className="px-4 py-2.5 rounded-xl text-xs font-bold text-[#081428] border border-[#D4AF37]/60 hover:bg-[#EDF2F9] transition cursor-pointer"
                         >
                           Back
                         </button>
                       )}
                       <button
                         type="submit"
-                        className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40"
+                        className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40"
                       >
                         {wizardStep < WIZARD_STEPS.length - 1 ? (
                           <>

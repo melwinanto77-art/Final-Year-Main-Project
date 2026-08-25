@@ -28,8 +28,8 @@ function Row({ label, value }) {
   if (!value || (typeof value === "string" && !value.trim())) return null;
   return (
     <div className="flex gap-3 text-xs">
-      <span className="w-40 shrink-0 font-bold text-[#8C6D58]">{label}</span>
-      <span className="text-[#4A0A13]">{value}</span>
+      <span className="w-40 shrink-0 font-bold text-[#6E7B91]">{label}</span>
+      <span className="text-[#0B1B36]">{value}</span>
     </div>
   );
 }
@@ -79,7 +79,7 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 16 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="w-full max-w-3xl max-h-[88vh] overflow-y-auto rounded-3xl border border-[#D4AF37] bg-[#FAF4E8] p-6 sm:p-8 shadow-2xl space-y-6 text-[#4A0A13]"
+        className="w-full max-w-3xl max-h-[88vh] overflow-y-auto rounded-3xl border border-[#D4AF37] bg-[#FBFCFE] p-6 sm:p-8 shadow-2xl space-y-6 text-[#0B1B36]"
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-3">
@@ -88,14 +88,14 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
               <FileText size={14} />
               <span>Executive Strategy Report</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#400A12]">{report.name}</h2>
-            <p className="text-xs text-[#7A1C29] font-mono">
+            <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#081428]">{report.name}</h2>
+            <p className="text-xs text-[#3D5A80] font-mono">
               {String(report.vertical || "startups").toUpperCase()} · {report.status || "PUBLISHED"}
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-[#F5EAD4] text-[#8C6D58] hover:text-[#4A0A13] transition cursor-pointer"
+            className="p-1.5 rounded-full hover:bg-[#EDF2F9] text-[#6E7B91] hover:text-[#0B1B36] transition cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -136,25 +136,25 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
         <div className="rounded-2xl border-2 border-[#D4AF37] bg-white p-5 flex flex-wrap items-center gap-x-8 gap-y-3">
           <div className="text-center">
             <p className="font-mono text-[0.65rem] uppercase font-bold text-[#B8860B] tracking-wider">Venture Orbital Score</p>
-            <p className="font-serif text-4xl font-extrabold text-[#B8860B]">{score}<span className="text-lg text-[#8C6D58]"> / 100</span></p>
+            <p className="font-serif text-4xl font-extrabold text-[#B8860B]">{score}<span className="text-lg text-[#6E7B91]"> / 100</span></p>
           </div>
           <span className={`px-3 py-1 rounded-full border text-xs font-extrabold ${decisionTone}`}>
             {decisionLabel}
           </span>
           {verdict?.headline && (
-            <p className="text-xs italic text-[#7A1C29] flex-1 min-w-52">"{verdict.headline}"</p>
+            <p className="text-xs italic text-[#3D5A80] flex-1 min-w-52">"{verdict.headline}"</p>
           )}
         </div>
         )}
 
         {/* Download box */}
         {!pending && (
-        <div className="rounded-2xl border border-[#D4AF37]/60 bg-[#F5EAD4]/70 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="rounded-2xl border border-[#D4AF37]/60 bg-[#EDF2F9]/70 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-start gap-3">
             <FileText size={26} className="text-[#B8860B] shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-bold text-[#400A12]">Full report as Word document</p>
-              <p className="text-[0.7rem] text-[#7A1C29]">
+              <p className="text-sm font-bold text-[#081428]">Full report as Word document</p>
+              <p className="text-[0.7rem] text-[#3D5A80]">
                 Everything below plus module findings and history, formatted for sharing — opens in MS Word.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
                   downloadReportDocx(report.id, `${report.name || "strategy-report"}.docx`)
                     .catch((err) => alert(err.message || "Could not download the report."))
                 }
-                className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40"
+                className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40"
               >
                 <Download size={14} />
                 <span>Download .docx</span>
@@ -177,7 +177,7 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
             )}
             <button
               onClick={() => downloadReportDoc(report, moduleResults)}
-              className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-[#D4AF37]/60 bg-[#FAF4E8] hover:bg-[#F5EAD4] text-[#400A12] font-bold text-xs transition cursor-pointer"
+              className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-[#D4AF37]/60 bg-[#FBFCFE] hover:bg-[#EDF2F9] text-[#081428] font-bold text-xs transition cursor-pointer"
             >
               <FileText size={14} />
               <span>.doc</span>
@@ -190,24 +190,24 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
         {!pending && verdict && (
           <div className="rounded-2xl border border-[#D4AF37]/40 bg-white p-5 space-y-3">
             <h3 className="font-mono text-[0.68rem] uppercase font-bold text-[#B8860B] tracking-wider">Executive Verdict</h3>
-            {verdict.rationale && <p className="text-xs text-[#4A0A13]">{verdict.rationale}</p>}
+            {verdict.rationale && <p className="text-xs text-[#0B1B36]">{verdict.rationale}</p>}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               {(verdict.strengths || []).length > 0 && (
                 <div className="space-y-1.5">
                   <p className="font-bold text-emerald-700 flex items-center gap-1"><CheckCircle2 size={12} /> Strengths</p>
-                  {verdict.strengths.map((s, i) => <p key={i} className="text-[#4A0A13]">• {s}</p>)}
+                  {verdict.strengths.map((s, i) => <p key={i} className="text-[#0B1B36]">• {s}</p>)}
                 </div>
               )}
               {(verdict.risks || []).length > 0 && (
                 <div className="space-y-1.5">
                   <p className="font-bold text-red-700 flex items-center gap-1"><AlertTriangle size={12} /> Risks</p>
-                  {verdict.risks.map((s, i) => <p key={i} className="text-[#4A0A13]">• {s}</p>)}
+                  {verdict.risks.map((s, i) => <p key={i} className="text-[#0B1B36]">• {s}</p>)}
                 </div>
               )}
               {(verdict.nextActions || []).length > 0 && (
                 <div className="space-y-1.5">
                   <p className="font-bold text-[#B8860B] flex items-center gap-1"><ArrowRight size={12} /> Next Actions</p>
-                  {verdict.nextActions.map((s, i) => <p key={i} className="text-[#4A0A13]">• {s}</p>)}
+                  {verdict.nextActions.map((s, i) => <p key={i} className="text-[#0B1B36]">• {s}</p>)}
                 </div>
               )}
             </div>
@@ -225,13 +225,13 @@ export default function ReportOverview({ report, moduleResults = {}, onClose }) 
                 const s = moduleResults[key]?.score;
                 const adminOverride = report.adminOverrides?.[key];
                 return (
-                  <div key={key} className="flex items-center justify-between gap-3 rounded-xl border border-[#D4AF37]/30 bg-[#FAF4E8] px-3 py-2">
-                    <span className="text-xs font-medium text-[#4A0A13]">{label}</span>
+                  <div key={key} className="flex items-center justify-between gap-3 rounded-xl border border-[#D4AF37]/30 bg-[#FBFCFE] px-3 py-2">
+                    <span className="text-xs font-medium text-[#0B1B36]">{label}</span>
                     <div className="flex items-center gap-2 w-28 shrink-0">
-                      <div className="flex-1 bg-[#4A0A13]/10 rounded-full h-1.5 overflow-hidden">
+                      <div className="flex-1 bg-[#0B1B36]/10 rounded-full h-1.5 overflow-hidden">
                         <div className="bg-[#B8860B] h-1.5 rounded-full" style={{ width: `${s ?? 0}%` }} />
                       </div>
-                      <span className="font-mono text-xs font-bold text-[#400A12]">{s ?? "—"}</span>
+                      <span className="font-mono text-xs font-bold text-[#081428]">{s ?? "—"}</span>
                       {adminOverride !== undefined && (
                         <span className="text-[#D4AF37] flex items-center gap-1">
                           ✓ {adminOverride}

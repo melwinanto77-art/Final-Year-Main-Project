@@ -55,8 +55,8 @@ Copy `server_python/.env.example` to `server_python/.env` and fill it in.
 Postgres is used when `DATABASE_URL` is set; otherwise it falls back to a
 local SQLite file, so it runs with no setup.
 
-Sign in with `admin@consciousorbit.com` / `admin123` (admin) or
-`founder@venture.io` / `password123` (client) — seeded on first boot.
+Sign in with `admin@ventureorbital.com` / `admin123` (admin) or
+`founder@ventureorbital.com` / `password123` (client) — seeded on first boot.
 **Change these before deploying anywhere.**
 
 Every integration degrades rather than failing: without `GEMINI_API_KEY` the

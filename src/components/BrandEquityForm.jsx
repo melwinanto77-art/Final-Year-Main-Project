@@ -93,14 +93,14 @@ const EMPTY = {
 
 const labelCls = "font-mono text-[0.68rem] uppercase font-bold text-[#B8860B] tracking-wider";
 const fieldCls =
-  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#4A0A13] placeholder-[#8C6D58]/60 focus:border-[#400A12] focus:outline-none";
+  "w-full rounded-xl border border-[#D4AF37]/60 bg-white px-3.5 py-2.5 text-xs text-[#0B1B36] placeholder-[#6E7B91]/60 focus:border-[#081428] focus:outline-none";
 
 function Field({ label, hint, htmlFor, children }) {
   return (
     <div className="space-y-1">
       <label className={labelCls} htmlFor={htmlFor}>{label}</label>
       {children}
-      {hint && <p className="text-[0.65rem] text-[#8C6D58]">{hint}</p>}
+      {hint && <p className="text-[0.65rem] text-[#6E7B91]">{hint}</p>}
     </div>
   );
 }
@@ -192,8 +192,8 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
       <div className="flex items-start gap-3">
         <Award size={22} className="text-[#B8860B] shrink-0 mt-0.5" />
         <div>
-          <h3 className="font-serif text-lg font-bold text-[#400A12]">Indian Brand Equity Assessment</h3>
-          <p className="text-xs text-[#7A1C29]">
+          <h3 className="font-serif text-lg font-bold text-[#081428]">Indian Brand Equity Assessment</h3>
+          <p className="text-xs text-[#3D5A80]">
             Measures how much your brand itself is worth in the Indian market — beyond the product.
             Answer honestly; the score is only useful if it reflects reality.
           </p>
@@ -209,11 +209,11 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
           <div>
             <p className={labelCls}>Brand Equity Score</p>
             <p className="font-serif text-3xl font-extrabold text-[#B8860B]">
-              {saved.equityScore}<span className="text-base text-[#8C6D58]"> / 100</span>
+              {saved.equityScore}<span className="text-base text-[#6E7B91]"> / 100</span>
             </p>
           </div>
           <StrengthBadge band={saved.strengthBand} />
-          <p className="text-[0.7rem] text-[#7A1C29] flex-1 min-w-48">
+          <p className="text-[0.7rem] text-[#3D5A80] flex-1 min-w-48">
             Saved for <strong>{saved.brandName}</strong>. Update any answer and save again to recalculate.
           </p>
 
@@ -279,8 +279,8 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
               return (
                 <button key={lang} type="button" onClick={() => toggleLanguage(lang)}
                   className={`px-3 py-1.5 rounded-full text-xs font-bold transition cursor-pointer ${
-                    on ? "bg-[#400A12] text-[#F5D77F] border border-[#D4AF37]/50"
-                       : "bg-[#FAF4E8] text-[#4A0A13] border border-[#D4AF37]/30 hover:bg-[#F5EAD4]"
+                    on ? "bg-[#081428] text-[#F5D77F] border border-[#D4AF37]/50"
+                       : "bg-[#FBFCFE] text-[#0B1B36] border border-[#D4AF37]/30 hover:bg-[#EDF2F9]"
                   }`}>
                   {on ? "✓ " : "+ "}{lang}
                 </button>
@@ -294,7 +294,7 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
       <div className="bg-white/90 border border-[#D4AF37]/40 rounded-2xl p-4 sm:p-5 space-y-5">
         <div>
           <p className={labelCls}>2 · The Five Equity Pillars</p>
-          <p className="text-[0.7rem] text-[#7A1C29] mt-1">
+          <p className="text-[0.7rem] text-[#3D5A80] mt-1">
             Drag each slider from 0 (not true at all) to 100 (completely true).
           </p>
         </div>
@@ -302,12 +302,12 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
           <div key={pillar.key} className="space-y-1.5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <label className="text-xs font-bold text-[#400A12]" htmlFor={`be-${pillar.key}`}>
+                <label className="text-xs font-bold text-[#081428]" htmlFor={`be-${pillar.key}`}>
                   {pillar.label}
                 </label>
-                <p className="text-[0.68rem] text-[#7A1C29]">{pillar.question}</p>
+                <p className="text-[0.68rem] text-[#3D5A80]">{pillar.question}</p>
               </div>
-              <span className="font-mono text-sm font-bold text-[#400A12] shrink-0">
+              <span className="font-mono text-sm font-bold text-[#081428] shrink-0">
                 {form[pillar.key]}
               </span>
             </div>
@@ -316,9 +316,9 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
               type="range" min="0" max="100"
               value={form[pillar.key]}
               onChange={(e) => set(pillar.key, Number(e.target.value))}
-              className="w-full accent-[#400A12] cursor-pointer"
+              className="w-full accent-[#081428] cursor-pointer"
             />
-            <div className="flex justify-between text-[0.62rem] text-[#8C6D58]">
+            <div className="flex justify-between text-[0.62rem] text-[#6E7B91]">
               <span>{pillar.low}</span>
               <span>{pillar.high}</span>
             </div>
@@ -330,7 +330,7 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
       <div className="bg-white/90 border border-[#D4AF37]/40 rounded-2xl p-4 sm:p-5 space-y-4">
         <div>
           <p className={labelCls}>3 · Real Numbers (proof behind the ratings)</p>
-          <p className="text-[0.7rem] text-[#7A1C29] mt-1">
+          <p className="text-[0.7rem] text-[#3D5A80] mt-1">
             These verify the sliders above — a brand claiming high loyalty with no repeat customers
             is scored down, not up.
           </p>
@@ -382,7 +382,7 @@ export default function BrandEquityForm({ reportId, clientEmail, defaultBrandNam
           </span>
         )}
         <button type="submit" disabled={saving}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#400A12] hover:bg-[#5C0F1A] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 disabled:opacity-60">
+          className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#081428] hover:bg-[#16294D] text-[#F5D77F] font-extrabold text-xs shadow-lg transition cursor-pointer border border-[#D4AF37]/40 disabled:opacity-60">
           {saving ? <Loader2 size={14} className="animate-spin" /> : <Award size={14} />}
           <span>{saving ? "Saving…" : saved ? "Update Assessment" : "Save Assessment"}</span>
         </button>
