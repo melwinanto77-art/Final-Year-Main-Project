@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets — .env holds ANTHROPIC_API_KEY / SPYFU keys. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
+
+# Per-machine Claude Code permission overrides
+.claude/settings.local.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore empty sub-folder that was causing git submodule issue
+the-conscious-orbit/
+
+
+# Local Netlify folder
+.netlify
+
+# Python build & DB files
+__pycache__/
+*.pyc
+*.db
+
+*.db.bak
+
+# Uploaded client documents (bytes live on disk, metadata in the DB)
+server_python/uploads/

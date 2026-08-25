@@ -1,0 +1,643 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Black & Gold Executive Design System Tokens */
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+
+  /* Executive Cream, Burgundy & Gold Color Palette */
+  :root {
+    /* Theme Colors */
+    --color-bg-primary: #FAF4E8;
+    --color-bg-secondary: #F4ECC8;
+    --color-bg-card: #4A0A13;
+    
+    /* Gold Tones */
+    --color-gold-primary: #D4AF37;
+    --color-gold-light: #F5D77F;
+    --color-gold-accent: #B8860B;
+
+    /* Burgundy Tones */
+    --color-burgundy-deep: #4A0A13;
+    --color-burgundy-dark: #38070E;
+    --color-burgundy-hover: #5C0F1A;
+    
+    /* Borders & Glow */
+    --color-border-subtle: rgba(212, 175, 55, 0.3);
+    --color-border-gold: rgba(212, 175, 55, 0.6);
+    --color-hover-glow: rgba(212, 175, 55, 0.4);
+
+    /* Typography */
+    --color-text-primary: #4A0A13;
+    --color-text-secondary: #7A1C29;
+    --color-text-muted: #9E5D67;
+  }
+
+  body {
+    background-color: #FAF4E8;
+    color: #4A0A13;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* ============================================================
+   LAYERED LUXURY BACKGROUNDS & UTILITIES
+   ============================================================ */
+
+/* Layered Executive Cream Background with Soft Gold Radial Lighting */
+.bg-royal-mesh {
+  background-color: #FAF4E8;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(245, 215, 127, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(200, 155, 60, 0.08) 0%, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Executive Card — Dark Onyx background with subtle gold outline & soft shadow */
+.card-royal-luxury {
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF;
+}
+
+.card-royal-luxury:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 18px 45px -5px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Glassmorphism Luxury Black Panel */
+.glass-royal-luxury {
+  background: rgba(14, 14, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  color: #FFFFFF;
+}
+
+/* Gold Gradient Shimmer Text */
+.text-shimmer-champagne {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Field focus glow in Gold */
+.field-luxury-gold:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+/* Primary Gold Button: Gold Background, Black Text, Soft Lift */
+.btn-royal-red {
+  background: linear-gradient(135deg, #F4D67A 0%, #D4AF37 100%);
+  border: 1px solid #D4AF37;
+  color: #050505;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+}
+
+.btn-royal-red:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 100%);
+  border-color: #F4D67A;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  transform: translateY(-3px);
+}
+
+.btn-royal-red:active {
+  background-color: #C89B3C;
+  transform: translateY(0);
+}
+
+/* Secondary Button: Transparent, Gold Border, White Text -> Hover Gold Background */
+.btn-royal-gold-outline {
+  background-color: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-royal-gold-outline:hover {
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+  color: #050505;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+/* 3D Luxury Flip Cards for Target Domains */
+.flip-card {
+  background: transparent;
+  width: 100%;
+  max-width: 320px;
+  height: 380px;
+  perspective: 1200px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 22px;
+  padding: 24px;
+
+  backface-visibility: hidden;
+
+  background: linear-gradient(
+      145deg,
+      #111111,
+      #080808
+  );
+
+  border: 1px solid rgba(212,175,55,.25);
+
+  box-shadow:
+      0 20px 40px rgba(0,0,0,.5),
+      inset 0 0 0 1px rgba(255,255,255,.03);
+
+  overflow: hidden;
+}
+
+.flip-card-front::before,
+.flip-card-back::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(212,175,55,.18),
+    transparent 45%);
+
+    pointer-events: none;
+}
+
+.flip-card-front {
+    color: #fff;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+
+    background:
+    linear-gradient(
+    145deg,
+    #181818,
+    #090909);
+}
+
+.flip-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F5D76E;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.flip-card-subtitle {
+    color: #C7C7C7;
+    font-size: 14px;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(244, 214, 122, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(200, 155, 60, 0.05) 0%, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Executive Card — Dark Onyx background with subtle gold outline & soft shadow */
+.card-royal-luxury {
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF;
+}
+
+.card-royal-luxury:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 18px 45px -5px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Glassmorphism Luxury Black Panel */
+.glass-royal-luxury {
+  background: rgba(14, 14, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  color: #FFFFFF;
+}
+
+/* Gold Gradient Shimmer Text */
+.text-shimmer-champagne {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ticker horizontal marquee animation */
+@keyframes tickerSlide {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: tickerSlide 35s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Background gold gradient slow flow */
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-bg-flow {
+  background-size: 200% 200%;
+  animation: bgFlow 12s ease infinite;
+}
+
+/* Satellite Orbital Gauge Rotations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverseSlow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 36s linear infinite;
+}
+
+/* Shimmer sweep animation for telemetry section */
+@keyframes sweepShimmer {
+  0% { transform: translateX(-100%); }
+  30%, 100% { transform: translateX(200%); }
+}
+
+.animate-shimmer-sweep {
+  animation: sweepShimmer 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Field focus glow in Gold */
+.field-luxury-gold:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+/* Primary Gold Button: Gold Background, Black Text, Soft Lift */
+.btn-royal-red {
+  background: linear-gradient(135deg, #F4D67A 0%, #D4AF37 100%);
+  border: 1px solid #D4AF37;
+  color: #050505;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+}
+
+.btn-royal-red:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4D67A 100%);
+  border-color: #F4D67A;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  transform: translateY(-3px);
+}
+
+.btn-royal-red:active {
+  background-color: #C89B3C;
+  transform: translateY(0);
+}
+
+/* Secondary Button: Transparent, Gold Border, White Text -> Hover Gold Background */
+.btn-royal-gold-outline {
+  background-color: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-royal-gold-outline:hover {
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+  color: #050505;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+/* 3D Luxury Flip Cards for Target Domains */
+.flip-card {
+  background: transparent;
+  width: 100%;
+  max-width: 360px;
+  height: 380px;
+  perspective: 1200px;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flip-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 22px;
+  padding: 32px 24px;
+
+  backface-visibility: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #F2D56B 0%,
+    #D4AF37 55%,
+    #BE9828 100%
+  );
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+
+  overflow: hidden;
+}
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+}
+
+.flip-card-front {
+  color: #050505;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(
+    145deg,
+    #F2D56B 0%,
+    #D4AF37 55%,
+    #BE9828 100%
+  );
+  color: #050505;
+}
+
+.flip-card-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.flip-card-subtitle {
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.flip-card-badge {
+  background-color: #050505;
+  color: #D4AF37;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   MAGIC UI — DEDICATED SCROLL VELOCITY NAVBAR CSS
+   ============================================================ */
+.scroll-velocity-header {
+  background: #0B0B0B;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.scroll-velocity-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.scroll-velocity-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  will-change: transform;
+}
+
+.scroll-velocity-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  color: #D5D5D5;
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.scroll-velocity-item:hover {
+  color: #D4AF37;
+  transform: translateY(-2px);
+}
+
+.scroll-velocity-item.active {
+  background: #D4AF37;
+  color: #050505;
+  border-color: #F4D67A;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.18);
+}
+
+.scroll-velocity-item.active:hover {
+  color: #050505;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+/* ============================================================
+   RESPONSIVE GUARANTEES
+   Applied globally rather than per-component so a single wide
+   element can never make the whole page scroll sideways on a
+   phone — the usual cause of a "broken" mobile layout.
+   ============================================================ */
+@layer base {
+  html,
+  body {
+    /* Nothing may push the document wider than the viewport. */
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Long unbroken strings (URLs, emails, IDs) wrap instead of
+     stretching their container. */
+  body {
+    overflow-wrap: break-word;
+  }
+
+  /* Media never overflows its column. */
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  /* Wide content that must stay wide scrolls inside its own box. */
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide the scrollbar on tab strips while keeping them swipeable. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Comfortable touch targets on phones and tablets: coarse pointers get a
+   minimum tappable height, and iOS stops zooming on focus once inputs are
+   at least 16px. */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a[role='button'],
+  select,
+  [type='button'],
+  [type='submit'] {
+    min-height: 40px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Range sliders are hard to grab at their default height. */
+  input[type='range'] {
+    height: 28px;
+  }
+}
